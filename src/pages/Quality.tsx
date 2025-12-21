@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
-import { Section, SectionHeader } from "@/components/ui/section";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import {
@@ -19,51 +18,51 @@ const certifications = [
   {
     icon: ShieldCheck,
     name: "HACCP Certified",
-    description:
-      "Our facilities and processes are HACCP certified, ensuring systematic preventive approach to food safety from biological, chemical, and physical hazards.",
+    description: "Systematic preventive approach to food safety from biological, chemical, and physical hazards.",
     status: "Certified",
+    highlight: true,
   },
   {
     icon: Award,
     name: "ISO 22000",
-    description:
-      "International standard for food safety management systems, demonstrating our ability to control food safety hazards to ensure safe products.",
+    description: "International standard for food safety management systems.",
     status: "Certified",
+    highlight: true,
   },
   {
     icon: FileCheck,
     name: "Halal Certification",
-    description:
-      "Product certification available upon request. Our acacia gum products meet Halal requirements for Muslim consumers.",
+    description: "Product certification available upon request for Muslim consumers.",
     status: "Available",
+    highlight: false,
   },
   {
     icon: FileCheck,
     name: "Kosher Certification",
-    description:
-      "Product certification available upon request. Products meet Kosher dietary requirements and are suitable for Jewish consumers.",
+    description: "Products meet Kosher dietary requirements.",
     status: "Available",
+    highlight: false,
   },
   {
     icon: Leaf,
     name: "Non-GMO Verified",
-    description:
-      "Our acacia gum is 100% natural and non-GMO verified. Harvested from wild acacia trees with no genetic modification.",
+    description: "100% natural, harvested from wild acacia trees with no genetic modification.",
     status: "Verified",
+    highlight: false,
   },
   {
     icon: FileText,
     name: "COA/SDS Documentation",
-    description:
-      "Certificate of Analysis and Safety Data Sheets available for every batch. Request documentation for your specific requirements.",
+    description: "Certificate of Analysis and Safety Data Sheets for every batch.",
     status: "On Request",
+    highlight: false,
   },
   {
     icon: MapPin,
     name: "Full Traceability",
-    description:
-      "Complete traceability from source to delivery. Every batch can be traced back to its origin in Sudan.",
+    description: "Complete traceability from source in Sudan to delivery.",
     status: "Standard",
+    highlight: false,
   },
 ];
 
@@ -89,111 +88,137 @@ export default function Quality() {
 
       <Layout>
         {/* Hero */}
-        <section className="pt-32 pb-16 gradient-primary text-primary-foreground">
-          <div className="container-wide text-center">
-            <ScrollReveal>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
-                Quality & Certifications
-              </h1>
-              <p className="text-xl text-primary-foreground/80 max-w-3xl mx-auto">
-                Committed to the highest standards of quality, safety, and compliance
-                throughout our supply chain.
-              </p>
-            </ScrollReveal>
+        <section className="relative pt-32 pb-20 overflow-hidden">
+          <div className="absolute inset-0 gradient-hero" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-accent/10 blur-[180px]" />
+          
+          <div className="relative container-wide">
+            <div className="max-w-3xl">
+              <ScrollReveal>
+                <span className="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-6">
+                  Quality & Certifications
+                </span>
+              </ScrollReveal>
+              <ScrollReveal delay={0.1}>
+                <h1 className="text-display-lg font-display font-bold text-primary-foreground mb-6">
+                  Committed to excellence
+                </h1>
+              </ScrollReveal>
+              <ScrollReveal delay={0.2}>
+                <p className="text-xl text-primary-foreground/70 leading-relaxed">
+                  The highest standards of quality, safety, and compliance throughout 
+                  our entire supply chain.
+                </p>
+              </ScrollReveal>
+            </div>
           </div>
         </section>
 
         {/* Certifications */}
-        <Section variant="default">
-          <SectionHeader
-            title="Our Certifications"
-            subtitle="Industry-recognized certifications ensuring product quality and safety"
-          />
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => (
-              <ScrollReveal key={cert.name} delay={index * 0.05}>
-                <div className="h-full bg-card rounded-2xl border border-border p-6 hover:border-primary/20 transition-all duration-300 card-hover">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-lg gradient-primary flex items-center justify-center flex-shrink-0">
-                      <cert.icon className="w-6 h-6 text-primary-foreground" />
-                    </div>
-                    <div>
-                      <h3 className="font-display font-semibold text-lg">
-                        {cert.name}
-                      </h3>
-                      <span className="inline-block px-2 py-0.5 rounded-full bg-accent/10 text-accent text-xs font-medium mt-1">
-                        {cert.status}
-                      </span>
-                    </div>
-                  </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {cert.description}
-                  </p>
-                </div>
+        <section className="relative py-24 md:py-32 overflow-hidden">
+          <div className="absolute inset-0 gradient-mesh" />
+          
+          <div className="relative container-wide">
+            <div className="max-w-2xl mb-16">
+              <ScrollReveal>
+                <span className="text-accent font-semibold text-sm uppercase tracking-widest mb-4 block">
+                  Certifications
+                </span>
               </ScrollReveal>
-            ))}
+              <ScrollReveal delay={0.1}>
+                <h2 className="text-display-sm font-display font-bold text-foreground">
+                  Industry-recognized standards
+                </h2>
+              </ScrollReveal>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {certifications.map((cert, index) => (
+                <ScrollReveal key={cert.name} delay={index * 0.05}>
+                  <div className={`group h-full rounded-3xl p-8 transition-all duration-500 ${
+                    cert.highlight 
+                      ? "bg-gradient-to-br from-accent/10 via-accent/5 to-transparent border-2 border-accent/30 hover:border-accent/50" 
+                      : "bg-card border border-border hover:border-accent/20"
+                  } hover:shadow-elevated`}>
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className={`w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500 ${
+                        cert.highlight ? "gradient-accent" : "gradient-primary"
+                      }`}>
+                        <cert.icon className={`w-7 h-7 ${cert.highlight ? "text-accent-foreground" : "text-primary-foreground"}`} />
+                      </div>
+                      <div>
+                        <h3 className="font-display font-bold text-lg text-foreground">
+                          {cert.name}
+                        </h3>
+                        <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mt-2 ${
+                          cert.highlight 
+                            ? "bg-accent/20 text-accent" 
+                            : "bg-secondary text-secondary-foreground"
+                        }`}>
+                          {cert.status}
+                        </span>
+                      </div>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {cert.description}
+                    </p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
-        </Section>
+        </section>
 
         {/* Quality Assurance */}
-        <Section variant="muted">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <ScrollReveal direction="left">
-              <SectionHeader
-                title="Quality Assurance"
-                subtitle="Our comprehensive quality management system ensures consistent product excellence"
-                align="left"
-              />
-              <div className="space-y-4">
-                {qualityPoints.map((point, index) => (
-                  <div key={point} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                    <span className="text-foreground">{point}</span>
-                  </div>
-                ))}
+        <section className="py-24 md:py-32 bg-foreground">
+          <div className="container-wide">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <ScrollReveal>
+                  <span className="text-accent font-semibold text-sm uppercase tracking-widest mb-4 block">
+                    Quality Assurance
+                  </span>
+                </ScrollReveal>
+                <ScrollReveal delay={0.1}>
+                  <h2 className="text-display-sm font-display font-bold text-background mb-8">
+                    Comprehensive quality management
+                  </h2>
+                </ScrollReveal>
+                
+                <div className="space-y-5">
+                  {qualityPoints.map((point, index) => (
+                    <ScrollReveal key={point} delay={index * 0.08}>
+                      <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                          <CheckCircle className="w-5 h-5 text-accent" />
+                        </div>
+                        <span className="text-background/80 text-lg">{point}</span>
+                      </div>
+                    </ScrollReveal>
+                  ))}
+                </div>
               </div>
-            </ScrollReveal>
 
-            <ScrollReveal direction="right">
-              <div className="bg-card rounded-2xl border border-border p-8">
-                <h3 className="font-display font-semibold text-xl mb-4">
-                  Request Documentation
-                </h3>
-                <p className="text-muted-foreground mb-6">
-                  Need COA, SDS, or certification documents? Contact us with your
-                  specific requirements and we'll provide the necessary documentation.
-                </p>
-                <Button variant="default" asChild>
-                  <Link to="/contact?type=coa">
-                    Request COA/SDS
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </Button>
-              </div>
-            </ScrollReveal>
+              <ScrollReveal direction="right">
+                <div className="bg-background/5 rounded-3xl p-10 border border-background/10">
+                  <h3 className="text-2xl font-display font-bold text-background mb-4">
+                    Request Documentation
+                  </h3>
+                  <p className="text-background/60 mb-8 leading-relaxed">
+                    Need COA, SDS, or certification documents? Contact us with your 
+                    specific requirements and we'll provide the necessary documentation.
+                  </p>
+                  <Button variant="hero" size="lg" asChild>
+                    <Link to="/contact?type=coa">
+                      Request COA/SDS
+                      <ArrowRight className="w-5 h-5" />
+                    </Link>
+                  </Button>
+                </div>
+              </ScrollReveal>
+            </div>
           </div>
-        </Section>
-
-        {/* CTA */}
-        <Section variant="accent">
-          <div className="text-center max-w-2xl mx-auto">
-            <ScrollReveal>
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-                Questions About Quality?
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Our team is ready to answer your quality and compliance questions.
-              </p>
-              <Button size="lg" variant="default" asChild>
-                <Link to="/contact">
-                  Contact Us
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </Button>
-            </ScrollReveal>
-          </div>
-        </Section>
+        </section>
       </Layout>
     </>
   );
