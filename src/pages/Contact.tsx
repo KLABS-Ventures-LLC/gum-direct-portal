@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet-async";
 import { useSearchParams } from "react-router-dom";
 import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
-import { Section } from "@/components/ui/section";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,7 +14,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, Clock, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
@@ -34,7 +33,13 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Address",
-    value: "GumDirect Ltd\nLondon, United Kingdom",
+    value: "GumDirect Ltd, London, UK",
+    href: null,
+  },
+  {
+    icon: Clock,
+    label: "Hours",
+    value: "Mon-Fri: 9AM - 5PM GMT",
     href: null,
   },
 ];
@@ -77,13 +82,9 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1500));
-
     setIsSubmitting(false);
     setIsSubmitted(true);
-
     toast({
       title: "Message Sent!",
       description: "We'll get back to you within 24 hours.",
@@ -100,23 +101,22 @@ export default function Contact() {
         <Helmet>
           <title>Thank You | GumDirect</title>
         </Helmet>
-
         <Layout>
-          <section className="pt-32 pb-16 min-h-screen flex items-center">
-            <div className="container-wide text-center">
+          <section className="min-h-screen flex items-center justify-center pt-20">
+            <div className="container-wide text-center py-32">
               <ScrollReveal>
-                <div className="w-20 h-20 mx-auto rounded-full gradient-primary flex items-center justify-center mb-8">
-                  <CheckCircle className="w-10 h-10 text-primary-foreground" />
+                <div className="w-24 h-24 mx-auto rounded-full gradient-primary flex items-center justify-center mb-8 shadow-elevated">
+                  <CheckCircle className="w-12 h-12 text-primary-foreground" />
                 </div>
-                <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
+                <h1 className="text-display-md font-display font-bold mb-4">
                   Thank You!
                 </h1>
-                <p className="text-xl text-muted-foreground mb-8 max-w-md mx-auto">
-                  We've received your message and will get back to you within 24
-                  business hours.
+                <p className="text-xl text-muted-foreground mb-10 max-w-md mx-auto">
+                  We've received your message and will get back to you within 24 business hours.
                 </p>
-                <Button variant="default" onClick={() => setIsSubmitted(false)}>
+                <Button variant="default" size="lg" onClick={() => setIsSubmitted(false)}>
                   Send Another Message
+                  <ArrowRight className="w-5 h-5" />
                 </Button>
               </ScrollReveal>
             </div>
@@ -132,230 +132,200 @@ export default function Contact() {
         <title>Contact Us | Get a Quote | GumDirect</title>
         <meta
           name="description"
-          content="Contact GumDirect for samples, quotes, or inquiries about our premium acacia gum products. UK-based supplier with fast response times."
+          content="Contact GumDirect for samples, quotes, or inquiries about our premium acacia gum products."
         />
       </Helmet>
 
       <Layout>
         {/* Hero */}
-        <section className="pt-32 pb-16 gradient-primary text-primary-foreground">
-          <div className="container-wide text-center">
-            <ScrollReveal>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
-                Contact Us
-              </h1>
-              <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto">
-                Ready to get started? Send us a message and we'll respond within
-                24 hours.
-              </p>
-            </ScrollReveal>
+        <section className="relative pt-32 pb-20 overflow-hidden">
+          <div className="absolute inset-0 gradient-hero" />
+          <div className="absolute bottom-0 left-1/4 w-[600px] h-[300px] rounded-full bg-accent/10 blur-[120px]" />
+          
+          <div className="relative container-wide">
+            <div className="max-w-2xl">
+              <ScrollReveal>
+                <span className="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-6">
+                  Contact Us
+                </span>
+              </ScrollReveal>
+              <ScrollReveal delay={0.1}>
+                <h1 className="text-display-lg font-display font-bold text-primary-foreground mb-6">
+                  Let's talk
+                </h1>
+              </ScrollReveal>
+              <ScrollReveal delay={0.2}>
+                <p className="text-xl text-primary-foreground/70 leading-relaxed">
+                  Ready to get started? Send us a message and we'll respond within 24 hours.
+                </p>
+              </ScrollReveal>
+            </div>
           </div>
         </section>
 
         {/* Contact Form & Info */}
-        <Section variant="default">
-          <div className="grid lg:grid-cols-3 gap-12">
-            {/* Contact Info */}
-            <div className="lg:col-span-1">
-              <ScrollReveal direction="left">
-                <h2 className="text-2xl font-display font-bold mb-6">
-                  Get in Touch
-                </h2>
-                <div className="space-y-6">
-                  {contactInfo.map((info) => (
-                    <div key={info.label} className="flex gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <info.icon className="w-6 h-6 text-primary" />
+        <section className="relative py-24 md:py-32 overflow-hidden">
+          <div className="absolute inset-0 gradient-mesh" />
+          
+          <div className="relative container-wide">
+            <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
+              {/* Contact Info */}
+              <div className="lg:col-span-4">
+                <ScrollReveal direction="left">
+                  <h2 className="text-2xl font-display font-bold mb-8">Get in Touch</h2>
+                  
+                  <div className="space-y-6 mb-10">
+                    {contactInfo.map((info) => (
+                      <div key={info.label} className="flex gap-4 group">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                          <info.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-foreground mb-1">{info.label}</h4>
+                          {info.href ? (
+                            <a href={info.href} className="text-muted-foreground hover:text-accent transition-colors">
+                              {info.value}
+                            </a>
+                          ) : (
+                            <p className="text-muted-foreground">{info.value}</p>
+                          )}
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-1">
-                          {info.label}
-                        </h4>
-                        {info.href ? (
-                          <a
-                            href={info.href}
-                            className="text-muted-foreground hover:text-primary transition-colors"
-                          >
-                            {info.value}
-                          </a>
-                        ) : (
-                          <p className="text-muted-foreground whitespace-pre-line">
-                            {info.value}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-10 p-6 rounded-2xl bg-secondary/50 border border-border">
-                  <h4 className="font-display font-semibold mb-2">
-                    Business Hours
-                  </h4>
-                  <p className="text-muted-foreground text-sm">
-                    Monday - Friday: 9:00 AM - 5:00 PM GMT
-                    <br />
-                    Saturday - Sunday: Closed
-                  </p>
-                </div>
-              </ScrollReveal>
-            </div>
-
-            {/* Form */}
-            <div className="lg:col-span-2">
-              <ScrollReveal direction="right">
-                <form
-                  onSubmit={handleSubmit}
-                  className="bg-card rounded-2xl border border-border p-8"
-                >
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {/* Name */}
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Full Name *</Label>
-                      <Input
-                        id="name"
-                        required
-                        placeholder="John Smith"
-                        value={formData.name}
-                        onChange={(e) => handleChange("name", e.target.value)}
-                      />
-                    </div>
-
-                    {/* Company */}
-                    <div className="space-y-2">
-                      <Label htmlFor="company">Company</Label>
-                      <Input
-                        id="company"
-                        placeholder="Your Company Ltd"
-                        value={formData.company}
-                        onChange={(e) => handleChange("company", e.target.value)}
-                      />
-                    </div>
-
-                    {/* Email */}
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email Address *</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        required
-                        placeholder="john@company.com"
-                        value={formData.email}
-                        onChange={(e) => handleChange("email", e.target.value)}
-                      />
-                    </div>
-
-                    {/* Phone */}
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">Phone Number</Label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        placeholder="+44 123 456 7890"
-                        value={formData.phone}
-                        onChange={(e) => handleChange("phone", e.target.value)}
-                      />
-                    </div>
-
-                    {/* Inquiry Type */}
-                    <div className="space-y-2">
-                      <Label>Inquiry Type *</Label>
-                      <Select
-                        value={formData.inquiryType}
-                        onValueChange={(value) =>
-                          handleChange("inquiryType", value)
-                        }
-                      >
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select inquiry type" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {inquiryTypes.map((type) => (
-                            <SelectItem key={type.value} value={type.value}>
-                              {type.label}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    {/* Product */}
-                    <div className="space-y-2">
-                      <Label>Product Interest</Label>
-                      <Select
-                        value={formData.product}
-                        onValueChange={(value) => handleChange("product", value)}
-                      >
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select product" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {products.map((product) => (
-                            <SelectItem key={product.value} value={product.value}>
-                              {product.label}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    {/* Quantity */}
-                    {(formData.inquiryType === "quote" ||
-                      formData.inquiryType === "sample") && (
-                      <div className="space-y-2 md:col-span-2">
-                        <Label htmlFor="quantity">
-                          {formData.inquiryType === "sample"
-                            ? "Sample Quantity (default: 1 kg)"
-                            : "Estimated Quantity (e.g., 100 kg/month)"}
-                        </Label>
-                        <Input
-                          id="quantity"
-                          placeholder={
-                            formData.inquiryType === "sample"
-                              ? "1 kg"
-                              : "e.g., 500 kg per month"
-                          }
-                          value={formData.quantity}
-                          onChange={(e) =>
-                            handleChange("quantity", e.target.value)
-                          }
-                        />
-                      </div>
-                    )}
-
-                    {/* Message */}
-                    <div className="space-y-2 md:col-span-2">
-                      <Label htmlFor="message">Message</Label>
-                      <Textarea
-                        id="message"
-                        rows={5}
-                        placeholder="Tell us about your requirements, application, or any questions you have..."
-                        value={formData.message}
-                        onChange={(e) => handleChange("message", e.target.value)}
-                      />
-                    </div>
+                    ))}
                   </div>
 
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="mt-6 w-full md:w-auto"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? (
-                      "Sending..."
-                    ) : (
-                      <>
-                        Send Message
-                        <Send className="w-4 h-4" />
-                      </>
-                    )}
-                  </Button>
-                </form>
-              </ScrollReveal>
+                  <div className="p-6 rounded-2xl bg-accent/5 border border-accent/10">
+                    <h4 className="font-display font-semibold mb-2">Quick Response</h4>
+                    <p className="text-sm text-muted-foreground">
+                      We aim to respond to all inquiries within 24 business hours.
+                    </p>
+                  </div>
+                </ScrollReveal>
+              </div>
+
+              {/* Form */}
+              <div className="lg:col-span-8">
+                <ScrollReveal direction="right">
+                  <form onSubmit={handleSubmit} className="bg-card rounded-3xl border border-border p-8 lg:p-10 shadow-card">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <Label htmlFor="name" className="text-sm font-medium">Full Name *</Label>
+                        <Input
+                          id="name"
+                          required
+                          placeholder="John Smith"
+                          value={formData.name}
+                          onChange={(e) => handleChange("name", e.target.value)}
+                          className="h-12 rounded-xl border-border bg-background"
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="company" className="text-sm font-medium">Company</Label>
+                        <Input
+                          id="company"
+                          placeholder="Your Company Ltd"
+                          value={formData.company}
+                          onChange={(e) => handleChange("company", e.target.value)}
+                          className="h-12 rounded-xl border-border bg-background"
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="email" className="text-sm font-medium">Email Address *</Label>
+                        <Input
+                          id="email"
+                          type="email"
+                          required
+                          placeholder="john@company.com"
+                          value={formData.email}
+                          onChange={(e) => handleChange("email", e.target.value)}
+                          className="h-12 rounded-xl border-border bg-background"
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="phone" className="text-sm font-medium">Phone Number</Label>
+                        <Input
+                          id="phone"
+                          type="tel"
+                          placeholder="+44 123 456 7890"
+                          value={formData.phone}
+                          onChange={(e) => handleChange("phone", e.target.value)}
+                          className="h-12 rounded-xl border-border bg-background"
+                        />
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label className="text-sm font-medium">Inquiry Type *</Label>
+                        <Select value={formData.inquiryType} onValueChange={(value) => handleChange("inquiryType", value)}>
+                          <SelectTrigger className="h-12 rounded-xl border-border bg-background">
+                            <SelectValue placeholder="Select inquiry type" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {inquiryTypes.map((type) => (
+                              <SelectItem key={type.value} value={type.value}>{type.label}</SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label className="text-sm font-medium">Product Interest</Label>
+                        <Select value={formData.product} onValueChange={(value) => handleChange("product", value)}>
+                          <SelectTrigger className="h-12 rounded-xl border-border bg-background">
+                            <SelectValue placeholder="Select product" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {products.map((product) => (
+                              <SelectItem key={product.value} value={product.value}>{product.label}</SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      </div>
+
+                      {(formData.inquiryType === "quote" || formData.inquiryType === "sample") && (
+                        <div className="space-y-2 md:col-span-2">
+                          <Label htmlFor="quantity" className="text-sm font-medium">
+                            {formData.inquiryType === "sample" ? "Sample Quantity" : "Estimated Quantity"}
+                          </Label>
+                          <Input
+                            id="quantity"
+                            placeholder={formData.inquiryType === "sample" ? "1 kg" : "e.g., 500 kg per month"}
+                            value={formData.quantity}
+                            onChange={(e) => handleChange("quantity", e.target.value)}
+                            className="h-12 rounded-xl border-border bg-background"
+                          />
+                        </div>
+                      )}
+
+                      <div className="space-y-2 md:col-span-2">
+                        <Label htmlFor="message" className="text-sm font-medium">Message</Label>
+                        <Textarea
+                          id="message"
+                          rows={5}
+                          placeholder="Tell us about your requirements..."
+                          value={formData.message}
+                          onChange={(e) => handleChange("message", e.target.value)}
+                          className="rounded-xl border-border bg-background resize-none"
+                        />
+                      </div>
+                    </div>
+
+                    <Button type="submit" size="xl" variant="accent" className="mt-8 w-full md:w-auto" disabled={isSubmitting}>
+                      {isSubmitting ? "Sending..." : (
+                        <>
+                          Send Message
+                          <Send className="w-5 h-5" />
+                        </>
+                      )}
+                    </Button>
+                  </form>
+                </ScrollReveal>
+              </div>
             </div>
           </div>
-        </Section>
+        </section>
       </Layout>
     </>
   );
