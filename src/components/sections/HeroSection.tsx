@@ -2,19 +2,26 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { ArrowRight, ArrowDown, Sparkles } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
 
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background */}
+      {/* Video Background */}
       <div className="absolute inset-0">
-        <img
-          src={heroBg}
-          alt=""
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-dark/95 via-primary/90 to-primary-light/85" />
+          poster="/hero-poster.jpg"
+        >
+          <source
+            src="https://videos.pexels.com/video-files/8015273/8015273-uhd_2560_1440_24fps.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-dark/95 via-primary/90 to-primary-light/80" />
         {/* Decorative elements */}
         <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] rounded-full bg-accent/10 blur-[120px]" />
         <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-primary-light/20 blur-[100px]" />
