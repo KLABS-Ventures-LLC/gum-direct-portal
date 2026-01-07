@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import ProductSenegal from "./pages/ProductSenegal";
-import ProductSeyal from "./pages/ProductSeyal";
 import Applications from "./pages/Applications";
 import Quality from "./pages/Quality";
 import About from "./pages/About";
@@ -26,7 +25,6 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/products" element={<ProductSenegal />} />
             <Route path="/products/acacia-senegal" element={<ProductSenegal />} />
-            <Route path="/products/acacia-seyal" element={<ProductSeyal />} />
             <Route path="/applications" element={<Applications />} />
             <Route path="/quality" element={<Quality />} />
             <Route path="/about" element={<About />} />
