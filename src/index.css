@@ -17,11 +17,11 @@
     --primary-light: 151 32% 32%;
     --primary-dark: 151 42% 14%;
 
-    /* Accent - Warm Terracotta #b75c37 */
-    --accent: 18 53% 47%;
-    --accent-foreground: 0 0% 100%;
-    --accent-light: 18 55% 58%;
-    --accent-muted: 18 35% 75%;
+    /* Accent - Warm Gold #EDBF52 */
+    --accent: 42 82% 63%;
+    --accent-foreground: 151 37% 12%;
+    --accent-light: 42 80% 72%;
+    --accent-muted: 42 50% 82%;
 
     /* Background & Surfaces */
     --background: 30 20% 97%;
@@ -53,7 +53,7 @@
     /* Custom shadows */
     --shadow-soft: 0 4px 24px -4px hsl(151 37% 12% / 0.08);
     --shadow-medium: 0 12px 40px -8px hsl(151 37% 12% / 0.15);
-    --shadow-glow: 0 0 60px hsl(18 53% 47% / 0.25);
+    --shadow-glow: 0 0 60px hsl(42 82% 63% / 0.25);
     --shadow-card: 0 2px 16px -2px hsl(151 37% 12% / 0.06);
     --shadow-elevated: 0 20px 60px -15px hsl(151 37% 12% / 0.2);
 
@@ -74,10 +74,10 @@
     --primary-light: 151 30% 55%;
     --primary-dark: 151 40% 35%;
 
-    --accent: 18 50% 55%;
-    --accent-foreground: 0 0% 100%;
-    --accent-light: 18 48% 65%;
-    --accent-muted: 18 35% 40%;
+    --accent: 42 78% 58%;
+    --accent-foreground: 151 37% 12%;
+    --accent-light: 42 75% 68%;
+    --accent-muted: 42 45% 42%;
 
     --background: 151 30% 6%;
     --foreground: 30 15% 95%;
