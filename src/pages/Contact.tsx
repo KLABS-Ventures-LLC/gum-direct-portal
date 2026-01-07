@@ -82,13 +82,46 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
+
+    try {
+      const response = await fetch(
+        "https://services.leadconnectorhq.com/hooks/SkSvke1CC1EmduOo6QFL/webhook-trigger/90556b25-a2b6-47c1-aea3-caab2850c8e7",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            company: formData.company,
+            email: formData.email,
+            phone: formData.phone,
+            inquiryType: formData.inquiryType,
+            product: formData.product,
+            quantity: formData.quantity,
+            message: formData.message,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to submit");
+      }
+
+      setIsSubmitted(true);
+      toast({
+        title: "Message Sent!",
+        description: "We'll get back to you within 24 hours.",
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (field: string, value: string) => {
