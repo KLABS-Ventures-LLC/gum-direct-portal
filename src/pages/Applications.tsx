@@ -190,7 +190,7 @@ export default function Applications() {
         <section className="py-24 md:py-32 bg-foreground">
           <div className="container-wide text-center">
             <ScrollReveal>
-              <h2 className="text-display-sm font-display font-bold text-background mb-6">
+              <h2 className="text-display-md font-display font-bold text-background mb-6">
                 Need technical guidance?
               </h2>
               <p className="text-xl text-background/60 mb-10 max-w-2xl mx-auto">
