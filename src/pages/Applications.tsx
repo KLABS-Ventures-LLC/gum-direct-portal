@@ -187,16 +187,16 @@ export default function Applications() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 md:py-20 lg:py-24 bg-foreground">
+        <section className="py-16 md:py-20 lg:py-24 bg-background">
           <div className="container-wide text-center">
             <ScrollReveal>
-              <h2 className="text-display-md font-display font-bold text-background mb-6">
+              <h2 className="text-display-md font-display font-bold text-primary mb-6">
                 Need technical guidance?
               </h2>
-              <p className="text-xl text-background/60 mb-10 max-w-2xl mx-auto">
+              <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
                 Our team can help you select the right product for your specific application requirements.
               </p>
-              <Button variant="hero" size="xl" asChild>
+              <Button variant="accent" size="xl" asChild>
                 <Link to="/contact">
                   Contact Us
                   <ArrowRight className="w-5 h-5" />
