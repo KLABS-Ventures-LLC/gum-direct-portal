@@ -113,7 +113,7 @@ export default function About() {
         </section>
 
         {/* Story */}
-        <section className="relative py-24 md:py-32 overflow-hidden bg-secondary">
+        <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden bg-secondary">
           
           <div className="relative container-wide">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -184,7 +184,7 @@ export default function About() {
         </section>
 
         {/* Values */}
-        <section className="py-24 md:py-32 bg-foreground">
+        <section className="py-16 md:py-20 lg:py-24 bg-foreground">
           <div className="container-wide">
             <div className="max-w-2xl mb-16">
               <ScrollReveal>
@@ -220,7 +220,7 @@ export default function About() {
         </section>
 
         {/* CTA */}
-        <section className="relative py-24 md:py-32 overflow-hidden bg-secondary">
+        <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden bg-secondary">
           <div className="relative container-wide text-center">
             <ScrollReveal>
               <h2 className="text-display-md font-display font-bold text-foreground mb-6">

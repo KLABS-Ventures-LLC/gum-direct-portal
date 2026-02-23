@@ -195,7 +195,7 @@ export default function Contact() {
         </section>
 
         {/* Contact Form & Info */}
-        <section className="relative py-24 md:py-32 overflow-hidden bg-secondary">
+        <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden bg-secondary">
           
           <div className="relative container-wide">
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">

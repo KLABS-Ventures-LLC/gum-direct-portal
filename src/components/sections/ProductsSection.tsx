@@ -12,7 +12,7 @@ const features = [
 
 export function ProductsSection() {
   return (
-    <section className="py-24 md:py-32 lg:py-40 bg-secondary">
+    <section className="py-16 md:py-20 lg:py-24 bg-secondary">
       <div className="container-wide">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16 md:mb-24">

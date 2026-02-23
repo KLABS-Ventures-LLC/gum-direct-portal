@@ -13,7 +13,7 @@ const certifications = [
 
 export function CertificationsSection() {
   return (
-    <section className="py-20 md:py-24 bg-secondary">
+    <section className="py-16 md:py-20 lg:py-24 bg-secondary">
       <div className="container-wide">
         <ScrollReveal>
           <div className="text-center mb-12">
