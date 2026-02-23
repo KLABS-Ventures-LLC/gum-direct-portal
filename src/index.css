@@ -11,29 +11,29 @@
 
 @layer base {
   :root {
-    /* Primary - Warm Forest Green #2D5F3F */
-    --primary: 148 35% 27%;
+    /* Primary - Forest Green #254e38 */
+    --primary: 148 36% 23%;
     --primary-foreground: 35 30% 96%;
-    --primary-light: 148 30% 37%;
-    --primary-dark: 148 40% 18%;
+    --primary-light: 148 30% 33%;
+    --primary-dark: 148 40% 14%;
 
-    /* Accent - Warm Terracotta #C06A3A */
-    --accent: 20 55% 49%;
+    /* Accent - Amber #b65c38 */
+    --accent: 17 53% 47%;
     --accent-foreground: 0 0% 100%;
-    --accent-light: 20 50% 58%;
-    --accent-muted: 20 35% 75%;
+    --accent-light: 17 48% 56%;
+    --accent-muted: 17 33% 73%;
 
     /* Background & Surfaces */
     --background: 35 30% 96%;
-    --foreground: 148 35% 15%;
+    --foreground: 148 36% 12%;
     --card: 35 25% 98%;
-    --card-foreground: 148 35% 15%;
+    --card-foreground: 148 36% 12%;
     --popover: 35 25% 98%;
-    --popover-foreground: 148 35% 15%;
+    --popover-foreground: 148 36% 12%;
 
-    /* Secondary - Warm Sandy Tan */
-    --secondary: 40 35% 85%;
-    --secondary-foreground: 148 35% 18%;
+    /* Secondary - Warm Sandy Beige #D7C7A5 */
+    --secondary: 41 38% 75%;
+    --secondary-foreground: 148 36% 18%;
 
     /* Muted */
     --muted: 35 20% 90%;
@@ -42,7 +42,7 @@
     /* Borders & Inputs */
     --border: 35 20% 85%;
     --input: 35 20% 85%;
-    --ring: 148 35% 27%;
+    --ring: 148 36% 23%;
 
     /* Destructive */
     --destructive: 0 72% 51%;
@@ -51,11 +51,11 @@
     --radius: 0.75rem;
 
     /* Custom shadows */
-    --shadow-soft: 0 4px 24px -4px hsl(148 35% 15% / 0.08);
-    --shadow-medium: 0 12px 40px -8px hsl(148 35% 15% / 0.15);
-    --shadow-glow: 0 0 60px hsl(20 55% 49% / 0.25);
-    --shadow-card: 0 2px 16px -2px hsl(148 35% 15% / 0.06);
-    --shadow-elevated: 0 20px 60px -15px hsl(148 35% 15% / 0.2);
+    --shadow-soft: 0 4px 24px -4px hsl(148 36% 12% / 0.08);
+    --shadow-medium: 0 12px 40px -8px hsl(148 36% 12% / 0.15);
+    --shadow-glow: 0 0 60px hsl(17 53% 47% / 0.25);
+    --shadow-card: 0 2px 16px -2px hsl(148 36% 12% / 0.06);
+    --shadow-elevated: 0 20px 60px -15px hsl(148 36% 12% / 0.2);
   }
 
   .dark {
