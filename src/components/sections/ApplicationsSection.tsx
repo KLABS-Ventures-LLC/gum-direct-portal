@@ -2,14 +2,7 @@ import { Link } from "react-router-dom";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { Button } from "@/components/ui/button";
 import {
-  Wine,
-  Droplets,
-  Candy,
-  Pill,
-  Heart,
-  CakeSlice,
-  Factory,
-  ArrowRight,
+  Wine, Droplets, Candy, Pill, Heart, CakeSlice, Factory, ArrowRight,
 } from "lucide-react";
 
 const applications = [
@@ -24,10 +17,8 @@ const applications = [
 
 export function ApplicationsSection() {
   return (
-    <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden">
-      <div className="absolute inset-0 gradient-mesh" />
-      
-      <div className="relative container-wide">
+    <section className="py-24 md:py-32 lg:py-40 bg-background">
+      <div className="container-wide">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
           <div className="max-w-2xl">
@@ -56,11 +47,8 @@ export function ApplicationsSection() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4">
           {applications.map((app, index) => (
             <ScrollReveal key={app.name} delay={index * 0.05}>
-              <Link
-                to={`/applications#${app.name.toLowerCase()}`}
-                className="group block h-full"
-              >
-                <div className="h-full p-6 rounded-2xl bg-card border border-border text-center hover:border-accent/30 hover:shadow-elevated transition-all duration-500">
+              <Link to={`/applications#${app.name.toLowerCase()}`} className="group block h-full">
+                <div className="h-full p-6 rounded-2xl bg-card border border-border text-center hover:border-accent/30 transition-all duration-500">
                   <div className="w-14 h-14 mx-auto rounded-2xl bg-secondary flex items-center justify-center mb-4 group-hover:bg-accent/10 group-hover:scale-110 transition-all duration-500">
                     <app.icon className="w-7 h-7 text-muted-foreground group-hover:text-accent transition-colors duration-300" />
                   </div>
