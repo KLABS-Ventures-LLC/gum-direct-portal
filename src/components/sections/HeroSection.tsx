@@ -21,7 +21,7 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-foreground/50" />
 
       <div className="container-wide relative z-10">
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center pt-[137px] pb-[64px]">
           <ScrollReveal>
             <span className="inline-block text-secondary font-semibold text-sm uppercase tracking-widest mb-6">
               UK-Based Supply • Global Standards
