@@ -12,52 +12,52 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+  SelectValue } from
+"@/components/ui/select";
 import { Mail, Phone, MapPin, Send, CheckCircle, Clock, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: "info@gumdirect.com",
-    href: "mailto:info@gumdirect.com",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+44 (0) 123 456 7890",
-    href: "tel:+441234567890",
-  },
-  {
-    icon: MapPin,
-    label: "Address",
-    value: "GumDirect Ltd, London, UK",
-    href: null,
-  },
-  {
-    icon: Clock,
-    label: "Hours",
-    value: "Mon-Fri: 9AM - 5PM GMT",
-    href: null,
-  },
-];
+{
+  icon: Mail,
+  label: "Email",
+  value: "info@gumdirect.com",
+  href: "mailto:info@gumdirect.com"
+},
+{
+  icon: Phone,
+  label: "Phone",
+  value: "+44 (0) 123 456 7890",
+  href: "tel:+441234567890"
+},
+{
+  icon: MapPin,
+  label: "Address",
+  value: "GumDirect Ltd, London, UK",
+  href: null
+},
+{
+  icon: Clock,
+  label: "Hours",
+  value: "Mon-Fri: 9AM - 5PM GMT",
+  href: null
+}];
+
 
 const inquiryTypes = [
-  { value: "sample", label: "Order Sample (1 kg)" },
-  { value: "quote", label: "Request Bulk Quote" },
-  { value: "coa", label: "Request COA/SDS" },
-  { value: "datasheet", label: "Request Product Data Sheet" },
-  { value: "general", label: "General Inquiry" },
-];
+{ value: "sample", label: "Order Sample (1 kg)" },
+{ value: "quote", label: "Request Bulk Quote" },
+{ value: "coa", label: "Request COA/SDS" },
+{ value: "datasheet", label: "Request Product Data Sheet" },
+{ value: "general", label: "General Inquiry" }];
+
 
 const products = [
-  { value: "senegal", label: "Acacia Senegal (Premium)" },
-  { value: "seyal", label: "Acacia Seyal (Industrial)" },
-  { value: "both", label: "Both Products" },
-  { value: "unsure", label: "Not Sure Yet" },
-];
+{ value: "senegal", label: "Acacia Senegal (Premium)" },
+{ value: "seyal", label: "Acacia Seyal (Industrial)" },
+{ value: "both", label: "Both Products" },
+{ value: "unsure", label: "Not Sure Yet" }];
+
 
 export default function Contact() {
   const [searchParams] = useSearchParams();
@@ -76,7 +76,7 @@ export default function Contact() {
     inquiryType: defaultType,
     product: defaultProduct,
     quantity: "",
-    message: "",
+    message: ""
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -89,7 +89,7 @@ export default function Contact() {
         {
           method: "POST",
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/json"
           },
           body: JSON.stringify({
             name: formData.name,
@@ -99,8 +99,8 @@ export default function Contact() {
             inquiryType: formData.inquiryType,
             product: formData.product,
             quantity: formData.quantity,
-            message: formData.message,
-          }),
+            message: formData.message
+          })
         }
       );
 
@@ -111,13 +111,13 @@ export default function Contact() {
       setIsSubmitted(true);
       toast({
         title: "Message Sent!",
-        description: "We'll get back to you within 24 hours.",
+        description: "We'll get back to you within 24 hours."
       });
     } catch (error) {
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
-        variant: "destructive",
+        variant: "destructive"
       });
     } finally {
       setIsSubmitting(false);
@@ -155,8 +155,8 @@ export default function Contact() {
             </div>
           </section>
         </Layout>
-      </>
-    );
+      </>);
+
   }
 
   return (
@@ -165,8 +165,8 @@ export default function Contact() {
         <title>Contact Us | Get a Quote | GumDirect</title>
         <meta
           name="description"
-          content="Contact GumDirect for samples, quotes, or inquiries about our premium acacia gum products."
-        />
+          content="Contact GumDirect for samples, quotes, or inquiries about our premium acacia gum products." />
+
       </Helmet>
 
       <Layout>
@@ -183,12 +183,12 @@ export default function Contact() {
                 </span>
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
-                <h1 className="text-display-lg font-display font-bold text-primary-foreground mb-6">
+                <h1 className="text-display-lg font-display font-bold mb-6 text-primary">
                   Let's talk
                 </h1>
               </ScrollReveal>
               <ScrollReveal delay={0.2}>
-                <p className="text-xl text-primary-foreground/70 leading-relaxed">
+                <p className="text-xl leading-relaxed text-gray-950">
                   Ready to get started? Send us a message and we'll respond within 24 hours.
                 </p>
               </ScrollReveal>
@@ -208,23 +208,23 @@ export default function Contact() {
                   <h2 className="text-2xl font-display font-bold mb-8">Get in Touch</h2>
                   
                   <div className="space-y-6 mb-10">
-                    {contactInfo.map((info) => (
-                      <div key={info.label} className="flex gap-4 group">
+                    {contactInfo.map((info) =>
+                    <div key={info.label} className="flex gap-4 group">
                         <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                           <info.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors" />
                         </div>
                         <div>
                           <h4 className="font-semibold text-foreground mb-1">{info.label}</h4>
-                          {info.href ? (
-                            <a href={info.href} className="text-muted-foreground hover:text-accent transition-colors">
+                          {info.href ?
+                        <a href={info.href} className="text-muted-foreground hover:text-accent transition-colors">
                               {info.value}
-                            </a>
-                          ) : (
-                            <p className="text-muted-foreground">{info.value}</p>
-                          )}
+                            </a> :
+
+                        <p className="text-muted-foreground">{info.value}</p>
+                        }
                         </div>
                       </div>
-                    ))}
+                    )}
                   </div>
 
                   <div className="p-6 rounded-2xl bg-accent/5 border border-accent/10">
@@ -249,8 +249,8 @@ export default function Contact() {
                           placeholder="John Smith"
                           value={formData.name}
                           onChange={(e) => handleChange("name", e.target.value)}
-                          className="h-12 rounded-xl border-border bg-background"
-                        />
+                          className="h-12 rounded-xl border-border bg-background" />
+
                       </div>
 
                       <div className="space-y-2">
@@ -260,8 +260,8 @@ export default function Contact() {
                           placeholder="Your Company Ltd"
                           value={formData.company}
                           onChange={(e) => handleChange("company", e.target.value)}
-                          className="h-12 rounded-xl border-border bg-background"
-                        />
+                          className="h-12 rounded-xl border-border bg-background" />
+
                       </div>
 
                       <div className="space-y-2">
@@ -273,8 +273,8 @@ export default function Contact() {
                           placeholder="john@company.com"
                           value={formData.email}
                           onChange={(e) => handleChange("email", e.target.value)}
-                          className="h-12 rounded-xl border-border bg-background"
-                        />
+                          className="h-12 rounded-xl border-border bg-background" />
+
                       </div>
 
                       <div className="space-y-2">
@@ -285,8 +285,8 @@ export default function Contact() {
                           placeholder="+44 123 456 7890"
                           value={formData.phone}
                           onChange={(e) => handleChange("phone", e.target.value)}
-                          className="h-12 rounded-xl border-border bg-background"
-                        />
+                          className="h-12 rounded-xl border-border bg-background" />
+
                       </div>
 
                       <div className="space-y-2">
@@ -296,9 +296,9 @@ export default function Contact() {
                             <SelectValue placeholder="Select inquiry type" />
                           </SelectTrigger>
                           <SelectContent>
-                            {inquiryTypes.map((type) => (
-                              <SelectItem key={type.value} value={type.value}>{type.label}</SelectItem>
-                            ))}
+                            {inquiryTypes.map((type) =>
+                            <SelectItem key={type.value} value={type.value}>{type.label}</SelectItem>
+                            )}
                           </SelectContent>
                         </Select>
                       </div>
@@ -310,27 +310,27 @@ export default function Contact() {
                             <SelectValue placeholder="Select product" />
                           </SelectTrigger>
                           <SelectContent>
-                            {products.map((product) => (
-                              <SelectItem key={product.value} value={product.value}>{product.label}</SelectItem>
-                            ))}
+                            {products.map((product) =>
+                            <SelectItem key={product.value} value={product.value}>{product.label}</SelectItem>
+                            )}
                           </SelectContent>
                         </Select>
                       </div>
 
-                      {(formData.inquiryType === "quote" || formData.inquiryType === "sample") && (
-                        <div className="space-y-2 md:col-span-2">
+                      {(formData.inquiryType === "quote" || formData.inquiryType === "sample") &&
+                      <div className="space-y-2 md:col-span-2">
                           <Label htmlFor="quantity" className="text-sm font-medium">
                             {formData.inquiryType === "sample" ? "Sample Quantity" : "Estimated Quantity"}
                           </Label>
                           <Input
-                            id="quantity"
-                            placeholder={formData.inquiryType === "sample" ? "1 kg" : "e.g., 500 kg per month"}
-                            value={formData.quantity}
-                            onChange={(e) => handleChange("quantity", e.target.value)}
-                            className="h-12 rounded-xl border-border bg-background"
-                          />
+                          id="quantity"
+                          placeholder={formData.inquiryType === "sample" ? "1 kg" : "e.g., 500 kg per month"}
+                          value={formData.quantity}
+                          onChange={(e) => handleChange("quantity", e.target.value)}
+                          className="h-12 rounded-xl border-border bg-background" />
+
                         </div>
-                      )}
+                      }
 
                       <div className="space-y-2 md:col-span-2">
                         <Label htmlFor="message" className="text-sm font-medium">Message</Label>
@@ -340,18 +340,18 @@ export default function Contact() {
                           placeholder="Tell us about your requirements..."
                           value={formData.message}
                           onChange={(e) => handleChange("message", e.target.value)}
-                          className="rounded-xl border-border bg-background resize-none"
-                        />
+                          className="rounded-xl border-border bg-background resize-none" />
+
                       </div>
                     </div>
 
                     <Button type="submit" size="xl" variant="accent" className="mt-8 w-full md:w-auto" disabled={isSubmitting}>
-                      {isSubmitting ? "Sending..." : (
-                        <>
+                      {isSubmitting ? "Sending..." :
+                      <>
                           Send Message
                           <Send className="w-5 h-5" />
                         </>
-                      )}
+                      }
                     </Button>
                   </form>
                 </ScrollReveal>
@@ -360,6 +360,6 @@ export default function Contact() {
           </div>
         </section>
       </Layout>
-    </>
-  );
+    </>);
+
 }
