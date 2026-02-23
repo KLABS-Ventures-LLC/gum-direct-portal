@@ -124,7 +124,7 @@ export default function About() {
                   </span>
                 </ScrollReveal>
                 <ScrollReveal delay={0.1}>
-                  <h2 className="text-display-sm font-display font-bold text-foreground mb-8">
+                  <h2 className="text-display-md font-display font-bold text-foreground mb-8">
                     From Sudan to the world
                   </h2>
                 </ScrollReveal>
@@ -193,7 +193,7 @@ export default function About() {
                 </span>
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
-                <h2 className="text-display-sm font-display font-bold text-background">
+                <h2 className="text-display-md font-display font-bold text-background">
                   The principles that guide everything we do
                 </h2>
               </ScrollReveal>
@@ -223,7 +223,7 @@ export default function About() {
         <section className="relative py-24 md:py-32 overflow-hidden bg-secondary">
           <div className="relative container-wide text-center">
             <ScrollReveal>
-              <h2 className="text-display-sm font-display font-bold text-foreground mb-6">
+              <h2 className="text-display-md font-display font-bold text-foreground mb-6">
                 Ready to work with us?
               </h2>
               <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">

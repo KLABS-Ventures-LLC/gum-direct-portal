@@ -142,7 +142,7 @@ export default function ProductSenegal() {
                 </span>
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
-                <h2 className="text-display-sm font-display font-bold text-foreground">
+                <h2 className="text-display-md font-display font-bold text-foreground">
                   Ideal for high-quality formulations
                 </h2>
               </ScrollReveal>
@@ -174,7 +174,7 @@ export default function ProductSenegal() {
                 </span>
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
-                <h2 className="text-display-sm font-display font-bold text-background">
+                <h2 className="text-display-md font-display font-bold text-background">
                   Product Specifications
                 </h2>
               </ScrollReveal>

@@ -125,7 +125,7 @@ export default function Quality() {
                 </span>
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
-                <h2 className="text-display-sm font-display font-bold text-foreground">
+                <h2 className="text-display-md font-display font-bold text-foreground">
                   Industry-recognized standards
                 </h2>
               </ScrollReveal>
@@ -179,7 +179,7 @@ export default function Quality() {
                   </span>
                 </ScrollReveal>
                 <ScrollReveal delay={0.1}>
-                  <h2 className="text-display-sm font-display font-bold text-background mb-8">
+                  <h2 className="text-display-md font-display font-bold text-background mb-8">
                     Comprehensive quality management
                   </h2>
                 </ScrollReveal>
