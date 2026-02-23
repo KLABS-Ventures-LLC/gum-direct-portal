@@ -17,6 +17,9 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
+  const isHome = location.pathname === "/";
+  const isTransparent = isHome && !isScrolled;
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -40,11 +43,11 @@ export function Header() {
     >
       <nav className="container-wide">
         <div className="flex items-center justify-between">
-          {/* Logo - Text only */}
+          {/* Logo */}
           <Link to="/" className="flex items-center group">
             <span className="font-display font-bold text-2xl leading-none tracking-tight">
-              <span className="text-primary">Gum</span>
-              <span className="text-accent">Direct</span>
+              <span className={isTransparent ? "text-background" : "text-primary"}>Gum</span>
+              <span className={isTransparent ? "text-background" : "text-accent"}>Direct</span>
             </span>
           </Link>
 
@@ -56,9 +59,13 @@ export function Header() {
                 to={item.href}
                 className={cn(
                   "px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full",
-                  location.pathname === item.href
-                    ? "text-accent bg-accent/10"
-                    : "text-foreground/70 hover:text-foreground hover:bg-muted"
+                  isTransparent
+                    ? location.pathname === item.href
+                      ? "text-background bg-background/20"
+                      : "text-background/80 hover:text-background hover:bg-background/10"
+                    : location.pathname === item.href
+                      ? "text-accent bg-accent/10"
+                      : "text-foreground/70 hover:text-foreground hover:bg-muted"
                 )}
               >
                 {item.name}
@@ -68,17 +75,30 @@ export function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button variant="outline" size="sm" asChild>
+            <Button
+              variant={isTransparent ? "hero-outline" : "outline"}
+              size="sm"
+              asChild
+            >
               <Link to="/contact?type=sample">Get Sample</Link>
             </Button>
-            <Button variant="accent" size="sm" asChild>
+            <Button
+              variant={isTransparent ? "hero" : "accent"}
+              size="sm"
+              asChild
+            >
               <Link to="/contact?type=quote">Request Quote</Link>
             </Button>
           </div>
 
           {/* Mobile Menu Toggle */}
           <button
-            className="lg:hidden p-2 rounded-xl text-foreground hover:bg-muted transition-colors"
+            className={cn(
+              "lg:hidden p-2 rounded-xl transition-colors",
+              isTransparent
+                ? "text-background hover:bg-background/10"
+                : "text-foreground hover:bg-muted"
+            )}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
