@@ -2,10 +2,8 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 export function VideoSection() {
   return (
-    <section className="relative py-20 md:py-28 lg:py-32 overflow-hidden">
-      <div className="absolute inset-0 gradient-mesh" />
-      
-      <div className="relative container-wide">
+    <section className="py-20 md:py-28 lg:py-32 bg-secondary/50">
+      <div className="container-wide">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <ScrollReveal>
@@ -21,7 +19,7 @@ export function VideoSection() {
           </div>
 
           <ScrollReveal delay={0.2}>
-            <div className="relative rounded-3xl overflow-hidden shadow-elevated border border-border">
+            <div className="relative rounded-3xl overflow-hidden border border-border">
               <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
                 <iframe
                   src="https://player.vimeo.com/video/1152290288?badge=0&autopause=0&player_id=0&app_id=58479"

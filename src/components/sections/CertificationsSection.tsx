@@ -13,7 +13,7 @@ const certifications = [
 
 export function CertificationsSection() {
   return (
-    <section className="relative py-20 md:py-24 bg-secondary/50 overflow-hidden">
+    <section className="py-20 md:py-24 bg-secondary/50">
       <div className="container-wide">
         <ScrollReveal>
           <div className="text-center mb-12">
@@ -27,7 +27,7 @@ export function CertificationsSection() {
         <div className="flex flex-wrap justify-center gap-4 lg:gap-6">
           {certifications.map((cert, index) => (
             <ScrollReveal key={cert.name} delay={index * 0.05}>
-              <div className="group flex items-center gap-4 px-6 py-4 rounded-2xl bg-card border border-border hover:border-primary/20 hover:shadow-medium transition-all duration-500">
+              <div className="group flex items-center gap-4 px-6 py-4 rounded-2xl bg-card border border-border hover:border-primary/20 transition-all duration-500">
                 <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                   <cert.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors" />
                 </div>
