@@ -12,35 +12,35 @@ import {
   Wine,
   Droplets,
   Candy,
-  Pill } from
-"lucide-react";
+  Pill,
+} from "lucide-react";
 
 const features = [
-"99%+ purity rating",
-"Superior emulsification properties",
-"Low viscosity for easy handling",
-"Excellent solubility",
-"Neutral taste and odor",
-"E414 compliant"];
-
+  "99%+ purity rating",
+  "Superior emulsification properties",
+  "Low viscosity for easy handling",
+  "Excellent solubility",
+  "Neutral taste and odor",
+  "E414 compliant",
+];
 
 const specifications = [
-{ label: "Origin", value: "Sudan (Acacia Senegal)" },
-{ label: "Processing", value: "Spray-dried" },
-{ label: "Purity", value: "≥99%" },
-{ label: "Moisture", value: "≤10%" },
-{ label: "Ash Content", value: "≤4%" },
-{ label: "Particle Size", value: "Fine powder (<250μm)" },
-{ label: "Solubility", value: "Completely soluble in water" },
-{ label: "pH (1% solution)", value: "4.0 - 5.0" }];
-
+  { label: "Origin", value: "Sudan (Acacia Senegal)" },
+  { label: "Processing", value: "Spray-dried" },
+  { label: "Purity", value: "≥99%" },
+  { label: "Moisture", value: "≤10%" },
+  { label: "Ash Content", value: "≤4%" },
+  { label: "Particle Size", value: "Fine powder (<250μm)" },
+  { label: "Solubility", value: "Completely soluble in water" },
+  { label: "pH (1% solution)", value: "4.0 - 5.0" },
+];
 
 const applications = [
-{ icon: Wine, name: "Beverages", desc: "Citrus emulsions, flavor oils, soft drinks" },
-{ icon: Droplets, name: "Emulsions", desc: "Oil-in-water stabilization" },
-{ icon: Candy, name: "Confectionery", desc: "Glazing, film forming" },
-{ icon: Pill, name: "Pharmaceuticals", desc: "Coatings, encapsulation" }];
-
+  { icon: Wine, name: "Beverages", desc: "Citrus emulsions, flavor oils, soft drinks" },
+  { icon: Droplets, name: "Emulsions", desc: "Oil-in-water stabilization" },
+  { icon: Candy, name: "Confectionery", desc: "Glazing, film forming" },
+  { icon: Pill, name: "Pharmaceuticals", desc: "Coatings, encapsulation" },
+];
 
 export default function ProductSenegal() {
   return (
@@ -49,15 +49,15 @@ export default function ProductSenegal() {
         <title>Acacia Senegal Spray-Dried Powder – 1 kg Sample | GumDirect</title>
         <meta
           name="description"
-          content="Premium spray-dried Acacia Senegal gum arabic. 1 kg sample for £34.99 with UK delivery included. 99%+ purity, food-grade." />
-
+          content="Premium spray-dried Acacia Senegal gum arabic. 1 kg sample for £34.99 with UK delivery included. 99%+ purity, food-grade."
+        />
       </Helmet>
 
       <Layout>
         {/* Hero */}
         <section className="relative pt-32 pb-20 lg:pb-32 overflow-hidden">
-          <div className="absolute inset-0 gradient-hero" />
-          <div className="absolute top-1/3 right-0 w-[600px] h-[600px] rounded-full bg-accent/15 blur-[120px]" />
+          
+          <div className="absolute top-1/3 right-0 w-[600px] h-[600px] rounded-full bg-accent/5 blur-[120px]" />
           
           <div className="relative container-wide">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -70,23 +70,23 @@ export default function ProductSenegal() {
                 </ScrollReveal>
                 
                 <ScrollReveal delay={0.1}>
-                  <h1 className="text-display-lg font-display font-bold text-primary-foreground mb-6">
+                  <h1 className="text-display-lg font-display font-bold text-primary mb-6">
                     Acacia Senegal Spray-Dried Powder
                   </h1>
                 </ScrollReveal>
                 
                 <ScrollReveal delay={0.15}>
-                  <p className="text-xl lg:text-2xl text-primary-foreground/70 mb-4 leading-relaxed">
+                  <p className="text-xl lg:text-2xl text-foreground/70 mb-4 leading-relaxed">
                     The gold standard in gum arabic. Superior emulsification properties,
                     exceptional purity, and consistent quality.
                   </p>
                 </ScrollReveal>
 
                 <ScrollReveal delay={0.2}>
-                  <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-primary-foreground/20 inline-block">
+                  <div className="bg-secondary rounded-2xl p-6 mb-8 border border-border inline-block">
                     <div className="flex items-baseline gap-3 mb-1">
-                      <span className="text-4xl font-display font-bold text-primary-foreground">£34.99</span>
-                      <span className="text-primary-foreground/60">/ 1 kg Sample</span>
+                      <span className="text-4xl font-display font-bold text-primary">£34.99</span>
+                      <span className="text-foreground/60">/ 1 kg Sample</span>
                     </div>
                     <p className="text-accent font-medium">Delivery Included (UK Only)</p>
                   </div>
@@ -112,17 +112,17 @@ export default function ProductSenegal() {
 
               <ScrollReveal direction="right" delay={0.2}>
                 <div className="relative">
-                  <div className="bg-primary-foreground/10 backdrop-blur-xl rounded-3xl p-8 lg:p-10 border border-primary-foreground/20 shadow-elevated">
-                    <h3 className="font-display font-bold text-xl text-primary-foreground mb-8">Key Features</h3>
+                  <div className="bg-secondary rounded-3xl p-8 lg:p-10 border border-border shadow-elevated">
+                    <h3 className="font-display font-bold text-xl text-primary mb-8">Key Features</h3>
                     <div className="space-y-5">
-                      {features.map((feature) =>
-                      <div key={feature} className="flex items-center gap-4">
+                      {features.map((feature) => (
+                        <div key={feature} className="flex items-center gap-4">
                           <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
                             <CheckCircle className="w-4 h-4 text-accent" />
                           </div>
-                          <span className="text-primary-dark font-semibold">{feature}</span>
+                          <span className="text-foreground/80">{feature}</span>
                         </div>
-                      )}
+                      ))}
                     </div>
                   </div>
                   <div className="absolute -bottom-6 -left-6 w-24 h-24 rounded-2xl bg-accent shadow-glow -z-10" />
@@ -133,8 +133,7 @@ export default function ProductSenegal() {
         </section>
 
         {/* Applications */}
-        <section className="relative py-24 md:py-32 overflow-hidden">
-          <div className="absolute inset-0 gradient-mesh" />
+        <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden bg-secondary">
           <div className="relative container-wide">
             <div className="max-w-2xl mb-16">
               <ScrollReveal>
@@ -143,15 +142,15 @@ export default function ProductSenegal() {
                 </span>
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
-                <h2 className="text-display-sm font-display font-bold text-foreground">
+                <h2 className="text-display-md font-display font-bold text-foreground">
                   Ideal for high-quality formulations
                 </h2>
               </ScrollReveal>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {applications.map((app, index) =>
-              <ScrollReveal key={app.name} delay={index * 0.1}>
+              {applications.map((app, index) => (
+                <ScrollReveal key={app.name} delay={index * 0.1}>
                   <div className="group h-full p-8 rounded-3xl bg-card border border-border hover:border-accent/30 hover:shadow-elevated transition-all duration-500 text-center">
                     <div className="w-16 h-16 mx-auto rounded-2xl gradient-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                       <app.icon className="w-8 h-8 text-primary-foreground" />
@@ -160,13 +159,13 @@ export default function ProductSenegal() {
                     <p className="text-muted-foreground">{app.desc}</p>
                   </div>
                 </ScrollReveal>
-              )}
+              ))}
             </div>
           </div>
         </section>
 
         {/* Specifications */}
-        <section className="py-24 md:py-32 bg-foreground">
+        <section className="py-16 md:py-20 lg:py-24 bg-foreground">
           <div className="container-wide">
             <div className="max-w-2xl mb-16">
               <ScrollReveal>
@@ -175,7 +174,7 @@ export default function ProductSenegal() {
                 </span>
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
-                <h2 className="text-display-sm font-display font-bold text-background">
+                <h2 className="text-display-md font-display font-bold text-background">
                   Product Specifications
                 </h2>
               </ScrollReveal>
@@ -186,12 +185,12 @@ export default function ProductSenegal() {
                 <div className="rounded-3xl overflow-hidden border border-background/10">
                   <table className="w-full">
                     <tbody>
-                      {specifications.map((spec, index) =>
-                      <tr key={spec.label} className={index % 2 === 0 ? "bg-background/5" : "bg-transparent"}>
+                      {specifications.map((spec, index) => (
+                        <tr key={spec.label} className={index % 2 === 0 ? "bg-background/5" : "bg-transparent"}>
                           <td className="px-6 py-5 font-medium text-background">{spec.label}</td>
                           <td className="px-6 py-5 text-background/60 text-right">{spec.value}</td>
                         </tr>
-                      )}
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -223,6 +222,6 @@ export default function ProductSenegal() {
           </div>
         </section>
       </Layout>
-    </>);
-
+    </>
+  );
 }
