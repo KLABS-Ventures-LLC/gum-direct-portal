@@ -115,7 +115,7 @@ export default function Quality() {
         </section>
 
         {/* Certifications */}
-        <section className="relative py-24 md:py-32 overflow-hidden">
+        <section className="relative py-24 md:py-32 overflow-hidden bg-secondary/50">
           <div className="absolute inset-0 gradient-mesh" />
           
           <div className="relative container-wide">
