@@ -10,8 +10,6 @@ const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
         const allowedKeys = ["Backspace", "Delete", "Tab", "Escape", "Enter", "ArrowLeft", "ArrowRight", "Home", "End"];
         const isAllowed =
           allowedKeys.includes(e.key) ||
-          e.key === "." ||
-          e.key === "-" ||
           (e.key >= "0" && e.key <= "9") ||
           e.ctrlKey || e.metaKey;
         if (!isAllowed) {
