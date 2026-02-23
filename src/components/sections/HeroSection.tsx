@@ -12,8 +12,8 @@ export function HeroSection() {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
+        className="absolute inset-0 w-full h-full object-cover">
+
         <source src="/videos/hero-bg.mp4" type="video/mp4" />
       </video>
 
@@ -29,7 +29,7 @@ export function HeroSection() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-background mb-6">
+            <h1 className="text-3xl md:text-4xl font-display font-bold text-background mb-6 lg:text-8xl">
               Premium{" "}
               <span className="text-accent">Acacia Gum</span>
               <br />
@@ -61,19 +61,19 @@ export function HeroSection() {
           <ScrollReveal delay={0.4}>
             <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-4 pt-8 border-t border-background/20">
               {[
-                { value: "99%+", label: "Purity" },
-                { value: "25+", label: "Countries" },
-                { value: "500t", label: "Annual Capacity" },
-              ].map((stat) => (
-                <div key={stat.label} className="text-center">
+              { value: "99%+", label: "Purity" },
+              { value: "25+", label: "Countries" },
+              { value: "500t", label: "Annual Capacity" }].
+              map((stat) =>
+              <div key={stat.label} className="text-center">
                   <div className="text-3xl font-display font-bold text-secondary">{stat.value}</div>
                   <div className="text-sm text-background/70 uppercase tracking-wider">{stat.label}</div>
                 </div>
-              ))}
+              )}
             </div>
           </ScrollReveal>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
