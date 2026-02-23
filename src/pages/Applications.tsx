@@ -96,7 +96,7 @@ export default function Applications() {
         {/* Hero */}
         <section className="relative pt-32 pb-20 overflow-hidden">
           
-          <div className="absolute bottom-0 right-0 w-[800px] h-[400px] rounded-full bg-accent/10 blur-[150px]" />
+          <div className="absolute bottom-0 right-0 w-[800px] h-[400px] rounded-full bg-accent/5 blur-[150px]" />
           
           <div className="relative container-wide">
             <div className="max-w-3xl">
@@ -121,8 +121,7 @@ export default function Applications() {
         </section>
 
         {/* Applications List */}
-        <section className="relative py-24 md:py-32 overflow-hidden bg-secondary/50">
-          <div className="absolute inset-0 gradient-mesh" />
+        <section className="relative py-24 md:py-32 overflow-hidden bg-secondary">
           
           <div className="relative container-wide">
             <div className="space-y-8">
@@ -152,7 +151,7 @@ export default function Applications() {
                           {app.uses.map((use) => (
                             <span
                               key={use}
-                              className="px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-sm"
+                              className="px-4 py-2 rounded-full bg-background text-foreground text-sm"
                             >
                               {use}
                             </span>

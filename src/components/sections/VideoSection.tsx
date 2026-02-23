@@ -2,7 +2,7 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 export function VideoSection() {
   return (
-    <section className="py-20 md:py-28 lg:py-32 bg-secondary/50">
+    <section className="py-20 md:py-28 lg:py-32 bg-secondary">
       <div className="container-wide">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">

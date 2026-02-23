@@ -171,7 +171,7 @@ export default function Contact() {
         {/* Hero */}
         <section className="relative pt-32 pb-20 overflow-hidden">
           
-          <div className="absolute bottom-0 left-1/4 w-[600px] h-[300px] rounded-full bg-accent/10 blur-[120px]" />
+          <div className="absolute bottom-0 left-1/4 w-[600px] h-[300px] rounded-full bg-accent/5 blur-[120px]" />
           
           <div className="relative container-wide">
             <div className="max-w-2xl">
@@ -195,8 +195,7 @@ export default function Contact() {
         </section>
 
         {/* Contact Form & Info */}
-        <section className="relative py-24 md:py-32 overflow-hidden bg-secondary/50">
-          <div className="absolute inset-0 gradient-mesh" />
+        <section className="relative py-24 md:py-32 overflow-hidden bg-secondary">
           
           <div className="relative container-wide">
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
