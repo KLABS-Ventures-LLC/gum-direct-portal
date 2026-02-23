@@ -26,7 +26,7 @@ const features = [
 
 export function WhatWeDoSection() {
   return (
-    <section className="py-24 md:py-32 lg:py-40 bg-background">
+    <section className="py-16 md:py-20 lg:py-24 bg-background">
       <div className="container-wide">
         {/* Header */}
         <div className="max-w-3xl mb-16 md:mb-24">

@@ -115,7 +115,7 @@ export default function Quality() {
         </section>
 
         {/* Certifications */}
-        <section className="relative py-24 md:py-32 overflow-hidden bg-secondary">
+        <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden bg-secondary">
           
           <div className="relative container-wide">
             <div className="max-w-2xl mb-16">
@@ -169,7 +169,7 @@ export default function Quality() {
         </section>
 
         {/* Quality Assurance */}
-        <section className="py-24 md:py-32 bg-foreground">
+        <section className="py-16 md:py-20 lg:py-24 bg-foreground">
           <div className="container-wide">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
