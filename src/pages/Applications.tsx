@@ -40,8 +40,8 @@ const applications = [
     description:
       "Essential ingredient for glazing, coating, and binding. Provides excellent film-forming properties and prevents sugar crystallization.",
     uses: ["Hard candy glazing", "Soft candy binding", "Chocolate panning", "Gummy texturing"],
-    recommended: "Acacia Seyal",
-    recommendedLink: "/products/acacia-seyal",
+    recommended: "Acacia Senegal",
+    recommendedLink: "/products/acacia-senegal",
   },
   {
     icon: Pill,
@@ -76,8 +76,8 @@ const applications = [
     description:
       "Versatile industrial applications including adhesives, lithography, textiles, and coatings.",
     uses: ["Lithographic printing", "Textile sizing", "Industrial adhesives", "Protective coatings"],
-    recommended: "Acacia Seyal",
-    recommendedLink: "/products/acacia-seyal",
+    recommended: "Acacia Senegal",
+    recommendedLink: "/products/acacia-senegal",
   },
 ];
 
