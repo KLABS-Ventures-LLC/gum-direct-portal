@@ -106,12 +106,12 @@ export default function Applications() {
                 </span>
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
-                <h1 className="text-display-lg font-display font-bold text-primary-foreground mb-6">
+                <h1 className="text-display-lg font-display font-bold text-primary mb-6">
                   Versatile solutions across industries
                 </h1>
               </ScrollReveal>
               <ScrollReveal delay={0.2}>
-                <p className="text-xl text-primary-foreground/70 leading-relaxed">
+                <p className="text-xl text-foreground/70 leading-relaxed">
                   Discover how our premium acacia gum can enhance your products across 
                   beverages, confectionery, pharmaceuticals, and more.
                 </p>
