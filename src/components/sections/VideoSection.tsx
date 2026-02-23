@@ -21,18 +21,11 @@ export function VideoSection() {
           <ScrollReveal delay={0.2}>
             <div className="relative rounded-3xl overflow-hidden border border-border">
               <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
-                <iframe
-                  src="https://player.vimeo.com/video/1152290288?badge=0&autopause=0&player_id=0&app_id=58479"
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                  }}
+                <video
+                  src="https://assets.cdn.filesafe.space/SkSvke1CC1EmduOo6QFL/media/699c72fb34011858238d798e.mp4"
+                  controls
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover"
                   title="GumDirect Explainer Video"
                 />
               </div>
