@@ -54,8 +54,6 @@ const inquiryTypes = [
 
 const products = [
 { value: "senegal", label: "Acacia Senegal (Premium)" },
-{ value: "seyal", label: "Acacia Seyal (Industrial)" },
-{ value: "both", label: "Both Products" },
 { value: "unsure", label: "Not Sure Yet" }];
 
 

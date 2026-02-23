@@ -4,7 +4,6 @@ import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 const footerLinks = {
   products: [
     { name: "Acacia Senegal", href: "/products/acacia-senegal" },
-    { name: "Acacia Seyal", href: "/products/acacia-seyal" },
   ],
   company: [
     { name: "About Us", href: "/about" },
