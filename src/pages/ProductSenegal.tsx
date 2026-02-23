@@ -57,7 +57,7 @@ export default function ProductSenegal() {
         {/* Hero */}
         <section className="relative pt-32 pb-20 lg:pb-32 overflow-hidden">
           
-          <div className="absolute top-1/3 right-0 w-[600px] h-[600px] rounded-full bg-accent/15 blur-[120px]" />
+          <div className="absolute top-1/3 right-0 w-[600px] h-[600px] rounded-full bg-accent/5 blur-[120px]" />
           
           <div className="relative container-wide">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -83,7 +83,7 @@ export default function ProductSenegal() {
                 </ScrollReveal>
 
                 <ScrollReveal delay={0.2}>
-                  <div className="bg-primary/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-primary/20 inline-block">
+                  <div className="bg-secondary rounded-2xl p-6 mb-8 border border-border inline-block">
                     <div className="flex items-baseline gap-3 mb-1">
                       <span className="text-4xl font-display font-bold text-primary">£34.99</span>
                       <span className="text-foreground/60">/ 1 kg Sample</span>
@@ -112,7 +112,7 @@ export default function ProductSenegal() {
 
               <ScrollReveal direction="right" delay={0.2}>
                 <div className="relative">
-                  <div className="bg-primary/10 backdrop-blur-xl rounded-3xl p-8 lg:p-10 border border-primary/20 shadow-elevated">
+                  <div className="bg-secondary rounded-3xl p-8 lg:p-10 border border-border shadow-elevated">
                     <h3 className="font-display font-bold text-xl text-primary mb-8">Key Features</h3>
                     <div className="space-y-5">
                       {features.map((feature) => (
@@ -133,8 +133,7 @@ export default function ProductSenegal() {
         </section>
 
         {/* Applications */}
-        <section className="relative py-24 md:py-32 overflow-hidden bg-secondary/50">
-          <div className="absolute inset-0 gradient-mesh" />
+        <section className="relative py-24 md:py-32 overflow-hidden bg-secondary">
           <div className="relative container-wide">
             <div className="max-w-2xl mb-16">
               <ScrollReveal>

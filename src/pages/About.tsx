@@ -68,7 +68,7 @@ export default function About() {
         {/* Hero */}
         <section className="relative pt-32 pb-20 lg:pb-32 overflow-hidden">
           
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-accent/15 blur-[150px]" />
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-accent/5 blur-[150px]" />
           
           <div className="relative container-wide">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -96,7 +96,7 @@ export default function About() {
                   {stats.map((stat, index) => (
                     <div
                       key={stat.label}
-                      className="bg-primary/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 text-center"
+                      className="bg-secondary rounded-2xl p-6 border border-border text-center"
                     >
                       <span className="block text-4xl lg:text-5xl font-display font-bold text-accent mb-2">
                         {stat.value}
@@ -113,8 +113,7 @@ export default function About() {
         </section>
 
         {/* Story */}
-        <section className="relative py-24 md:py-32 overflow-hidden bg-secondary/50">
-          <div className="absolute inset-0 gradient-mesh" />
+        <section className="relative py-24 md:py-32 overflow-hidden bg-secondary">
           
           <div className="relative container-wide">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -221,8 +220,7 @@ export default function About() {
         </section>
 
         {/* CTA */}
-        <section className="relative py-24 md:py-32 overflow-hidden bg-secondary/50">
-          <div className="absolute inset-0 gradient-mesh" />
+        <section className="relative py-24 md:py-32 overflow-hidden bg-secondary">
           <div className="relative container-wide text-center">
             <ScrollReveal>
               <h2 className="text-display-sm font-display font-bold text-foreground mb-6">

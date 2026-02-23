@@ -90,7 +90,7 @@ export default function Quality() {
         {/* Hero */}
         <section className="relative pt-32 pb-20 overflow-hidden">
           
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-accent/10 blur-[180px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-accent/5 blur-[180px]" />
           
           <div className="relative container-wide">
             <div className="max-w-3xl">
@@ -115,8 +115,7 @@ export default function Quality() {
         </section>
 
         {/* Certifications */}
-        <section className="relative py-24 md:py-32 overflow-hidden bg-secondary/50">
-          <div className="absolute inset-0 gradient-mesh" />
+        <section className="relative py-24 md:py-32 overflow-hidden bg-secondary">
           
           <div className="relative container-wide">
             <div className="max-w-2xl mb-16">
