@@ -105,7 +105,7 @@ export default function Quality() {
                 </h1>
               </ScrollReveal>
               <ScrollReveal delay={0.2}>
-                <p className="text-xl text-foreground/70 leading-relaxed">
+                <p className="text-xl lg:text-2xl text-foreground/70 leading-relaxed">
                   The highest standards of quality, safety, and compliance throughout 
                   our entire supply chain.
                 </p>

@@ -37,16 +37,16 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         isScrolled
-          ? "bg-background/95 backdrop-blur-sm shadow-soft py-3"
-          : "bg-transparent py-5"
+          ? "bg-background/95 backdrop-blur-sm shadow-soft py-4"
+          : "bg-transparent py-6"
       )}
     >
       <nav className="container-wide">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
-            <span className="font-display font-bold text-2xl leading-none tracking-tight">
-              <span className="text-primary">Gum</span>
+            <span className="font-display font-bold text-3xl leading-none tracking-tight">
+              <span className={isTransparent ? "text-background" : "text-primary"}>Gum</span>
               <span className="text-accent">Direct</span>
             </span>
           </Link>
@@ -58,7 +58,7 @@ export function Header() {
                 key={item.name}
                 to={item.href}
                 className={cn(
-                  "px-5 py-2.5 text-base font-medium transition-all duration-300 rounded-full",
+                  "px-6 py-3 text-lg font-medium transition-all duration-300 rounded-full",
                   isTransparent
                     ? location.pathname === item.href
                       ? "text-background bg-background/20"
@@ -77,14 +77,14 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-3">
             <Button
               variant={isTransparent ? "hero-outline" : "outline"}
-              size="default"
+              size="lg"
               asChild
             >
               <Link to="/contact?type=sample">Get Sample</Link>
             </Button>
             <Button
               variant={isTransparent ? "hero" : "accent"}
-              size="default"
+              size="lg"
               asChild
             >
               <Link to="/contact?type=quote">Request Quote</Link>
@@ -101,7 +101,7 @@ export function Header() {
             )}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
         </div>
 

@@ -186,7 +186,7 @@ export default function Contact() {
                 </h1>
               </ScrollReveal>
               <ScrollReveal delay={0.2}>
-                <p className="text-xl leading-relaxed text-gray-950">
+                <p className="text-xl lg:text-2xl leading-relaxed text-gray-950">
                   Ready to get started? Send us a message and we'll respond within 24 hours.
                 </p>
               </ScrollReveal>
