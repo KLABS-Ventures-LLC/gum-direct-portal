@@ -67,7 +67,7 @@ export default function About() {
       <Layout>
         {/* Hero */}
         <section className="relative pt-32 pb-20 lg:pb-32 overflow-hidden">
-          <div className="absolute inset-0 gradient-hero" />
+          
           <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-accent/15 blur-[150px]" />
           
           <div className="relative container-wide">
@@ -79,12 +79,12 @@ export default function About() {
                   </span>
                 </ScrollReveal>
                 <ScrollReveal delay={0.1}>
-                  <h1 className="text-display-lg font-display font-bold text-primary-foreground mb-6">
+                  <h1 className="text-display-lg font-display font-bold text-primary mb-6">
                     Your trusted partner for premium gum arabic
                   </h1>
                 </ScrollReveal>
                 <ScrollReveal delay={0.2}>
-                  <p className="text-xl text-primary-foreground/70 leading-relaxed">
+                  <p className="text-xl text-foreground/70 leading-relaxed">
                     We connect Sudan's finest acacia gum with manufacturers worldwide, 
                     delivering quality, reliability, and expertise.
                   </p>
@@ -96,12 +96,12 @@ export default function About() {
                   {stats.map((stat, index) => (
                     <div
                       key={stat.label}
-                      className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/20 text-center"
+                      className="bg-primary/10 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 text-center"
                     >
                       <span className="block text-4xl lg:text-5xl font-display font-bold text-accent mb-2">
                         {stat.value}
                       </span>
-                      <span className="text-primary-foreground/60 text-sm uppercase tracking-wider">
+                      <span className="text-foreground/60 text-sm uppercase tracking-wider">
                         {stat.label}
                       </span>
                     </div>

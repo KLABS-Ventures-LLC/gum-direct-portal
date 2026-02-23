@@ -56,7 +56,7 @@ export default function ProductSenegal() {
       <Layout>
         {/* Hero */}
         <section className="relative pt-32 pb-20 lg:pb-32 overflow-hidden">
-          <div className="absolute inset-0 gradient-hero" />
+          
           <div className="absolute top-1/3 right-0 w-[600px] h-[600px] rounded-full bg-accent/15 blur-[120px]" />
           
           <div className="relative container-wide">
@@ -70,23 +70,23 @@ export default function ProductSenegal() {
                 </ScrollReveal>
                 
                 <ScrollReveal delay={0.1}>
-                  <h1 className="text-display-lg font-display font-bold text-primary-foreground mb-6">
+                  <h1 className="text-display-lg font-display font-bold text-primary mb-6">
                     Acacia Senegal Spray-Dried Powder
                   </h1>
                 </ScrollReveal>
                 
                 <ScrollReveal delay={0.15}>
-                  <p className="text-xl lg:text-2xl text-primary-foreground/70 mb-4 leading-relaxed">
+                  <p className="text-xl lg:text-2xl text-foreground/70 mb-4 leading-relaxed">
                     The gold standard in gum arabic. Superior emulsification properties,
                     exceptional purity, and consistent quality.
                   </p>
                 </ScrollReveal>
 
                 <ScrollReveal delay={0.2}>
-                  <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-primary-foreground/20 inline-block">
+                  <div className="bg-primary/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-primary/20 inline-block">
                     <div className="flex items-baseline gap-3 mb-1">
-                      <span className="text-4xl font-display font-bold text-primary-foreground">£34.99</span>
-                      <span className="text-primary-foreground/60">/ 1 kg Sample</span>
+                      <span className="text-4xl font-display font-bold text-primary">£34.99</span>
+                      <span className="text-foreground/60">/ 1 kg Sample</span>
                     </div>
                     <p className="text-accent font-medium">Delivery Included (UK Only)</p>
                   </div>
@@ -112,15 +112,15 @@ export default function ProductSenegal() {
 
               <ScrollReveal direction="right" delay={0.2}>
                 <div className="relative">
-                  <div className="bg-primary-foreground/10 backdrop-blur-xl rounded-3xl p-8 lg:p-10 border border-primary-foreground/20 shadow-elevated">
-                    <h3 className="font-display font-bold text-xl text-primary-foreground mb-8">Key Features</h3>
+                  <div className="bg-primary/10 backdrop-blur-xl rounded-3xl p-8 lg:p-10 border border-primary/20 shadow-elevated">
+                    <h3 className="font-display font-bold text-xl text-primary mb-8">Key Features</h3>
                     <div className="space-y-5">
                       {features.map((feature) => (
                         <div key={feature} className="flex items-center gap-4">
                           <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
                             <CheckCircle className="w-4 h-4 text-accent" />
                           </div>
-                          <span className="text-primary-foreground/90">{feature}</span>
+                          <span className="text-foreground/80">{feature}</span>
                         </div>
                       ))}
                     </div>

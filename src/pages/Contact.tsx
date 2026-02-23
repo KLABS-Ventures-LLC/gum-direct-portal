@@ -172,7 +172,7 @@ export default function Contact() {
       <Layout>
         {/* Hero */}
         <section className="relative pt-32 pb-20 overflow-hidden">
-          <div className="absolute inset-0 gradient-hero" />
+          
           <div className="absolute bottom-0 left-1/4 w-[600px] h-[300px] rounded-full bg-accent/10 blur-[120px]" />
           
           <div className="relative container-wide">

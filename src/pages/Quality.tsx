@@ -89,7 +89,7 @@ export default function Quality() {
       <Layout>
         {/* Hero */}
         <section className="relative pt-32 pb-20 overflow-hidden">
-          <div className="absolute inset-0 gradient-hero" />
+          
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-accent/10 blur-[180px]" />
           
           <div className="relative container-wide">
@@ -100,12 +100,12 @@ export default function Quality() {
                 </span>
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
-                <h1 className="text-display-lg font-display font-bold text-primary-foreground mb-6">
+                <h1 className="text-display-lg font-display font-bold text-primary mb-6">
                   Committed to excellence
                 </h1>
               </ScrollReveal>
               <ScrollReveal delay={0.2}>
-                <p className="text-xl text-primary-foreground/70 leading-relaxed">
+                <p className="text-xl text-foreground/70 leading-relaxed">
                   The highest standards of quality, safety, and compliance throughout 
                   our entire supply chain.
                 </p>
