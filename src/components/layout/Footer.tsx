@@ -53,16 +53,14 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
             {/* Brand Column */}
             <div className="lg:col-span-5">
-              <Link to="/" className="inline-flex items-center gap-3 mb-6">
-                <div className="w-11 h-11 rounded-2xl bg-primary flex items-center justify-center">
-                  <span className="text-primary-foreground font-display font-bold text-xl">G</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-display font-bold text-xl leading-none">GumDirect</span>
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-background/50">
-                    Premium Acacia Gum
-                  </span>
-                </div>
+              <Link to="/" className="inline-block mb-6">
+                <span className="font-display font-bold text-3xl leading-none tracking-tight">
+                  <span className="text-background">Gum</span>
+                  <span className="text-accent">Direct</span>
+                </span>
+                <span className="block text-[10px] uppercase tracking-[0.2em] text-background/50 mt-1">
+                  Premium Acacia Gum
+                </span>
               </Link>
               <p className="text-background/60 mb-8 max-w-sm text-sm leading-relaxed">
                 Premium spray-dried acacia gum sourced directly from Sudan. 

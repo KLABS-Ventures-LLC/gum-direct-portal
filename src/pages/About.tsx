@@ -84,7 +84,7 @@ export default function About() {
                   </h1>
                 </ScrollReveal>
                 <ScrollReveal delay={0.2}>
-                  <p className="text-xl text-foreground/70 leading-relaxed">
+                  <p className="text-xl lg:text-2xl text-foreground/70 leading-relaxed">
                     We connect Sudan's finest acacia gum with manufacturers worldwide, 
                     delivering quality, reliability, and expertise.
                   </p>
