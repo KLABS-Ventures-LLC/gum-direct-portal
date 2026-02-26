@@ -46,7 +46,7 @@ export function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center group">
             <span className="font-display font-bold text-3xl leading-none tracking-tight">
-              <span className={isTransparent ? "text-background" : "text-primary"}>Gum</span>
+              <span className="text-primary">Gum</span>
               <span className="text-accent">Direct</span>
             </span>
           </Link>
@@ -59,13 +59,9 @@ export function Header() {
                 to={item.href}
                 className={cn(
                   "px-6 py-3 text-lg font-medium transition-all duration-300 rounded-full",
-                  isTransparent
-                    ? location.pathname === item.href
-                      ? "text-background bg-background/20"
-                      : "text-background/80 hover:text-background hover:bg-background/10"
-                    : location.pathname === item.href
-                      ? "text-accent bg-accent/10"
-                      : "text-foreground/70 hover:text-foreground hover:bg-muted"
+                  location.pathname === item.href
+                    ? "text-accent bg-accent/10"
+                    : "text-primary/80 hover:text-primary hover:bg-primary/5"
                 )}
               >
                 {item.name}
@@ -76,14 +72,14 @@ export function Header() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <Button
-              variant={isTransparent ? "hero-outline" : "outline"}
+              variant="outline"
               size="lg"
               asChild
             >
               <Link to="/contact?type=sample">Get Sample</Link>
             </Button>
             <Button
-              variant={isTransparent ? "hero" : "accent"}
+              variant="accent"
               size="lg"
               asChild
             >
@@ -95,9 +91,7 @@ export function Header() {
           <button
             className={cn(
               "lg:hidden p-2 rounded-xl transition-colors",
-              isTransparent
-                ? "text-background hover:bg-background/10"
-                : "text-foreground hover:bg-muted"
+              "text-primary hover:bg-primary/5"
             )}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
