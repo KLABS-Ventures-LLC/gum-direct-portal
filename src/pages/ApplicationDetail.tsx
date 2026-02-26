@@ -104,7 +104,7 @@ export default function ApplicationDetail() {
           <div className="container-wide">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
               <ScrollReveal direction="left">
-                <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-start gap-3 mb-4">
                   <FlaskConical className="w-6 h-6 text-primary" />
                   <h2 className="text-display-sm font-display font-bold text-primary">
                     {data.solution.heading}
