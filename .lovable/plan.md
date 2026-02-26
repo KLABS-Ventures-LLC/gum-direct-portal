@@ -1,30 +1,54 @@
 
 
-# Fix Inconsistent Section Heading Sizes
+## Plan: Create Beverages Application Page with Dynamic Routing Template
 
-## The Problem
+### Overview
+Create a dedicated `/applications/beverages` page and set up a dynamic route template (`/applications/:id`) so future application pages can reuse the same layout.
 
-Section headings across the site use two different size classes inconsistently:
+### Changes
 
-- **Homepage sections** (WhatWeDo, Products, Applications, WhyGumDirect) use `text-display-md` -- the correct, larger size (clamp 2rem to 3.5rem)
-- **VideoSection + all subpage sections** use `text-display-sm` -- noticeably smaller (clamp 1.5rem to 2.25rem)
+#### 1. Create `src/pages/ApplicationDetail.tsx` (new file)
+A dynamic page component that receives application data based on the URL param `:id`. It will:
+- Look up application data from a shared data map (keyed by slug like `"beverages"`)
+- Render 6 sections matching the provided content structure:
+  1. **Hero** — Title, subtitle, description paragraph, "Request Quote" CTA
+  2. **Industry Challenges** — Heading, intro text, bullet list, closing statement
+  3. **Technical Solution** — Heading, intro text, bullet list, closing statement
+  4. **Technical Suitability** — "Why Spray-Dried Acacia Senegal?" with specs list + "Suitable for" tags
+  5. **Compliance & Documentation** — Bullet list of available docs + traceability note
+  6. **Final CTA** — Heading, subtext, "Request Quote" button
+- If the slug doesn't match any data, redirect to `/applications` or show 404
+- Uses the existing `Layout`, `ScrollReveal`, and `Button` components
+- Alternating section backgrounds (`#FFFDF8` and white) for visual rhythm
 
-This makes the VideoSection heading ("See How It Works") look tiny compared to adjacent sections, and makes all subpage content feel undersized compared to the homepage.
+#### 2. Create `src/data/applicationDetails.ts` (new file)
+A data file containing a Record/map of application detail objects keyed by slug. For now, only `"beverages"` will be populated with:
+- Hero text, challenges list, solution points, technical specs, compliance docs — all exactly as specified in the user's content
+- This structure makes it trivial to add more applications later (emulsions, confectionery, etc.) by adding entries
 
-## The Fix
+#### 3. Update `src/App.tsx`
+Add a new route:
+```
+<Route path="/applications/:id" element={<ApplicationDetail />} />
+```
+Place it before the catch-all `*` route.
 
-Upgrade all `text-display-sm` section headings to `text-display-md` for consistency. The only exception is the Footer CTA heading, which should stay smaller since it's a minor call-to-action, not a full section title.
+#### 4. Update links in `src/pages/Applications.tsx`
+Update the application card titles/names to link to `/applications/beverages` (and eventually other slugs) instead of just anchoring to `#beverages`. Only beverages will have an active link for now; others will keep existing behavior.
 
-### Files to update
+### Section Layout Details
 
-| File | Line(s) | Current | Change to |
-|------|---------|---------|-----------|
-| `src/components/sections/VideoSection.tsx` | 15 | `text-display-sm` | `text-display-md` |
-| `src/pages/About.tsx` | 127, 196, 226 | `text-display-sm` | `text-display-md` |
-| `src/pages/Quality.tsx` | 128, 182 | `text-display-sm` | `text-display-md` |
-| `src/pages/Applications.tsx` | 193 | `text-display-sm` | `text-display-md` |
-| `src/pages/ProductSenegal.tsx` | 145, 177 | `text-display-sm` | `text-display-md` |
+Each section uses `container-wide` for consistent width and `ScrollReveal` for entrance animations. The structure per section:
 
-**Not changing:** `src/components/layout/Footer.tsx` (line 24) -- this is a smaller CTA block in the footer, not a main section heading.
+- **Hero**: Full-width, `pt-32 pb-20`, decorative gradient blur blob, accent label + h1 + paragraph + CTA button
+- **Challenges**: `#FFFDF8` bg, two-column on desktop (text left, bullet list right)
+- **Solution**: White bg, similar two-column layout
+- **Technical Suitability**: `#FFFDF8` bg, specs as a compact grid/list + "Suitable for" pill tags
+- **Compliance**: White bg, icon-accompanied bullet list
+- **CTA**: Centered text + single "Request Quote" button
 
-This is a straightforward find-and-replace of the class name in 5 files, no layout or structural changes needed.
+### Technical Notes
+- The data structure in `applicationDetails.ts` will be typed with a TypeScript interface for consistency
+- The dynamic component will use `useParams()` from react-router-dom to get the slug
+- Beverage-specific icon: `Wine` from lucide-react
+
