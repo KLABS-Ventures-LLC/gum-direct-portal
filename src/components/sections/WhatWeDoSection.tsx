@@ -37,8 +37,8 @@ export function WhatWeDoSection() {
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <h2 className="text-display-md font-display font-bold text-foreground mb-6">
-              Premium gum arabic,{" "}
-              <span className="text-accent">sourced responsibly</span>
+              UK-Processed Acacia Senegal for{" "}
+              <span className="text-accent">Industrial Applications</span>
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
