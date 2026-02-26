@@ -14,7 +14,7 @@ export function VideoSection() {
   };
 
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-secondary">
+    <section className="py-16 md:py-20 lg:py-24" style={{ backgroundColor: '#FFFDF8' }}>
       <div className="container-wide">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
