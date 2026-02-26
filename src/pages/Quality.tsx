@@ -18,61 +18,79 @@ const certifications = [
   {
     icon: ShieldCheck,
     name: "HACCP Certified",
-    description: "Systematic preventive approach to food safety from biological, chemical, and physical hazards.",
+    description: "Hazard Analysis and Critical Control Points system implemented across sourcing, processing and distribution to control biological, chemical and physical risks.",
     status: "Certified",
     highlight: true,
   },
   {
     icon: Award,
     name: "ISO 22000",
-    description: "International standard for food safety management systems.",
+    description: "Certified food safety management system covering processing, quality control and supply chain traceability.",
     status: "Certified",
     highlight: true,
   },
   {
     icon: FileCheck,
     name: "Halal Certification",
-    description: "Product certification available upon request for Muslim consumers.",
+    description: "Product certification available upon request to meet Halal compliance requirements in applicable markets.",
     status: "Available",
     highlight: false,
   },
   {
     icon: FileCheck,
     name: "Kosher Certification",
-    description: "Products meet Kosher dietary requirements.",
+    description: "Certified to meet Kosher dietary standards for relevant food applications.",
     status: "Available",
     highlight: false,
   },
   {
     icon: Leaf,
     name: "Non-GMO Verified",
-    description: "100% natural, harvested from wild acacia trees with no genetic modification.",
+    description: "Naturally harvested acacia gum with no genetic modification. Documentation available upon request.",
     status: "Verified",
     highlight: false,
   },
   {
     icon: FileText,
-    name: "COA/SDS Documentation",
-    description: "Certificate of Analysis and Safety Data Sheets for every batch.",
+    name: "COA / SDS Documentation",
+    description: "Certificate of Analysis and Safety Data Sheets provided for every batch supplied.",
     status: "On Request",
     highlight: false,
   },
   {
     icon: MapPin,
     name: "Full Traceability",
-    description: "Complete traceability from source in Sudan to delivery.",
+    description: "Batch-level traceability from origin in Sudan through spray-drying and UK distribution.",
     status: "Standard",
     highlight: false,
   },
 ];
 
 const qualityPoints = [
-  "Rigorous incoming material inspection",
-  "In-process quality monitoring",
-  "Finished product testing",
-  "Third-party laboratory verification",
-  "Continuous improvement programs",
-  "Staff training and certification",
+  {
+    title: "Incoming Raw Material Inspection",
+    description: "Verification of origin, visual grading, moisture testing and impurity screening before processing.",
+  },
+  {
+    title: "In-Process Quality Monitoring",
+    description: "Controlled spray-drying parameters, particle size monitoring and moisture consistency checks.",
+  },
+  {
+    title: "Finished Product Testing",
+    description: "Batch-level testing for purity, moisture, ash content, pH and microbiological parameters.",
+  },
+  {
+    title: "Third-Party Laboratory Verification",
+    description: "Independent laboratory testing available upon request for additional compliance assurance.",
+  },
+  {
+    title: "Continuous Improvement Programs",
+    description: "Ongoing quality audits, process optimisation and supplier performance evaluation.",
+  },
+  {
+    title: "Staff Training & Certification",
+    description: "Regular training programs aligned with HACCP and ISO 22000 standards.",
+  },
 ];
 
 export default function Quality() {
@@ -101,13 +119,12 @@ export default function Quality() {
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
                 <h1 className="text-display-lg font-display font-bold text-primary mb-6">
-                  Committed to excellence
+                  Quality & Compliance Framework
                 </h1>
               </ScrollReveal>
               <ScrollReveal delay={0.2}>
                 <p className="text-xl lg:text-2xl text-foreground/70 leading-relaxed">
-                  The highest standards of quality, safety, and compliance throughout 
-                  our entire supply chain.
+                  Integrated quality control from sourcing in Sudan to spray-drying and UK distribution, ensuring batch-level traceability, regulatory compliance, and consistent performance.
                 </p>
               </ScrollReveal>
             </div>
@@ -115,7 +132,7 @@ export default function Quality() {
         </section>
 
         {/* Certifications */}
-        <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden bg-secondary">
+        <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden" style={{ backgroundColor: '#FFFDF8' }}>
           
           <div className="relative container-wide">
             <div className="max-w-2xl mb-16">
@@ -137,7 +154,7 @@ export default function Quality() {
                   <div className={`group h-full rounded-3xl p-8 transition-all duration-500 ${
                     cert.highlight 
                       ? "bg-gradient-to-br from-accent/10 via-accent/5 to-transparent border-2 border-accent/30 hover:border-accent/50" 
-                      : "bg-card border border-border hover:border-accent/20"
+                      : "bg-white border border-border hover:border-accent/20"
                   } hover:shadow-elevated`}>
                     <div className="flex items-start gap-4 mb-4">
                       <div className={`w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500 ${
@@ -152,7 +169,7 @@ export default function Quality() {
                         <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mt-2 ${
                           cert.highlight 
                             ? "bg-accent/20 text-accent" 
-                            : "bg-secondary text-secondary-foreground"
+                            : "bg-secondary/30 text-secondary-foreground"
                         }`}>
                           {cert.status}
                         </span>
@@ -171,7 +188,7 @@ export default function Quality() {
         {/* Quality Assurance */}
         <section className="py-16 md:py-20 lg:py-24 bg-foreground">
           <div className="container-wide">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div>
                 <ScrollReveal>
                   <span className="text-accent font-semibold text-sm uppercase tracking-widest mb-4 block">
@@ -180,18 +197,21 @@ export default function Quality() {
                 </ScrollReveal>
                 <ScrollReveal delay={0.1}>
                   <h2 className="text-display-md font-display font-bold text-background mb-8">
-                    Comprehensive quality management
+                    Quality Control & Assurance Process
                   </h2>
                 </ScrollReveal>
                 
-                <div className="space-y-5">
+                <div className="space-y-6">
                   {qualityPoints.map((point, index) => (
-                    <ScrollReveal key={point} delay={index * 0.08}>
-                      <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                    <ScrollReveal key={point.title} delay={index * 0.08}>
+                      <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                           <CheckCircle className="w-5 h-5 text-accent" />
                         </div>
-                        <span className="text-background/80 text-lg">{point}</span>
+                        <div>
+                          <h4 className="text-background font-display font-semibold text-lg mb-1">{point.title}</h4>
+                          <p className="text-background/60 text-sm leading-relaxed">{point.description}</p>
+                        </div>
                       </div>
                     </ScrollReveal>
                   ))}
@@ -204,12 +224,11 @@ export default function Quality() {
                     Request Documentation
                   </h3>
                   <p className="text-background/60 mb-8 leading-relaxed">
-                    Need COA, SDS, or certification documents? Contact us with your 
-                    specific requirements and we'll provide the necessary documentation.
+                    Batch-specific COA, SDS, certification copies and compliance documents are available upon request.
                   </p>
                   <Button variant="hero" size="lg" asChild>
                     <Link to="/contact?type=coa">
-                      Request COA/SDS
+                      Request Batch Documentation
                       <ArrowRight className="w-5 h-5" />
                     </Link>
                   </Button>
