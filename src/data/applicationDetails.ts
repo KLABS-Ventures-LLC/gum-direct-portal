@@ -233,4 +233,71 @@ export const applicationDetails: Record<string, ApplicationDetail> = {
       description: "Our team can support formulation discussions, documentation needs, and commercial supply requirements.",
     },
   },
+  supplements: {
+    slug: "supplements",
+    hero: {
+      label: "Dietary Supplements",
+      title: "Acacia Gum for Dietary Supplement Applications",
+      subtitle: "Functional binding, encapsulation, and stabilization for nutraceutical and supplement formulations.",
+      description: "GumDirect's spray-dried Acacia Senegal supports consistent performance in powders, capsules, tablets, and liquid supplement systems.",
+    },
+    challenges: {
+      heading: "Common Supplement Formulation Challenges",
+      intro: "Nutraceutical manufacturers often encounter:",
+      items: [
+        "Poor binding in tablet compression",
+        "Capsule flowability inconsistencies",
+        "Ingredient segregation in powder blends",
+        "Stability issues in liquid supplements",
+        "Regulatory documentation requirements",
+      ],
+      closing: "Precision and consistency are essential in supplement manufacturing environments.",
+    },
+    solution: {
+      heading: "Functional Performance in Supplement Systems",
+      intro: "Our spray-dried Acacia Senegal provides:",
+      items: [
+        "Reliable binding properties for tablet systems",
+        "Improved powder flow characteristics",
+        "Stabilization in liquid supplement matrices",
+        "Controlled viscosity in suspension systems",
+        "Neutral sensory profile",
+      ],
+      closing: "Fine particle size ensures predictable dispersion and uniform blending during manufacturing.",
+    },
+    technical: {
+      heading: "Why Acacia Senegal Is Used in Supplements",
+      intro: "Acacia Senegal (E414) is valued for its:",
+      specs: [
+        "Natural origin",
+        "High purity (≥99%)",
+        "Low viscosity at functional dosage",
+        "Neutral taste and odor",
+        "Compatibility with active ingredients",
+      ],
+      suitableFor: [
+        "Tablet binding",
+        "Capsule formulations",
+        "Powder blends",
+        "Liquid supplements",
+        "Fiber-based nutraceutical products",
+      ],
+    },
+    compliance: {
+      heading: "Regulatory & Quality Support",
+      intro: "To support supplement manufacturers, we provide:",
+      items: [
+        "Certificate of Analysis (COA) per batch",
+        "Safety Data Sheets (SDS)",
+        "Technical specification sheets",
+        "HACCP & ISO-aligned documentation",
+        "Halal and Kosher certification (where required)",
+      ],
+      closing: "All material is supplied with full batch traceability.",
+    },
+    cta: {
+      heading: "Discuss Your Supplement Formulation",
+      description: "Our team can support your technical documentation needs and commercial supply requirements.",
+    },
+  },
 };
