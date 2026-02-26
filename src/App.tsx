@@ -12,6 +12,7 @@ import Quality from "./pages/Quality";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import ApplicationDetail from "./pages/ApplicationDetail";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/products" element={<ProductSenegal />} />
             <Route path="/products/acacia-senegal" element={<ProductSenegal />} />
             <Route path="/applications" element={<Applications />} />
+            <Route path="/applications/:id" element={<ApplicationDetail />} />
             <Route path="/quality" element={<Quality />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
