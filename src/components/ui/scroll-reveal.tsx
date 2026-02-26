@@ -16,7 +16,7 @@ export function ScrollReveal({
   delay = 0,
   direction = "up",
   duration = 0.6,
-  once = true,
+  once = false,
 }: ScrollRevealProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once, margin: "-50px" });
@@ -45,8 +45,10 @@ export function ScrollReveal({
   useEffect(() => {
     if (isInView) {
       controls.start("visible");
+    } else if (!once) {
+      controls.start("hidden");
     }
-  }, [isInView, controls]);
+  }, [isInView, controls, once]);
 
   return (
     <motion.div
