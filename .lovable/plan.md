@@ -1,54 +1,25 @@
 
 
-## Plan: Create Beverages Application Page with Dynamic Routing Template
+## Fix: Align Section Heading Icons with First Line of Text
 
-### Overview
-Create a dedicated `/applications/beverages` page and set up a dynamic route template (`/applications/:id`) so future application pages can reuse the same layout.
+### Problem
+When section titles wrap to 2 lines, icons using `items-center` get vertically centered across both lines (too low), while `items-start` pins them to the very top (too high). The icon should sit aligned with the center of the **first line** only.
 
-### Changes
+### Solution
+For all 4 section heading icon+title containers in `ApplicationDetail.tsx`:
 
-#### 1. Create `src/pages/ApplicationDetail.tsx` (new file)
-A dynamic page component that receives application data based on the URL param `:id`. It will:
-- Look up application data from a shared data map (keyed by slug like `"beverages"`)
-- Render 6 sections matching the provided content structure:
-  1. **Hero** — Title, subtitle, description paragraph, "Request Quote" CTA
-  2. **Industry Challenges** — Heading, intro text, bullet list, closing statement
-  3. **Technical Solution** — Heading, intro text, bullet list, closing statement
-  4. **Technical Suitability** — "Why Spray-Dried Acacia Senegal?" with specs list + "Suitable for" tags
-  5. **Compliance & Documentation** — Bullet list of available docs + traceability note
-  6. **Final CTA** — Heading, subtext, "Request Quote" button
-- If the slug doesn't match any data, redirect to `/applications` or show 404
-- Uses the existing `Layout`, `ScrollReveal`, and `Button` components
-- Alternating section backgrounds (`#FFFDF8` and white) for visual rhythm
+1. Change all `flex` containers from `items-center` to `items-start`
+2. Add `mt-1` and `flex-shrink-0` to every icon so it aligns with the vertical center of the first text line regardless of how many lines the title wraps to
 
-#### 2. Create `src/data/applicationDetails.ts` (new file)
-A data file containing a Record/map of application detail objects keyed by slug. For now, only `"beverages"` will be populated with:
-- Hero text, challenges list, solution points, technical specs, compliance docs — all exactly as specified in the user's content
-- This structure makes it trivial to add more applications later (emulsions, confectionery, etc.) by adding entries
+### Changes in `src/pages/ApplicationDetail.tsx`
 
-#### 3. Update `src/App.tsx`
-Add a new route:
-```
-<Route path="/applications/:id" element={<ApplicationDetail />} />
-```
-Place it before the catch-all `*` route.
+**Line 74** (Challenges heading): `items-center` → `items-start`, add `flex-shrink-0 mt-1` to `AlertTriangle`
 
-#### 4. Update links in `src/pages/Applications.tsx`
-Update the application card titles/names to link to `/applications/beverages` (and eventually other slugs) instead of just anchoring to `#beverages`. Only beverages will have an active link for now; others will keep existing behavior.
+**Line 107** (Solution heading): Already `items-start`, change icon from `lg:mt-2` to just `mt-1` for consistency
 
-### Section Layout Details
+**Line 139** (Technical heading): `items-center` → `items-start`, add `flex-shrink-0 mt-1` to `ShieldCheck`
 
-Each section uses `container-wide` for consistent width and `ScrollReveal` for entrance animations. The structure per section:
+**Line 185** (Compliance heading): `items-center` → `items-start`, add `flex-shrink-0 mt-1` to `FileCheck`
 
-- **Hero**: Full-width, `pt-32 pb-20`, decorative gradient blur blob, accent label + h1 + paragraph + CTA button
-- **Challenges**: `#FFFDF8` bg, two-column on desktop (text left, bullet list right)
-- **Solution**: White bg, similar two-column layout
-- **Technical Suitability**: `#FFFDF8` bg, specs as a compact grid/list + "Suitable for" pill tags
-- **Compliance**: White bg, icon-accompanied bullet list
-- **CTA**: Centered text + single "Request Quote" button
-
-### Technical Notes
-- The data structure in `applicationDetails.ts` will be typed with a TypeScript interface for consistency
-- The dynamic component will use `useParams()` from react-router-dom to get the slug
-- Beverage-specific icon: `Wine` from lucide-react
+This gives a consistent, subtle nudge that keeps icons visually aligned with the first line across all sections, whether titles are 1 or 2 lines.
 
