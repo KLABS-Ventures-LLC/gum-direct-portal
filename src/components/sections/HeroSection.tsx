@@ -59,15 +59,11 @@ export function HeroSection() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.4}>
-            <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-4 pt-8 border-t border-background/20">
-              {[
-              { value: "99%+", label: "Purity" },
-              { value: "25+", label: "Countries" },
-              { value: "500t", label: "Annual Capacity" }].
-              map((stat) =>
-              <div key={stat.label} className="text-center">
-                  <div className="text-3xl font-display font-bold text-secondary">{stat.value}</div>
-                  <div className="text-sm text-background/70 uppercase tracking-wider">{stat.label}</div>
+            <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-4 pt-8 border-t border-background/20">
+              {["99%+ Purity", "UK Processed", "Batch Tested"].map((item) =>
+                <div key={item} className="flex items-center gap-2 text-background text-lg font-medium">
+                  <span className="text-secondary font-bold">✔</span>
+                  <span>{item}</span>
                 </div>
               )}
             </div>
