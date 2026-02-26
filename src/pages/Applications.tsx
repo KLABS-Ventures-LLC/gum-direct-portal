@@ -167,7 +167,7 @@ export default function Applications() {
                           <div>
                             <h2 className="text-2xl lg:text-3xl font-display font-bold text-foreground mb-3">
                               {(() => {
-                                const slugMap: Record<string, string> = { "Beverages": "beverages", "Emulsions": "emulsions", "Confectionery": "confectionery", "Dietary Supplements": "supplements" };
+                                const slugMap: Record<string, string> = { "Beverages": "beverages", "Emulsions": "emulsions", "Confectionery": "confectionery", "Dietary Supplements": "supplements", "Pharmaceuticals": "pharmaceuticals" };
                                 const slug = slugMap[app.name];
                                 return slug ? (
                                   <Link to={`/applications/${slug}`} className="hover:text-accent transition-colors">
