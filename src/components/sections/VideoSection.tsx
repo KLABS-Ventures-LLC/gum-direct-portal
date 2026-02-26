@@ -32,7 +32,7 @@ export function VideoSection() {
           </div>
 
           <ScrollReveal delay={0.2}>
-            <div className="relative rounded-3xl overflow-hidden border border-border">
+            <div className="relative overflow-hidden border border-border" style={{ borderRadius: '2px' }}>
               <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
                 <video
                   ref={videoRef}
