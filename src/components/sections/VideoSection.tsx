@@ -24,8 +24,8 @@ export function VideoSection() {
               </span>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <h2 className="text-display-md font-display font-bold text-foreground">
-                See How It Works
+              <h2 className="text-display-md font-display font-bold text-foreground">From Sudanese Origin to UK Spray-Dried Precision
+
               </h2>
             </ScrollReveal>
           </div>
