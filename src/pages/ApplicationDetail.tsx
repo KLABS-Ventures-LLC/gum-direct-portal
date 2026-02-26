@@ -11,6 +11,7 @@ import {
   FlaskConical,
   FileCheck,
   ShieldCheck,
+  ChevronRight,
 } from "lucide-react";
 
 export default function ApplicationDetail() {
@@ -34,6 +35,13 @@ export default function ApplicationDetail() {
           <div className="absolute top-20 right-0 w-[600px] h-[600px] rounded-full bg-accent/5 blur-[150px]" />
           <div className="relative container-wide">
             <div className="max-w-3xl">
+              <nav className="flex items-center gap-1.5 text-sm text-muted-foreground mb-8">
+                <Link to="/applications" className="hover:text-primary transition-colors">
+                  Applications
+                </Link>
+                <ChevronRight className="w-3.5 h-3.5" />
+                <span className="text-foreground font-medium">{data.hero.label}</span>
+              </nav>
               <ScrollReveal>
                 <span className="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-6">
                   {data.hero.label}
