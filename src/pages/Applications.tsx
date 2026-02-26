@@ -166,7 +166,14 @@ export default function Applications() {
                           </div>
                           <div>
                             <h2 className="text-2xl lg:text-3xl font-display font-bold text-foreground mb-3">
-                              {app.name}
+                              {app.name === "Beverages" ? (
+                                <Link to="/applications/beverages" className="hover:text-accent transition-colors">
+                                  {app.name}
+                                  <ArrowRight className="inline w-5 h-5 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                </Link>
+                              ) : (
+                                app.name
+                              )}
                             </h2>
                             <div className="mb-4">
                               <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-1">Functional Role</p>
