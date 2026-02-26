@@ -54,7 +54,7 @@ export function WhatWeDoSection() {
           {features.map((feature, index) =>
           <ScrollReveal key={feature.title} delay={index * 0.1}>
               <div className="group relative h-full">
-                <div className="relative h-full p-8 lg:p-10 rounded-3xl bg-card border border-border group-hover:border-accent/20 transition-all duration-500 shadow-card">
+                <div className="relative h-full p-8 lg:p-10 rounded-3xl border border-border group-hover:border-accent/20 transition-all duration-500 shadow-card" style={{ backgroundColor: '#FFFFFF' }}>
                   <div className="flex items-start gap-6">
                     <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
                       <feature.icon className="w-7 h-7 text-primary" />
