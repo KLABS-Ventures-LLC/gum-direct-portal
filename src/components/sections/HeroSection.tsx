@@ -45,13 +45,13 @@ export function HeroSection() {
           <ScrollReveal delay={0.3}>
             <div className="flex flex-wrap justify-center gap-4 mb-16">
               <Button variant="accent" size="xl" asChild>
-                <Link to="/contact?type=sample">
-                  Order Sample
+                <Link to="/contact?type=quote">
+                  Request Quote
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="xl" className="border-primary/30 text-primary hover:bg-primary/10" asChild>
-                <Link to="/contact?type=quote">Request Quote</Link>
+              <Button variant="outline" size="xl" className="border-primary text-primary hover:bg-primary/10 bg-transparent" asChild>
+                <Link to="/contact">Download Technical Data Sheet</Link>
               </Button>
             </div>
           </ScrollReveal>
