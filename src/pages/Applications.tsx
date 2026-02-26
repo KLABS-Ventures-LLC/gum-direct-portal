@@ -166,7 +166,7 @@ export default function Applications() {
                           </div>
                           <div>
                             <h2 className="text-2xl lg:text-3xl font-display font-bold text-foreground mb-3">
-                              {app.name === "Beverages" || app.name === "Emulsions" ? (
+                              {["Beverages", "Emulsions", "Confectionery"].includes(app.name) ? (
                                 <Link to={`/applications/${app.name.toLowerCase()}`} className="hover:text-accent transition-colors">
                                   {app.name}
                                   <ArrowRight className="inline w-5 h-5 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />

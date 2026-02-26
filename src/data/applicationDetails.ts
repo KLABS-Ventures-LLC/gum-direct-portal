@@ -168,4 +168,69 @@ export const applicationDetails: Record<string, ApplicationDetail> = {
       description: "Whether developing a new system or optimizing an existing formulation, our team can support your technical and supply needs.",
     },
   },
+  confectionery: {
+    slug: "confectionery",
+    hero: {
+      label: "Confectionery",
+      title: "Acacia Gum for Confectionery Applications",
+      subtitle: "Natural binding, glazing, and film-forming performance for stable and consistent confectionery products.",
+      description: "GumDirect's spray-dried Acacia Senegal supports texture control, surface finish, and structural stability across a wide range of confectionery systems.",
+    },
+    challenges: {
+      heading: "Common Confectionery Formulation Challenges",
+      intro: "Confectionery manufacturers often encounter:",
+      items: [
+        "Sugar crystallization instability",
+        "Poor surface glazing or uneven coating",
+        "Structural weakness in gummy systems",
+        "Inconsistent binding in compressed sweets",
+        "Moisture migration affecting texture",
+      ],
+      closing: "Maintaining visual appeal and texture consistency is critical in confectionery production.",
+    },
+    solution: {
+      heading: "Functional Support in Confectionery Systems",
+      intro: "Our spray-dried Acacia Senegal provides:",
+      items: [
+        "Effective film-forming properties",
+        "Controlled binding performance",
+        "Improved surface glazing",
+        "Stabilization against crystallization",
+        "Consistent dispersion during mixing",
+      ],
+      closing: "Its fine particle size allows uniform hydration and predictable functionality in industrial processes.",
+    },
+    technical: {
+      heading: "Why Acacia Senegal Is Used in Confectionery",
+      intro: "Acacia Senegal is valued for its:",
+      specs: [
+        "Neutral taste and odor",
+        "Excellent film-forming capability",
+        "Low viscosity at functional inclusion rates",
+        "Natural origin (E414 compliant)",
+      ],
+      suitableFor: [
+        "Hard candy glazing",
+        "Chocolate panning",
+        "Gummy texturizing",
+        "Soft candy binding",
+        "Sugar coating systems",
+      ],
+    },
+    compliance: {
+      heading: "Quality & Regulatory Support",
+      intro: "We supply:",
+      items: [
+        "Certificate of Analysis (COA) for each batch",
+        "Safety Data Sheets (SDS)",
+        "Technical specifications",
+        "HACCP & ISO-aligned documentation",
+      ],
+      closing: "All batches are traceable from source to delivery.",
+    },
+    cta: {
+      heading: "Discuss Your Confectionery Application",
+      description: "Our team can support formulation discussions, documentation needs, and commercial supply requirements.",
+    },
+  },
 };
