@@ -21,19 +21,19 @@ const contactInfo = [
 {
   icon: Mail,
   label: "Email",
-  value: "info@gumdirect.com",
-  href: "mailto:info@gumdirect.com"
+  value: "info@gumdirect.co.uk",
+  href: "mailto:info@gumdirect.co.uk"
 },
 {
   icon: Phone,
   label: "Phone",
-  value: "+44 (0) 123 456 7890",
-  href: "tel:+441234567890"
+  value: "+44 7930 844065",
+  href: "tel:+447930844065"
 },
 {
   icon: MapPin,
   label: "Address",
-  value: "GumDirect Ltd, London, UK",
+  value: "London, United Kingdom",
   href: null
 },
 {
@@ -43,19 +43,17 @@ const contactInfo = [
   href: null
 }];
 
-
 const inquiryTypes = [
-{ value: "sample", label: "Order Sample (1 kg)" },
-{ value: "quote", label: "Request Bulk Quote" },
-{ value: "coa", label: "Request COA/SDS" },
-{ value: "datasheet", label: "Request Product Data Sheet" },
-{ value: "general", label: "General Inquiry" }];
-
+{ value: "quote", label: "Request Quote" },
+{ value: "sample", label: "Sample Request" },
+{ value: "technical", label: "Technical Question" },
+{ value: "coa", label: "Documentation (COA/SDS)" },
+{ value: "partnership", label: "Partnership Inquiry" }];
 
 const products = [
-{ value: "senegal", label: "Acacia Senegal (Premium)" },
-{ value: "unsure", label: "Not Sure Yet" }];
-
+{ value: "senegal-spray", label: "Acacia Senegal – Spray Dried" },
+{ value: "bulk", label: "Bulk Supply Inquiry" },
+{ value: "unsure", label: "Not Sure – Need Guidance" }];
 
 export default function Contact() {
   const [searchParams] = useSearchParams();
@@ -63,7 +61,7 @@ export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const defaultType = searchParams.get("type") || "general";
+  const defaultType = searchParams.get("type") || "quote";
   const defaultProduct = searchParams.get("product") || "";
 
   const [formData, setFormData] = useState({
@@ -109,7 +107,7 @@ export default function Contact() {
       setIsSubmitted(true);
       toast({
         title: "Message Sent!",
-        description: "We'll get back to you within 24 hours."
+        description: "We'll get back to you within one business day."
       });
     } catch (error) {
       toast({
@@ -143,7 +141,7 @@ export default function Contact() {
                   Thank You!
                 </h1>
                 <p className="text-xl text-muted-foreground mb-10 max-w-md mx-auto">
-                  We've received your message and will get back to you within 24 business hours.
+                  We've received your inquiry and will respond within one business day.
                 </p>
                 <Button variant="default" size="lg" onClick={() => setIsSubmitted(false)}>
                   Send Another Message
@@ -154,7 +152,6 @@ export default function Contact() {
           </section>
         </Layout>
       </>);
-
   }
 
   return (
@@ -164,7 +161,6 @@ export default function Contact() {
         <meta
           name="description"
           content="Contact GumDirect for samples, quotes, or inquiries about our premium acacia gum products." />
-
       </Helmet>
 
       <Layout>
@@ -186,7 +182,7 @@ export default function Contact() {
                 </h1>
               </ScrollReveal>
               <ScrollReveal delay={0.2}>
-                <p className="text-xl lg:text-2xl leading-relaxed text-gray-950">
+                <p className="text-xl lg:text-2xl leading-relaxed text-foreground/70">
                   Ready to get started? Send us a message and we'll respond within 24 hours.
                 </p>
               </ScrollReveal>
@@ -195,7 +191,7 @@ export default function Contact() {
         </section>
 
         {/* Contact Form & Info */}
-        <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden bg-secondary">
+        <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden" style={{ backgroundColor: '#FFFDF8' }}>
           
           <div className="relative container-wide">
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
@@ -216,7 +212,6 @@ export default function Contact() {
                         <a href={info.href} className="text-muted-foreground hover:text-accent transition-colors">
                               {info.value}
                             </a> :
-
                         <p className="text-muted-foreground">{info.value}</p>
                         }
                         </div>
@@ -225,9 +220,9 @@ export default function Contact() {
                   </div>
 
                   <div className="p-6 rounded-2xl bg-accent/5 border border-accent/10">
-                    <h4 className="font-display font-semibold mb-2">Quick Response</h4>
+                    <h4 className="font-display font-semibold mb-2">Response Time</h4>
                     <p className="text-sm text-muted-foreground">
-                      We aim to respond to all inquiries within 24 business hours.
+                      All inquiries are reviewed within one business day.
                     </p>
                   </div>
                 </ScrollReveal>
@@ -236,7 +231,10 @@ export default function Contact() {
               {/* Form */}
               <div className="lg:col-span-8">
                 <ScrollReveal direction="right">
-                  <form onSubmit={handleSubmit} className="bg-card rounded-3xl border border-border p-8 lg:p-10 shadow-card">
+                  <form onSubmit={handleSubmit} className="bg-white rounded-3xl border border-border p-8 lg:p-10 shadow-card">
+                    <p className="text-muted-foreground mb-8 leading-relaxed">
+                      For pricing, samples, or documentation requests, complete the form below and our team will respond promptly.
+                    </p>
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="name" className="text-sm font-medium">Full Name *</Label>
@@ -247,7 +245,6 @@ export default function Contact() {
                           value={formData.name}
                           onChange={(e) => handleChange("name", e.target.value)}
                           className="h-12 rounded-xl border-border bg-background" />
-
                       </div>
 
                       <div className="space-y-2">
@@ -258,7 +255,6 @@ export default function Contact() {
                           value={formData.company}
                           onChange={(e) => handleChange("company", e.target.value)}
                           className="h-12 rounded-xl border-border bg-background" />
-
                       </div>
 
                       <div className="space-y-2">
@@ -271,7 +267,6 @@ export default function Contact() {
                           value={formData.email}
                           onChange={(e) => handleChange("email", e.target.value)}
                           className="h-12 rounded-xl border-border bg-background" />
-
                       </div>
 
                       <div className="space-y-2">
@@ -283,7 +278,6 @@ export default function Contact() {
                           value={formData.phone}
                           onChange={(e) => handleChange("phone", e.target.value)}
                           className="h-12 rounded-xl border-border bg-background" />
-
                       </div>
 
                       <div className="space-y-2">
@@ -292,7 +286,7 @@ export default function Contact() {
                           <SelectTrigger className="h-12 rounded-xl border-border bg-background">
                             <SelectValue placeholder="Select inquiry type" />
                           </SelectTrigger>
-                          <SelectContent>
+                          <SelectContent className="bg-white border border-border z-50">
                             {inquiryTypes.map((type) =>
                             <SelectItem key={type.value} value={type.value}>{type.label}</SelectItem>
                             )}
@@ -306,7 +300,7 @@ export default function Contact() {
                           <SelectTrigger className="h-12 rounded-xl border-border bg-background">
                             <SelectValue placeholder="Select product" />
                           </SelectTrigger>
-                          <SelectContent>
+                          <SelectContent className="bg-white border border-border z-50">
                             {products.map((product) =>
                             <SelectItem key={product.value} value={product.value}>{product.label}</SelectItem>
                             )}
@@ -325,7 +319,6 @@ export default function Contact() {
                           value={formData.quantity}
                           onChange={(e) => handleChange("quantity", e.target.value)}
                           className="h-12 rounded-xl border-border bg-background" />
-
                         </div>
                       }
 
@@ -334,18 +327,17 @@ export default function Contact() {
                         <Textarea
                           id="message"
                           rows={5}
-                          placeholder="Tell us about your requirements..."
+                          placeholder={"Please include:\n– Required volume (kg/tonnes)\n– Application\n– Target delivery location\n– Any specification requirements"}
                           value={formData.message}
                           onChange={(e) => handleChange("message", e.target.value)}
                           className="rounded-xl border-border bg-background resize-none" />
-
                       </div>
                     </div>
 
                     <Button type="submit" size="xl" variant="accent" className="mt-8 w-full md:w-auto" disabled={isSubmitting}>
                       {isSubmitting ? "Sending..." :
                       <>
-                          Send Message
+                          Request Quote
                           <Send className="w-5 h-5" />
                         </>
                       }
@@ -358,5 +350,4 @@ export default function Contact() {
         </section>
       </Layout>
     </>);
-
 }
