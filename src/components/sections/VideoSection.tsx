@@ -19,8 +19,8 @@ export function VideoSection() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <ScrollReveal>
-              <span className="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-4">
-                Watch & Learn
+              <span className="inline-block text-accent font-semibold text-sm uppercase tracking-widest mb-4">QUALITY & PROCESSING
+
               </span>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
@@ -42,24 +42,24 @@ export function VideoSection() {
                   title="GumDirect Explainer Video"
                   onPlay={() => setIsPlaying(true)}
                   onPause={() => setIsPlaying(false)}
-                  onEnded={() => setIsPlaying(false)}
-                />
-                {!isPlaying && (
-                  <button
-                    onClick={handlePlay}
-                    className="absolute inset-0 flex items-center justify-center bg-black/30 transition-colors hover:bg-black/40 cursor-pointer"
-                    aria-label="Play video"
-                  >
+                  onEnded={() => setIsPlaying(false)} />
+
+                {!isPlaying &&
+                <button
+                  onClick={handlePlay}
+                  className="absolute inset-0 flex items-center justify-center bg-black/30 transition-colors hover:bg-black/40 cursor-pointer"
+                  aria-label="Play video">
+
                     <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-accent flex items-center justify-center shadow-xl transition-transform hover:scale-110">
                       <Play className="w-8 h-8 md:w-10 md:h-10 text-accent-foreground ml-1" fill="currentColor" />
                     </div>
                   </button>
-                )}
+                }
               </div>
             </div>
           </ScrollReveal>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
