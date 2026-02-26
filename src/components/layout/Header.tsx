@@ -72,13 +72,6 @@ export function Header() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <Button
-              variant="outline"
-              size="lg"
-              asChild
-            >
-              <Link to="/contact?type=sample">Get Sample</Link>
-            </Button>
-            <Button
               variant="accent"
               size="lg"
               asChild
@@ -122,9 +115,6 @@ export function Header() {
               ))}
             </div>
             <div className="mt-4 pt-4 border-t border-border space-y-2">
-              <Button variant="outline" className="w-full" asChild>
-                <Link to="/contact?type=sample">Get Sample</Link>
-              </Button>
               <Button variant="accent" className="w-full" asChild>
                 <Link to="/contact?type=quote">Request Quote</Link>
               </Button>
