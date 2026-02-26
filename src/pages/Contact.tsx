@@ -62,7 +62,7 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const defaultType = searchParams.get("type") || "quote";
-  const defaultProduct = searchParams.get("product") || "";
+  const defaultProduct = searchParams.get("product") || "senegal-spray";
 
   const [formData, setFormData] = useState({
     name: "",
