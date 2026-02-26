@@ -29,12 +29,12 @@ export function HeroSection() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <h1 className="md:text-4xl font-display font-bold text-background mb-6 lg:text-8xl text-6xl">
-              Premium{" "}
-              <span className="text-accent">Acacia Gum</span>
-              <br />
-              Direct From Sudan
-            </h1>
+             <h1 className="md:text-4xl font-display font-bold text-background mb-6 lg:text-8xl text-6xl">
+               Spray-Dried{" "}
+               <span className="text-accent">Acacia Senegal</span>
+               <br />
+               (E414)
+             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
