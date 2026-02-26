@@ -24,9 +24,10 @@ export function VideoSection() {
               </span>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <h2 className="text-display-md font-display font-bold text-foreground">From Sudanese Origin to UK Spray-Dried Precision
-
-              </h2>
+              <h2 className="text-display-md font-display font-bold text-foreground">From Sudanese Origin to UK Spray-Dried Precision</h2>
+            </ScrollReveal>
+            <ScrollReveal delay={0.15}>
+              <p className="text-muted-foreground text-lg mt-4 max-w-2xl mx-auto">Our supply chain combines carefully sourced Acacia Senegal with UK-based spray-drying, ensuring purity, consistency and full batch traceability.</p>
             </ScrollReveal>
           </div>
 
