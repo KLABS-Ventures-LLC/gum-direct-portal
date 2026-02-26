@@ -17,7 +17,7 @@ const applications = [
 
 export function ApplicationsSection() {
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-background">
+    <section className="py-16 md:py-20 lg:py-24" style={{ backgroundColor: '#FFFDF8' }}>
       <div className="container-wide">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
@@ -29,7 +29,8 @@ export function ApplicationsSection() {
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <h2 className="text-display-md font-display font-bold text-foreground">
-                Versatile solutions across industries
+                Industrial Applications of Acacia Senegal{" "}
+                <span className="text-accent">(E414)</span>
               </h2>
             </ScrollReveal>
           </div>
@@ -48,7 +49,7 @@ export function ApplicationsSection() {
           {applications.map((app, index) => (
             <ScrollReveal key={app.name} delay={index * 0.05}>
               <Link to={`/applications#${app.name.toLowerCase()}`} className="group block h-full">
-                <div className="h-full p-6 rounded-2xl bg-card border border-border text-center hover:border-accent/30 transition-all duration-500">
+                <div className="h-full p-6 rounded-2xl border border-border text-center hover:border-accent/30 transition-all duration-500" style={{ backgroundColor: '#FFFFFF' }}>
                   <div className="w-14 h-14 mx-auto rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-accent/10 group-hover:scale-110 transition-all duration-500">
                     <app.icon className="w-7 h-7 text-muted-foreground group-hover:text-accent transition-colors duration-300" />
                   </div>
