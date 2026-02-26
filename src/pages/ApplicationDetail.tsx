@@ -80,7 +80,7 @@ export default function ApplicationDetail() {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
               <ScrollReveal direction="left">
                 <div className="flex items-start gap-3 mb-4">
-                  <span className="mt-0.5 inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg border border-border bg-background/80">
+                  <span className="mt-[2px] inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg border border-border bg-background/80">
                     <AlertTriangle className="h-5 w-5 text-accent" />
                   </span>
                   <h2 className="text-display-sm font-display font-bold text-primary">
@@ -115,7 +115,7 @@ export default function ApplicationDetail() {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
               <ScrollReveal direction="left">
                 <div className="flex items-start gap-3 mb-4">
-                  <span className="mt-0.5 inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg border border-border bg-background/80">
+                  <span className="mt-[2px] inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg border border-border bg-background/80">
                     <FlaskConical className="h-5 w-5 text-primary" />
                   </span>
                   <h2 className="text-display-sm font-display font-bold text-primary">
@@ -149,7 +149,7 @@ export default function ApplicationDetail() {
           <div className="container-wide">
             <ScrollReveal>
               <div className="flex items-start gap-3 mb-4">
-                <span className="mt-0.5 inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg border border-border bg-background/80">
+                <span className="mt-[2px] inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg border border-border bg-background/80">
                   <ShieldCheck className="h-5 w-5 text-accent" />
                 </span>
                 <h2 className="text-display-sm font-display font-bold text-primary">
@@ -197,7 +197,7 @@ export default function ApplicationDetail() {
           <div className="container-wide">
             <ScrollReveal>
               <div className="flex items-start gap-3 mb-4">
-                <span className="mt-0.5 inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg border border-border bg-background/80">
+                <span className="mt-[2px] inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg border border-border bg-background/80">
                   <FileCheck className="h-5 w-5 text-primary" />
                 </span>
                 <h2 className="text-display-sm font-display font-bold text-primary">
