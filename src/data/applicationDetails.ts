@@ -367,4 +367,71 @@ export const applicationDetails: Record<string, ApplicationDetail> = {
       description: "For technical documentation, specification details, or supply inquiries, contact our team.",
     },
   },
+  bakery: {
+    slug: "bakery",
+    hero: {
+      label: "Bakery",
+      title: "Acacia Gum for Bakery Applications",
+      subtitle: "Functional support for texture control, moisture retention, and product stability in baked goods.",
+      description: "GumDirect's spray-dried Acacia Senegal contributes to consistent structure and controlled performance across industrial bakery systems.",
+    },
+    challenges: {
+      heading: "Common Bakery Formulation Challenges",
+      intro: "Bakery manufacturers frequently manage:",
+      items: [
+        "Moisture loss during storage",
+        "Texture inconsistency",
+        "Crumb instability",
+        "Surface cracking or dryness",
+        "Shelf-life limitations",
+      ],
+      closing: "Maintaining product structure and softness over time is essential in large-scale production.",
+    },
+    solution: {
+      heading: "Performance in Baked Formulations",
+      intro: "Spray-dried Acacia Senegal supports:",
+      items: [
+        "Moisture retention in baked goods",
+        "Improved crumb structure",
+        "Controlled viscosity in batters",
+        "Stabilization in icing and glaze systems",
+        "Uniform ingredient dispersion",
+      ],
+      closing: "Its neutral taste allows integration without affecting flavor profiles.",
+    },
+    technical: {
+      heading: "Why Acacia Senegal Is Used in Bakery",
+      intro: "Acacia Senegal (E414) is valued for:",
+      specs: [
+        "Fine particle size for uniform mixing",
+        "Low viscosity at functional inclusion levels",
+        "Film-forming properties in coatings",
+        "Stability during baking processes",
+        "Compatibility with other hydrocolloids",
+      ],
+      suitableFor: [
+        "Cakes and sponge systems",
+        "Biscuits and cookies",
+        "Icing and glaze formulations",
+        "Fillings and toppings",
+        "Specialty baked products",
+      ],
+    },
+    compliance: {
+      heading: "Quality & Regulatory Support",
+      intro: "Each batch is supplied with:",
+      items: [
+        "Certificate of Analysis (COA)",
+        "Safety Data Sheets (SDS)",
+        "Technical specification sheets",
+        "HACCP & ISO-aligned documentation",
+        "Full batch traceability",
+      ],
+      closing: "",
+    },
+    cta: {
+      heading: "Discuss Your Bakery Formulation",
+      description: "Our team can assist with documentation, commercial supply, and technical inquiries.",
+    },
+  },
 };
