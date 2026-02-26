@@ -103,4 +103,69 @@ export const applicationDetails: Record<string, ApplicationDetail> = {
       description: "Our team can support formulation discussions, documentation requests, and commercial supply inquiries.",
     },
   },
+  emulsions: {
+    slug: "emulsions",
+    hero: {
+      label: "Emulsions",
+      title: "Acacia Gum for Emulsion Systems",
+      subtitle: "Reliable stabilization for oil-in-water emulsions across food, beverage, and flavor applications.",
+      description: "GumDirect's spray-dried Acacia Senegal provides consistent emulsification performance, controlled viscosity, and dependable batch uniformity.",
+    },
+    challenges: {
+      heading: "Common Emulsion Stability Challenges",
+      intro: "Formulators working with oil-in-water systems often face:",
+      items: [
+        "Phase separation over time",
+        "Droplet coalescence",
+        "Inconsistent droplet size distribution",
+        "Viscosity imbalance at functional inclusion rates",
+        "Reduced stability under temperature variation",
+      ],
+      closing: "Emulsion stability is critical for product clarity, shelf life, and performance reliability.",
+    },
+    solution: {
+      heading: "Stabilization Through Controlled Processing",
+      intro: "Our spray-dried Acacia Senegal is selected for applications requiring:",
+      items: [
+        "Strong surface-active properties",
+        "Effective encapsulation of oil droplets",
+        "Stable droplet suspension",
+        "Low viscosity at functional dosage",
+        "Predictable behavior across production batches",
+      ],
+      closing: "Fine particle size and controlled drying improve dispersion efficiency during hydration.",
+    },
+    technical: {
+      heading: "Why Acacia Senegal Performs in Emulsions",
+      intro: "Acacia Senegal contains natural arabinogalactan-protein complexes that contribute to:",
+      specs: [
+        "Efficient oil droplet stabilization",
+        "Long-term suspension stability",
+        "Resistance to coalescence",
+        "Compatibility with flavor oils and essential oils",
+      ],
+      suitableFor: [
+        "Citrus oil emulsions",
+        "Flavor concentrates",
+        "Fragrance systems",
+        "Spray-dried flavor encapsulation",
+        "Nutritional emulsions",
+      ],
+    },
+    compliance: {
+      heading: "Documentation & Quality Control",
+      intro: "Each batch is supplied with:",
+      items: [
+        "Certificate of Analysis (COA)",
+        "Safety Data Sheet (SDS)",
+        "Technical specification sheet",
+        "Batch-level traceability documentation",
+      ],
+      closing: "Manufactured and handled under HACCP and ISO-aligned quality systems.",
+    },
+    cta: {
+      heading: "Discuss Your Emulsion Requirements",
+      description: "Whether developing a new system or optimizing an existing formulation, our team can support your technical and supply needs.",
+    },
+  },
 };
