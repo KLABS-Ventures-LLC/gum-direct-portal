@@ -1,25 +1,29 @@
 
 
-## Fix: Align Section Heading Icons with First Line of Text
+## Plan: Align Application Cards with Detail Pages and Improve UX
 
 ### Problem
-When section titles wrap to 2 lines, icons using `items-center` get vertically centered across both lines (too low), while `items-start` pins them to the very top (too high). The icon should sit aligned with the center of the **first line** only.
+1. The application cards on `/applications` have content (functionalRole, benefits, uses) that was written separately from the detail pages in `applicationDetails.ts` — they may be inconsistent.
+2. Cards don't feel clickable — no whole-card hover effect.
+3. The right sidebar on every card shows "View Product" linking to the same product page, which is repetitive.
 
-### Solution
-For all 4 section heading icon+title containers in `ApplicationDetail.tsx`:
+### Changes
 
-1. Change all `flex` containers from `items-center` to `items-start`
-2. Add `mt-1` and `flex-shrink-0` to every icon so it aligns with the vertical center of the first text line regardless of how many lines the title wraps to
+**File: `src/pages/Applications.tsx`**
 
-### Changes in `src/pages/ApplicationDetail.tsx`
+1. **Align card content with detail pages**: Update each application's `functionalRole`, `benefits`, and `uses` arrays in the `applications` array (lines 18-110) to match the corresponding data in `applicationDetails.ts`. Specifically pull the subtitle from `hero.subtitle`, the solution items from `solution.items`, and the `suitableFor` list from `technical.suitableFor`.
 
-**Line 74** (Challenges heading): `items-center` → `items-start`, add `flex-shrink-0 mt-1` to `AlertTriangle`
+2. **Make whole card clickable with hover effect**: Wrap each card's outer `<div>` (line 157-234) in a `<Link>` to `/applications/{slug}`. Add a hover background color change (e.g., `hover:bg-accent/5`) to the card container so the entire card signals interactivity. The existing border/shadow hover effects will be retained.
 
-**Line 107** (Solution heading): Already `items-start`, change icon from `lg:mt-2` to just `mt-1` for consistency
+3. **Replace "View Product" sidebar**: Change the right-side panel (lines 217-232) from "Available Grade / Spray-Dried Acacia Senegal / View Product" to a contextual "Learn More" section with a button labeled something like "Explore {app.name} Applications" linking to the detail page. This removes the repetitive product link and makes the CTA relevant to each card.
 
-**Line 139** (Technical heading): `items-center` → `items-start`, add `flex-shrink-0 mt-1` to `ShieldCheck`
+### Technical Details
 
-**Line 185** (Compliance heading): `items-center` → `items-start`, add `flex-shrink-0 mt-1` to `FileCheck`
-
-This gives a consistent, subtle nudge that keeps icons visually aligned with the first line across all sections, whether titles are 1 or 2 lines.
+- The `slugMap` already exists at line 170 — it will be extracted to the top level so it can be used both for the card link wrapper and the sidebar CTA.
+- The card `<Link>` wrapper will use `className="block"` with no text decoration. The inner content structure stays the same.
+- The existing `<Link>` on the application name (lines 172-176) will be simplified to plain text since the whole card is now clickable.
+- Content alignment will match these mappings:
+  - `functionalRole` → `applicationDetails[slug].hero.subtitle`
+  - `benefits` → `applicationDetails[slug].solution.items`
+  - `uses` → `applicationDetails[slug].technical.suitableFor`
 
