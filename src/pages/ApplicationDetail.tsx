@@ -72,7 +72,9 @@ export default function ApplicationDetail() {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
               <ScrollReveal direction="left">
                 <div className="flex items-start gap-3 mb-4">
-                  <AlertTriangle className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
+                  <span className="mt-0.5 inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg border border-border bg-background/80">
+                    <AlertTriangle className="h-5 w-5 text-accent" />
+                  </span>
                   <h2 className="text-display-sm font-display font-bold text-primary">
                     {data.challenges.heading}
                   </h2>
@@ -105,7 +107,9 @@ export default function ApplicationDetail() {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
               <ScrollReveal direction="left">
                 <div className="flex items-start gap-3 mb-4">
-                  <FlaskConical className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                  <span className="mt-0.5 inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg border border-border bg-background/80">
+                    <FlaskConical className="h-5 w-5 text-primary" />
+                  </span>
                   <h2 className="text-display-sm font-display font-bold text-primary">
                     {data.solution.heading}
                   </h2>
@@ -137,7 +141,9 @@ export default function ApplicationDetail() {
           <div className="container-wide">
             <ScrollReveal>
               <div className="flex items-start gap-3 mb-4">
-                <ShieldCheck className="w-6 h-6 text-accent mt-1 flex-shrink-0" />
+                <span className="mt-0.5 inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg border border-border bg-background/80">
+                  <ShieldCheck className="h-5 w-5 text-accent" />
+                </span>
                 <h2 className="text-display-sm font-display font-bold text-primary">
                   {data.technical.heading}
                 </h2>
@@ -183,7 +189,9 @@ export default function ApplicationDetail() {
           <div className="container-wide">
             <ScrollReveal>
               <div className="flex items-start gap-3 mb-4">
-                <FileCheck className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                <span className="mt-0.5 inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg border border-border bg-background/80">
+                  <FileCheck className="h-5 w-5 text-primary" />
+                </span>
                 <h2 className="text-display-sm font-display font-bold text-primary">
                   {data.compliance.heading}
                 </h2>
