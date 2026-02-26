@@ -136,7 +136,7 @@ export default function ProductSenegal() {
         </section>
 
         {/* Applications */}
-        <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden bg-secondary">
+        <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden" style={{ backgroundColor: '#FFFDF8' }}>
           <div className="relative container-wide">
             <div className="max-w-2xl mb-16">
               <ScrollReveal>
