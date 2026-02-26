@@ -12,72 +12,100 @@ import {
   CakeSlice,
   Factory,
   ArrowRight,
-  Star,
+  Package,
 } from "lucide-react";
 
 const applications = [
   {
     icon: Wine,
     name: "Beverages",
-    description:
-      "Acacia gum is widely used as an emulsifier and stabilizer in citrus-based beverages, soft drinks, and flavor concentrates. It ensures consistent flavor distribution and prevents separation.",
-    uses: ["Citrus oil emulsions", "Cloud agents", "Flavor encapsulation", "Wine clarification"],
-    recommended: "Acacia Senegal",
-    recommendedLink: "/products/acacia-senegal",
+    functionalRole:
+      "Acts as a primary emulsifier and stabiliser for citrus oil systems and flavour concentrates in soft drinks and juice-based beverages.",
+    benefits: [
+      "Stable citrus cloud systems with minimal separation",
+      "Effective flavour oil encapsulation",
+      "Prevents ring formation in bottled beverages",
+      "Compatible with acidic pH environments",
+    ],
+    uses: ["Citrus oil emulsions", "Cloud agents", "Flavour encapsulation", "Wine clarification"],
   },
   {
     icon: Droplets,
     name: "Emulsions",
-    description:
-      "Superior emulsification properties make acacia gum ideal for creating stable oil-in-water emulsions. Essential for flavor and fragrance industries.",
-    uses: ["Essential oil emulsions", "Flavor concentrates", "Fragrance formulations", "Spray-dried flavors"],
-    recommended: "Acacia Senegal",
-    recommendedLink: "/products/acacia-senegal",
+    functionalRole:
+      "Functions as a natural oil-in-water emulsifier with low viscosity and high solubility, suitable for flavour and fragrance systems.",
+    benefits: [
+      "Low interfacial tension for fine droplet formation",
+      "Long-term emulsion stability",
+      "Suitable for spray-drying applications",
+      "Compatible with a wide range of oils",
+    ],
+    uses: ["Essential oil emulsions", "Flavour concentrates", "Fragrance formulations", "Spray-dried flavours"],
   },
   {
     icon: Candy,
     name: "Confectionery",
-    description:
-      "Essential ingredient for glazing, coating, and binding. Provides excellent film-forming properties and prevents sugar crystallization.",
+    functionalRole:
+      "Provides film-forming and adhesion properties for glazing, coating and binding in sugar and chocolate confectionery.",
+    benefits: [
+      "Uniform film formation for glossy coatings",
+      "Improved coating adhesion and durability",
+      "Prevents sugar crystallisation",
+      "Enhances surface stability and shine",
+    ],
     uses: ["Hard candy glazing", "Soft candy binding", "Chocolate panning", "Gummy texturing"],
-    recommended: "Acacia Senegal",
-    recommendedLink: "/products/acacia-senegal",
   },
   {
     icon: Pill,
     name: "Dietary Supplements",
-    description:
-      "Used as a prebiotic fiber source and encapsulating agent for vitamins and minerals. Excellent tableting properties.",
-    uses: ["Tablet binding", "Microencapsulation", "Fiber supplementation", "Powder blending"],
-    recommended: "Acacia Senegal",
-    recommendedLink: "/products/acacia-senegal",
+    functionalRole:
+      "Serves as a prebiotic fibre source, tableting binder and microencapsulation agent for vitamins and minerals.",
+    benefits: [
+      "Effective tablet binding with clean release",
+      "Microencapsulation of sensitive actives",
+      "Soluble dietary fibre contribution",
+      "Neutral taste profile for powder blends",
+    ],
+    uses: ["Tablet binding", "Microencapsulation", "Fibre supplementation", "Powder blending"],
   },
   {
     icon: Heart,
     name: "Pharmaceuticals",
-    description:
-      "Pharmaceutical-grade acacia gum serves as an excipient for tablet coatings, suspensions, and emulsions.",
-    uses: ["Tablet film coating", "Suspension stabilizer", "Emulsion base", "Controlled release"],
-    recommended: "Acacia Senegal",
-    recommendedLink: "/products/acacia-senegal",
+    functionalRole:
+      "Used as an excipient for tablet film coatings, suspension stabilisation and emulsion formulation in pharmaceutical systems.",
+    benefits: [
+      "Controlled-release film coating capability",
+      "Suspension stabilisation without viscosity increase",
+      "Biocompatible and well-tolerated",
+      "Compliant with pharmacopoeia standards",
+    ],
+    uses: ["Tablet film coating", "Suspension stabiliser", "Emulsion base", "Controlled release"],
   },
   {
     icon: CakeSlice,
     name: "Bakery",
-    description:
-      "Enhances texture and moisture retention in baked goods. Acts as an egg replacer and provides excellent glazing.",
-    uses: ["Egg replacement", "Glaze formulation", "Moisture retention", "Fiber enrichment"],
-    recommended: "Acacia Senegal",
-    recommendedLink: "/products/acacia-senegal",
+    functionalRole:
+      "Enhances moisture retention, acts as an egg replacer and provides glazing functionality in baked goods.",
+    benefits: [
+      "Improved moisture retention in finished products",
+      "Effective egg replacement in select formulations",
+      "Clean-label fibre enrichment",
+      "Consistent glaze formation",
+    ],
+    uses: ["Egg replacement", "Glaze formulation", "Moisture retention", "Fibre enrichment"],
   },
   {
     icon: Factory,
     name: "Industrial",
-    description:
-      "Versatile industrial applications including adhesives, lithography, textiles, and coatings.",
+    functionalRole:
+      "Applied in adhesives, lithographic printing, textile sizing and protective coatings for industrial use.",
+    benefits: [
+      "Strong adhesive bonding in speciality applications",
+      "Consistent sizing performance in textiles",
+      "Effective binder for lithographic inks",
+      "Film-forming capability for protective coatings",
+    ],
     uses: ["Lithographic printing", "Textile sizing", "Industrial adhesives", "Protective coatings"],
-    recommended: "Acacia Senegal",
-    recommendedLink: "/products/acacia-senegal",
   },
 ];
 
@@ -107,13 +135,12 @@ export default function Applications() {
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
                 <h1 className="text-display-lg font-display font-bold text-primary mb-6">
-                  Versatile solutions across industries
+                  Functional Performance Across Industries
                 </h1>
               </ScrollReveal>
               <ScrollReveal delay={0.2}>
                 <p className="text-xl lg:text-2xl text-foreground/70 leading-relaxed">
-                  Discover how our premium acacia gum can enhance your products across 
-                  beverages, confectionery, pharmaceuticals, and more.
+                  Spray-dried Acacia Senegal designed for emulsification, encapsulation, film formation and stabilization in food, beverage, nutraceutical and pharmaceutical systems.
                 </p>
               </ScrollReveal>
             </div>
@@ -121,7 +148,7 @@ export default function Applications() {
         </section>
 
         {/* Applications List */}
-        <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden bg-secondary">
+        <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden" style={{ backgroundColor: '#FFFDF8' }}>
           
           <div className="relative container-wide">
             <div className="space-y-8">
@@ -129,7 +156,7 @@ export default function Applications() {
                 <ScrollReveal key={app.name} delay={index * 0.05}>
                   <div 
                     id={app.name.toLowerCase()}
-                    className="group bg-card rounded-3xl border border-border p-8 lg:p-10 hover:border-accent/20 hover:shadow-elevated transition-all duration-500"
+                    className="group bg-white rounded-3xl border border-border p-8 lg:p-10 hover:border-accent/20 hover:shadow-elevated transition-all duration-500"
                   >
                     <div className="grid lg:grid-cols-12 gap-8">
                       <div className="lg:col-span-8">
@@ -138,40 +165,54 @@ export default function Applications() {
                             <app.icon className="w-8 h-8 text-primary-foreground" />
                           </div>
                           <div>
-                            <h2 className="text-2xl lg:text-3xl font-display font-bold text-foreground mb-2">
+                            <h2 className="text-2xl lg:text-3xl font-display font-bold text-foreground mb-3">
                               {app.name}
                             </h2>
-                            <p className="text-muted-foreground leading-relaxed">
-                              {app.description}
-                            </p>
+                            <div className="mb-4">
+                              <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-1">Functional Role</p>
+                              <p className="text-muted-foreground leading-relaxed">
+                                {app.functionalRole}
+                              </p>
+                            </div>
+                            <div>
+                              <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Performance Benefits</p>
+                              <ul className="space-y-1.5">
+                                {app.benefits.map((benefit) => (
+                                  <li key={benefit} className="flex items-start gap-2 text-muted-foreground text-sm leading-relaxed">
+                                    <span className="text-accent mt-1">•</span>
+                                    {benefit}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
                           </div>
                         </div>
                         
-                        <div className="flex flex-wrap gap-2 ml-0 lg:ml-[84px]">
-                          {app.uses.map((use) => (
-                            <span
-                              key={use}
-                              className="px-4 py-2 rounded-full bg-background text-foreground text-sm"
-                            >
-                              {use}
-                            </span>
-                          ))}
+                        <div className="ml-0 lg:ml-[84px]">
+                          <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Typical Applications</p>
+                          <div className="flex flex-wrap gap-2">
+                            {app.uses.map((use) => (
+                              <span
+                                key={use}
+                                className="px-4 py-2 rounded-full bg-background text-foreground text-sm"
+                              >
+                                {use}
+                              </span>
+                            ))}
+                          </div>
                         </div>
                       </div>
 
-                      <div className="lg:col-span-4 lg:border-l lg:border-border lg:pl-8">
-                        <div className="bg-accent/5 rounded-2xl p-6 border border-accent/10">
-                          <div className="flex items-center gap-2 mb-3">
-                            <Star className="w-4 h-4 text-accent" />
-                            <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
-                              Recommended
-                            </span>
-                          </div>
-                          <p className="text-xl font-display font-bold text-accent mb-4">
-                            {app.recommended}
+                      <div className="lg:col-span-4 lg:border-l lg:border-border lg:pl-8 flex items-start">
+                        <div className="bg-background rounded-2xl p-6 border border-border w-full">
+                          <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
+                            Available Grade
+                          </p>
+                          <p className="text-lg font-display font-bold text-primary mb-4">
+                            Spray-Dried Acacia Senegal
                           </p>
                           <Button variant="outline" size="sm" asChild>
-                            <Link to={app.recommendedLink}>
+                            <Link to="/products/acacia-senegal">
                               View Product
                               <ArrowRight className="w-4 h-4" />
                             </Link>
@@ -191,17 +232,25 @@ export default function Applications() {
           <div className="container-wide text-center">
             <ScrollReveal>
               <h2 className="text-display-md font-display font-bold text-primary mb-6">
-                Need technical guidance?
+                Discuss your application requirements
               </h2>
               <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-                Our team can help you select the right product for your specific application requirements.
+                Our technical team can assist with emulsification systems, encapsulation performance, dosage guidance and regulatory documentation tailored to your formulation.
               </p>
-              <Button variant="accent" size="xl" asChild>
-                <Link to="/contact">
-                  Contact Us
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </Button>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Button variant="accent" size="xl" asChild>
+                  <Link to="/contact">
+                    Request Technical Consultation
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </Button>
+                <Button variant="outline" size="xl" asChild>
+                  <Link to="/contact?type=sample&product=senegal">
+                    <Package className="w-5 h-5" />
+                    Order 1kg Sample
+                  </Link>
+                </Button>
+              </div>
             </ScrollReveal>
           </div>
         </section>
