@@ -81,7 +81,7 @@ export default function ProductSenegal() {
                 </ScrollReveal>
 
                 <ScrollReveal delay={0.2}>
-                  <div className="bg-secondary rounded-2xl p-6 mb-8 border border-border inline-block">
+                  <div className="bg-secondary/30 rounded-2xl p-6 mb-8 border border-border inline-block">
                     <p className="text-sm font-semibold text-foreground uppercase tracking-wider mb-2">
                       Technical Evaluation Sample – 1kg
                     </p>
@@ -115,7 +115,7 @@ export default function ProductSenegal() {
 
               <ScrollReveal direction="right" delay={0.2}>
                 <div className="relative">
-                  <div className="bg-secondary rounded-3xl p-8 lg:p-10 border border-border shadow-elevated">
+                  <div className="bg-secondary/30 rounded-3xl p-8 lg:p-10 border border-border shadow-elevated">
                     <h3 className="font-display font-bold text-xl text-primary mb-8">Technical Characteristics</h3>
                     <div className="space-y-5">
                       {features.map((feature) => (
