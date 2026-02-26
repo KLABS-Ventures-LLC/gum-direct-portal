@@ -14,98 +14,67 @@ import {
   ArrowRight,
   Package,
 } from "lucide-react";
+import { applicationDetails } from "@/data/applicationDetails";
+
+const slugMap: Record<string, string> = {
+  "Beverages": "beverages",
+  "Emulsions": "emulsions",
+  "Confectionery": "confectionery",
+  "Dietary Supplements": "supplements",
+  "Pharmaceuticals": "pharmaceuticals",
+  "Bakery": "bakery",
+  "Industrial": "industrial",
+};
 
 const applications = [
   {
     icon: Wine,
     name: "Beverages",
-    functionalRole:
-      "Acts as a primary emulsifier and stabiliser for citrus oil systems and flavour concentrates in soft drinks and juice-based beverages.",
-    benefits: [
-      "Stable citrus cloud systems with minimal separation",
-      "Effective flavour oil encapsulation",
-      "Prevents ring formation in bottled beverages",
-      "Compatible with acidic pH environments",
-    ],
-    uses: ["Citrus oil emulsions", "Cloud agents", "Flavour encapsulation", "Wine clarification"],
+    functionalRole: applicationDetails.beverages.hero.subtitle,
+    benefits: applicationDetails.beverages.solution.items,
+    uses: applicationDetails.beverages.technical.suitableFor,
   },
   {
     icon: Droplets,
     name: "Emulsions",
-    functionalRole:
-      "Functions as a natural oil-in-water emulsifier with low viscosity and high solubility, suitable for flavour and fragrance systems.",
-    benefits: [
-      "Low interfacial tension for fine droplet formation",
-      "Long-term emulsion stability",
-      "Suitable for spray-drying applications",
-      "Compatible with a wide range of oils",
-    ],
-    uses: ["Essential oil emulsions", "Flavour concentrates", "Fragrance formulations", "Spray-dried flavours"],
+    functionalRole: applicationDetails.emulsions.hero.subtitle,
+    benefits: applicationDetails.emulsions.solution.items,
+    uses: applicationDetails.emulsions.technical.suitableFor,
   },
   {
     icon: Candy,
     name: "Confectionery",
-    functionalRole:
-      "Provides film-forming and adhesion properties for glazing, coating and binding in sugar and chocolate confectionery.",
-    benefits: [
-      "Uniform film formation for glossy coatings",
-      "Improved coating adhesion and durability",
-      "Prevents sugar crystallisation",
-      "Enhances surface stability and shine",
-    ],
-    uses: ["Hard candy glazing", "Soft candy binding", "Chocolate panning", "Gummy texturing"],
+    functionalRole: applicationDetails.confectionery.hero.subtitle,
+    benefits: applicationDetails.confectionery.solution.items,
+    uses: applicationDetails.confectionery.technical.suitableFor,
   },
   {
     icon: Pill,
     name: "Dietary Supplements",
-    functionalRole:
-      "Serves as a prebiotic fibre source, tableting binder and microencapsulation agent for vitamins and minerals.",
-    benefits: [
-      "Effective tablet binding with clean release",
-      "Microencapsulation of sensitive actives",
-      "Soluble dietary fibre contribution",
-      "Neutral taste profile for powder blends",
-    ],
-    uses: ["Tablet binding", "Microencapsulation", "Fibre supplementation", "Powder blending"],
+    functionalRole: applicationDetails.supplements.hero.subtitle,
+    benefits: applicationDetails.supplements.solution.items,
+    uses: applicationDetails.supplements.technical.suitableFor,
   },
   {
     icon: Heart,
     name: "Pharmaceuticals",
-    functionalRole:
-      "Used as an excipient for tablet film coatings, suspension stabilisation and emulsion formulation in pharmaceutical systems.",
-    benefits: [
-      "Controlled-release film coating capability",
-      "Suspension stabilisation without viscosity increase",
-      "Biocompatible and well-tolerated",
-      "Compliant with pharmacopoeia standards",
-    ],
-    uses: ["Tablet film coating", "Suspension stabiliser", "Emulsion base", "Controlled release"],
+    functionalRole: applicationDetails.pharmaceuticals.hero.subtitle,
+    benefits: applicationDetails.pharmaceuticals.solution.items,
+    uses: applicationDetails.pharmaceuticals.technical.suitableFor,
   },
   {
     icon: CakeSlice,
     name: "Bakery",
-    functionalRole:
-      "Enhances moisture retention, acts as an egg replacer and provides glazing functionality in baked goods.",
-    benefits: [
-      "Improved moisture retention in finished products",
-      "Effective egg replacement in select formulations",
-      "Clean-label fibre enrichment",
-      "Consistent glaze formation",
-    ],
-    uses: ["Egg replacement", "Glaze formulation", "Moisture retention", "Fibre enrichment"],
+    functionalRole: applicationDetails.bakery.hero.subtitle,
+    benefits: applicationDetails.bakery.solution.items,
+    uses: applicationDetails.bakery.technical.suitableFor,
   },
   {
     icon: Factory,
     name: "Industrial",
-    functionalRole:
-      "Applied in adhesives, lithographic printing, textile sizing and protective coatings for industrial use.",
-    benefits: [
-      "Strong adhesive bonding in speciality applications",
-      "Consistent sizing performance in textiles",
-      "Effective binder for lithographic inks",
-      "Film-forming capability for protective coatings",
-    ],
-    uses: ["Lithographic printing", "Textile sizing", "Industrial adhesives", "Protective coatings"],
+    functionalRole: applicationDetails.industrial.hero.subtitle,
+    benefits: applicationDetails.industrial.solution.items,
+    uses: applicationDetails.industrial.technical.suitableFor,
   },
 ];
 
@@ -154,9 +123,10 @@ export default function Applications() {
             <div className="space-y-8">
               {applications.map((app, index) => (
                 <ScrollReveal key={app.name} delay={index * 0.05}>
-                  <div 
+                  <Link
+                    to={`/applications/${slugMap[app.name]}`}
                     id={app.name.toLowerCase()}
-                    className="group bg-white rounded-3xl border border-border p-8 lg:p-10 hover:border-accent/20 hover:shadow-elevated transition-all duration-500"
+                    className="group block bg-white rounded-3xl border border-border p-8 lg:p-10 hover:border-accent/20 hover:shadow-elevated hover:bg-accent/5 transition-all duration-500"
                   >
                     <div className="grid lg:grid-cols-12 gap-8">
                       <div className="lg:col-span-8">
@@ -166,18 +136,8 @@ export default function Applications() {
                           </div>
                           <div>
                             <h2 className="text-2xl lg:text-3xl font-display font-bold text-foreground mb-3">
-                              {(() => {
-                                const slugMap: Record<string, string> = { "Beverages": "beverages", "Emulsions": "emulsions", "Confectionery": "confectionery", "Dietary Supplements": "supplements", "Pharmaceuticals": "pharmaceuticals", "Bakery": "bakery", "Industrial": "industrial" };
-                                const slug = slugMap[app.name];
-                                return slug ? (
-                                  <Link to={`/applications/${slug}`} className="hover:text-accent transition-colors">
-                                    {app.name}
-                                    <ArrowRight className="inline w-5 h-5 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                  </Link>
-                                ) : (
-                                  app.name
-                                );
-                              })()}
+                              {app.name}
+                              <ArrowRight className="inline w-5 h-5 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                             </h2>
                             <div className="mb-4">
                               <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-1">Functional Role</p>
@@ -214,24 +174,22 @@ export default function Applications() {
                         </div>
                       </div>
 
-                      <div className="lg:col-span-4 lg:border-l lg:border-border lg:pl-8 flex items-start">
-                        <div className="bg-background rounded-2xl p-6 border border-border w-full">
-                          <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-3">
-                            Available Grade
+                      <div className="lg:col-span-4 lg:border-l lg:border-border lg:pl-8 flex items-center">
+                        <div className="bg-background rounded-2xl p-6 border border-border w-full text-center">
+                          <p className="text-lg font-display font-bold text-foreground mb-2">
+                            Learn More
                           </p>
-                          <p className="text-lg font-display font-bold text-primary mb-4">
-                            Spray-Dried Acacia Senegal
+                          <p className="text-sm text-muted-foreground mb-4">
+                            Explore formulation details, technical specs & documentation
                           </p>
-                          <Button variant="outline" size="sm" asChild>
-                            <Link to="/products/acacia-senegal">
-                              View Product
-                              <ArrowRight className="w-4 h-4" />
-                            </Link>
-                          </Button>
+                          <span className="inline-flex items-center gap-2 text-sm font-semibold text-accent group-hover:gap-3 transition-all">
+                            Read More About {app.name}
+                            <ArrowRight className="w-4 h-4" />
+                          </span>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </ScrollReveal>
               ))}
             </div>
