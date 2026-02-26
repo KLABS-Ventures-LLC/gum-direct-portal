@@ -23,7 +23,7 @@ export function HeroSection() {
       <div className="container-wide relative z-10">
         <div className="max-w-5xl mx-auto text-center pt-[137px] pb-[64px]">
           <ScrollReveal>
-            <span className="inline-block text-secondary font-semibold text-sm uppercase tracking-widest mb-6">UK PROCESSED • BATCH TESTED • FULL TRACEABILITY
+            <span className="inline-block font-semibold text-sm uppercase tracking-widest mb-6 text-primary">UK PROCESSED • BATCH TESTED • FULL TRACEABILITY
 
             </span>
           </ScrollReveal>
@@ -59,7 +59,7 @@ export function HeroSection() {
           <ScrollReveal delay={0.4}>
             <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-4 pt-8 border-t border-background/20">
               {["99%+ Purity", "UK Processed", "Batch Tested"].map((item) =>
-                <div key={item} className="flex items-center gap-2 text-background text-lg font-medium">
+              <div key={item} className="flex items-center gap-2 text-background text-lg font-medium">
                   <span className="text-secondary font-bold">✔</span>
                   <span>{item}</span>
                 </div>
