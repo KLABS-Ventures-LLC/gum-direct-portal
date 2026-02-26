@@ -434,4 +434,70 @@ export const applicationDetails: Record<string, ApplicationDetail> = {
       description: "Our team can assist with documentation, commercial supply, and technical inquiries.",
     },
   },
+  industrial: {
+    slug: "industrial",
+    hero: {
+      label: "Industrial Applications",
+      title: "Acacia Gum for Industrial Applications",
+      subtitle: "Natural binder and stabilizer for adhesive, coating, and technical formulation systems.",
+      description: "GumDirect's spray-dried Acacia Senegal delivers consistent performance in industrial processes requiring controlled viscosity, dispersion, and film formation.",
+    },
+    challenges: {
+      heading: "Common Industrial Formulation Challenges",
+      intro: "Industrial manufacturers often manage:",
+      items: [
+        "Inconsistent binder performance",
+        "Film cracking or surface instability",
+        "Viscosity imbalance during processing",
+        "Poor dispersion of solids",
+        "Batch variability affecting product consistency",
+      ],
+      closing: "Reliable raw materials are essential to maintain production stability and finished product performance.",
+    },
+    solution: {
+      heading: "Performance Characteristics",
+      intro: "Spray-dried Acacia Senegal can function as:",
+      items: [
+        "Natural binder",
+        "Film-forming agent",
+        "Stabilizer in aqueous systems",
+        "Thickening component",
+        "Adhesion support material",
+      ],
+      closing: "Its controlled particle size supports predictable hydration and dispersion in water-based systems.",
+    },
+    technical: {
+      heading: "Why Acacia Senegal Is Used in Industrial Formulations",
+      intro: "Acacia Senegal is valued for:",
+      specs: [
+        "Controlled viscosity behavior",
+        "Stable dispersion in aqueous media",
+        "Natural polymer structure",
+        "Film-forming capability",
+        "Compatibility with various formulation systems",
+      ],
+      suitableFor: [
+        "Adhesives",
+        "Paper coatings",
+        "Printing inks",
+        "Textile sizing",
+        "Technical binder systems",
+      ],
+    },
+    compliance: {
+      heading: "Supply & Traceability",
+      intro: "Each batch is supplied with:",
+      items: [
+        "Certificate of Analysis (COA)",
+        "Safety Data Sheets (SDS)",
+        "Technical specifications",
+        "Batch-level traceability",
+      ],
+      closing: "Material performance should be validated within the customer's specific formulation system.",
+    },
+    cta: {
+      heading: "Discuss Your Industrial Requirements",
+      description: "Our team can support documentation requests and commercial supply inquiries.",
+    },
+  },
 };
