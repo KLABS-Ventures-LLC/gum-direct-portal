@@ -4,29 +4,29 @@ import { Shield, Truck, FlaskConical, CheckCircle } from "lucide-react";
 const features = [
 {
   icon: FlaskConical,
-  title: "Premium Spray-Dried",
-  description: "Advanced spray-drying technology for consistent quality, superior solubility, and optimal particle size."
+  title: "Spray-Dried Precision",
+  description: "Advanced UK spray-drying ensures consistent particle size, high solubility and stable performance across applications."
 },
 {
   icon: Shield,
-  title: "Food-Grade Certified",
-  description: "HACCP, ISO 22000, with Halal and Kosher certifications available. Full compliance guaranteed."
+  title: "Certified & Compliant",
+  description: "HACCP and ISO 22000 aligned processing with Halal and Kosher certification options available."
 },
 {
   icon: Truck,
-  title: "UK Stock Available",
-  description: "Fast delivery from our UK warehouse. Reduce lead times and streamline your supply chain."
+  title: "UK Stock & Distribution",
+  description: "Fast delivery from our UK warehouse to reduce lead times and strengthen supply continuity."
 },
 {
   icon: CheckCircle,
-  title: "Batch Tested",
-  description: "Every batch tested with COA provided. Complete traceability from Sudan to delivery."
+  title: "Batch-Level Testing",
+  description: "Every batch supplied with COA documentation and full traceability from origin to delivery."
 }];
 
 
 export function WhatWeDoSection() {
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-background">
+    <section className="py-16 md:py-20 lg:py-24" style={{ backgroundColor: '#FFFDF8' }}>
       <div className="container-wide">
         {/* Header */}
         <div className="max-w-3xl mb-16 md:mb-24">
