@@ -300,4 +300,71 @@ export const applicationDetails: Record<string, ApplicationDetail> = {
       description: "Our team can support your technical documentation needs and commercial supply requirements.",
     },
   },
+  pharmaceuticals: {
+    slug: "pharmaceuticals",
+    hero: {
+      label: "Pharmaceuticals",
+      title: "Acacia Gum for Pharmaceutical Applications",
+      subtitle: "Functional excipient support for tablet binding, coating, and suspension systems.",
+      description: "GumDirect's spray-dried Acacia Senegal provides reliable performance in pharmaceutical and regulated manufacturing environments.",
+    },
+    challenges: {
+      heading: "Common Pharmaceutical Formulation Challenges",
+      intro: "Pharmaceutical manufacturers must manage:",
+      items: [
+        "Consistent excipient performance",
+        "Controlled binding during tablet compression",
+        "Suspension stability in liquid formulations",
+        "Regulatory documentation and traceability requirements",
+        "Batch-to-batch consistency in excipient quality",
+      ],
+      closing: "Reliability and compliance are critical in regulated production systems.",
+    },
+    solution: {
+      heading: "Excipient Performance Characteristics",
+      intro: "Spray-dried Acacia Senegal is commonly used as:",
+      items: [
+        "Tablet binder",
+        "Film-forming agent",
+        "Suspension stabilizer",
+        "Coating component",
+        "Encapsulation aid",
+      ],
+      closing: "Its natural arabinogalactan structure contributes to stable dispersion and controlled viscosity.",
+    },
+    technical: {
+      heading: "Why Acacia Senegal Is Used in Regulated Systems",
+      intro: "Acacia Senegal (E414) is valued for:",
+      specs: [
+        "High purity (≥99%)",
+        "Controlled moisture content",
+        "Fine powder format for uniform blending",
+        "Neutral taste and odor",
+        "Stable performance in aqueous systems",
+      ],
+      suitableFor: [
+        "Tablet formulations",
+        "Oral suspensions",
+        "Syrup stabilization",
+        "Film coatings",
+        "Encapsulation systems",
+      ],
+    },
+    compliance: {
+      heading: "Regulatory & Quality Support",
+      intro: "We provide:",
+      items: [
+        "Certificate of Analysis (COA) for each batch",
+        "Safety Data Sheets (SDS)",
+        "Technical specification sheets",
+        "HACCP & ISO-aligned documentation",
+        "Batch-level traceability",
+      ],
+      closing: "Documentation can be supplied to support regulatory review and quality audits. Material suitability for pharmaceutical use should be assessed in accordance with the manufacturer's internal regulatory requirements.",
+    },
+    cta: {
+      heading: "Discuss Your Pharmaceutical Requirements",
+      description: "For technical documentation, specification details, or supply inquiries, contact our team.",
+    },
+  },
 };
