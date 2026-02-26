@@ -22,25 +22,25 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="text-center md:text-left">
               <h3 className="text-display-sm text-primary-foreground mb-2">
-                Ready to get started?
+                Request a Technical Sample or Quotation
               </h3>
               <p className="text-primary-foreground/70 text-lg">
-                Request a sample or get a quote for your requirements.
+                Get started with a sample or receive a tailored quote for your requirements.
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/contact?type=sample"
+                to="/contact?type=quote"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary-foreground text-primary font-semibold rounded-full hover:bg-primary-foreground/90 transition-all shadow-elevated"
               >
-                Get Sample
+                Request Quote
                 <ArrowUpRight className="w-4 h-4" />
               </Link>
               <Link
-                to="/contact?type=quote"
+                to="/contact?type=sample"
                 className="inline-flex items-center gap-2 px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-full hover:bg-primary-foreground/10 transition-all"
               >
-                Request Quote
+                Request Technical Sample
               </Link>
             </div>
           </div>
@@ -63,23 +63,22 @@ export function Footer() {
                 </span>
               </Link>
               <p className="text-background/60 mb-8 max-w-sm text-sm leading-relaxed">
-                Premium spray-dried acacia gum sourced directly from Sudan. 
-                UK-based supply with full traceability and batch certification.
+                UK-processed Acacia Senegal (E414) supplied with full batch documentation, certified food safety compliance and traceable origin.
               </p>
               <div className="space-y-3">
                 <a
-                  href="mailto:info@gumdirect.com"
+                  href="mailto:info@gumdirect.co.uk"
                   className="flex items-center gap-3 text-background/60 hover:text-accent transition-colors text-sm"
                 >
                   <Mail className="w-4 h-4" />
-                  info@gumdirect.com
+                  info@gumdirect.co.uk
                 </a>
                 <a
-                  href="tel:+441234567890"
+                  href="tel:+447930844065"
                   className="flex items-center gap-3 text-background/60 hover:text-accent transition-colors text-sm"
                 >
                   <Phone className="w-4 h-4" />
-                  +44 (0) 123 456 7890
+                  +44 7930 844065
                 </a>
                 <div className="flex items-start gap-3 text-background/60 text-sm">
                   <MapPin className="w-4 h-4 mt-0.5" />
@@ -145,17 +144,22 @@ export function Footer() {
           </div>
 
           {/* Bottom Bar */}
-          <div className="mt-16 pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-            <p className="text-background/40">
-              © {new Date().getFullYear()} GumDirect Ltd. All rights reserved.
-            </p>
-            <div className="flex items-center gap-6">
-              <Link to="/privacy" className="text-background/40 hover:text-background/70 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-background/40 hover:text-background/70 transition-colors">
-                Terms of Service
-              </Link>
+          <div className="mt-16 pt-8 border-t border-background/10">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+              <div className="text-background/40 text-center md:text-left">
+                <p>© {new Date().getFullYear()} GumDirect Ltd. All rights reserved.</p>
+                <p className="mt-1 text-xs text-background/30">
+                  Company No: 16390184 · Registered in England & Wales
+                </p>
+              </div>
+              <div className="flex items-center gap-6">
+                <Link to="/privacy" className="text-background/40 hover:text-background/70 transition-colors">
+                  Privacy Policy
+                </Link>
+                <Link to="/terms" className="text-background/40 hover:text-background/70 transition-colors">
+                  Terms of Service
+                </Link>
+              </div>
             </div>
           </div>
         </div>
