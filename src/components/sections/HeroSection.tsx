@@ -18,7 +18,7 @@ export function HeroSection() {
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0" style={{ backgroundColor: 'rgba(255, 253, 248, 0.85)' }} />
+      <div className="absolute inset-0" style={{ backgroundColor: 'rgba(255, 253, 248, 0.55)' }} />
 
       <div className="container-wide relative z-10">
         <div className="max-w-5xl mx-auto text-center pt-[137px] pb-[64px]">
