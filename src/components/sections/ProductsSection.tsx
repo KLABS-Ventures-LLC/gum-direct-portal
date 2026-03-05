@@ -4,15 +4,15 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Package, CheckCircle } from "lucide-react";
 
 const features = [
-  "≥99% Purity",
-  "Food Grade (E414)",
-  "Sudan Origin",
-  "COA Provided",
-];
+"≥99% Purity",
+"Food Grade (E414)",
+"Sudan Origin",
+"COA Provided"];
+
 
 export function ProductsSection() {
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-secondary">
+    <section className="py-16 md:py-20 lg:py-24 bg-background">
       <div className="container-wide">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16 md:mb-24">
@@ -57,14 +57,14 @@ export function ProductsSection() {
 
                   {/* Features - Vertical Bullet Format */}
                   <div className="space-y-3 mb-8">
-                    {features.map((feature) => (
-                      <div key={feature} className="flex items-center gap-3">
+                    {features.map((feature) =>
+                    <div key={feature} className="flex items-center gap-3">
                         <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
                           <CheckCircle className="w-3.5 h-3.5 text-accent" />
                         </div>
                         <span className="text-foreground/80">{feature}</span>
                       </div>
-                    ))}
+                    )}
                   </div>
                 </div>
 
@@ -99,6 +99,6 @@ export function ProductsSection() {
           </div>
         </ScrollReveal>
       </div>
-    </section>
-  );
+    </section>);
+
 }
