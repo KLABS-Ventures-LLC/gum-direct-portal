@@ -213,9 +213,9 @@ export default function ProductSenegal() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button variant="accent" size="lg" asChild>
-                    <a href="/spec-sheet-senegal.pdf" download>
+                    <a href="/documents/GumDirect_TDS_SprayDried_AcaciaSenegal_E414.pdf" download>
                       <Download className="w-4 h-4" />
-                      Download Spec Sheet
+                      Download Technical Datasheet
                     </a>
                   </Button>
                   <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10" asChild>
