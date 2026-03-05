@@ -1,29 +1,45 @@
 
 
-## Plan: Align Application Cards with Detail Pages and Improve UX
+## Plan: Sample Order Page, Hero Updates, and Contact Form Cleanup
 
-### Problem
-1. The application cards on `/applications` have content (functionalRole, benefits, uses) that was written separately from the detail pages in `applicationDetails.ts` — they may be inconsistent.
-2. Cards don't feel clickable — no whole-card hover effect.
-3. The right sidebar on every card shows "View Product" linking to the same product page, which is repetitive.
+### Changes Overview
 
-### Changes
+**1. Hero section bullet points** (`src/components/sections/HeroSection.tsx`)
+- Replace `["99%+ Purity", "UK Processed", "Batch Tested"]` with `["High Purity", "Low Ash", "Controlled Microbiology"]`
 
-**File: `src/pages/Applications.tsx`**
+**2. Create new `/order-sample` page** (`src/pages/OrderSample.tsx`)
+- New dedicated page with the following structure:
+  - **Product Header**: "Technical Evaluation Sample" title, "Spray-Dried Acacia Senegal (E414)" subtitle, description line, price (£34.99 incl. UK delivery), next batch note (Early May 2026)
+  - **What You Will Receive**: bullet list (1kg sample, sealed lab bag, batch ID, COA, TDS)
+  - **Intended Use**: short paragraph about lab/evaluation use, not for resale
+  - **Dispatch & Delivery**: bullet list (2-3 working days, UK delivery included, international on request, tracking provided)
+  - **Order Form**: Company Name, Contact Name, Email, Phone, Delivery Address (textarea), Application (text input)
+  - **"Proceed to Secure Payment" button** (non-functional placeholder for now — will be linked to Stripe later)
+  - **Disclaimer below button**: "All commercial supply is subject to formal quotation and written confirmation."
 
-1. **Align card content with detail pages**: Update each application's `functionalRole`, `benefits`, and `uses` arrays in the `applications` array (lines 18-110) to match the corresponding data in `applicationDetails.ts`. Specifically pull the subtitle from `hero.subtitle`, the solution items from `solution.items`, and the `suitableFor` list from `technical.suitableFor`.
+**3. Update all "Request Technical Sample" links to point to `/order-sample`** and rename to "Order Technical Sample"
+- `src/components/sections/HeroSection.tsx` — not applicable (hero has "Request Quote" not sample)
+- `src/pages/ProductSenegal.tsx` — line 101-104: change link to `/order-sample`, text to "Order Technical Sample"
+- `src/components/sections/ProductsSection.tsx` — line 89-94: change link to `/order-sample`, text to "Order Technical Sample"
+- `src/components/layout/Footer.tsx` — line 39-44: change link to `/order-sample`, text to "Order Technical Sample"
 
-2. **Make whole card clickable with hover effect**: Wrap each card's outer `<div>` (line 157-234) in a `<Link>` to `/applications/{slug}`. Add a hover background color change (e.g., `hover:bg-accent/5`) to the card container so the entire card signals interactivity. The existing border/shadow hover effects will be retained.
+**4. Remove sample price from homepage and product page**
+- `src/components/sections/ProductsSection.tsx` — remove the £34.99 price block (lines 73-86)
+- `src/pages/ProductSenegal.tsx` — remove the pricing block (lines 83-96) showing £34.99
 
-3. **Replace "View Product" sidebar**: Change the right-side panel (lines 217-232) from "Available Grade / Spray-Dried Acacia Senegal / View Product" to a contextual "Learn More" section with a button labeled something like "Explore {app.name} Applications" linking to the detail page. This removes the repetitive product link and makes the CTA relevant to each card.
+**5. Update Contact page** (`src/pages/Contact.tsx`)
+- Replace `{ value: "sample", label: "Sample Request" }` with `{ value: "general", label: "General Inquiry" }` in the `inquiryTypes` array
+- Remove the conditional quantity field that shows for `sample` type (keep it for `quote` only)
 
-### Technical Details
+**6. Register route** (`src/App.tsx`)
+- Add `<Route path="/order-sample" element={<OrderSample />} />`
 
-- The `slugMap` already exists at line 170 — it will be extracted to the top level so it can be used both for the card link wrapper and the sidebar CTA.
-- The card `<Link>` wrapper will use `className="block"` with no text decoration. The inner content structure stays the same.
-- The existing `<Link>` on the application name (lines 172-176) will be simplified to plain text since the whole card is now clickable.
-- Content alignment will match these mappings:
-  - `functionalRole` → `applicationDetails[slug].hero.subtitle`
-  - `benefits` → `applicationDetails[slug].solution.items`
-  - `uses` → `applicationDetails[slug].technical.suitableFor`
+### Files Modified
+- `src/components/sections/HeroSection.tsx` — bullet text
+- `src/pages/OrderSample.tsx` — new file
+- `src/pages/ProductSenegal.tsx` — remove price, update sample button
+- `src/components/sections/ProductsSection.tsx` — remove price, update sample button
+- `src/components/layout/Footer.tsx` — update sample link
+- `src/pages/Contact.tsx` — replace sample inquiry type with general inquiry
+- `src/App.tsx` — add route
 
