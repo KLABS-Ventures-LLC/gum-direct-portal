@@ -51,7 +51,7 @@ export function HeroSection() {
                 </Link>
               </Button>
               <Button variant="outline" size="xl" className="border-primary text-primary hover:bg-primary/10 bg-transparent" asChild>
-                <Link to="/contact">Download Technical Data Sheet</Link>
+                <a href="/documents/GumDirect_TDS_SprayDried_AcaciaSenegal_E414.pdf" download>Download Technical Data Sheet</a>
               </Button>
             </div>
           </ScrollReveal>
