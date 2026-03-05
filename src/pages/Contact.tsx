@@ -45,7 +45,7 @@ const contactInfo = [
 
 const inquiryTypes = [
 { value: "quote", label: "Request Quote" },
-{ value: "sample", label: "Sample Request" },
+{ value: "general", label: "General Inquiry" },
 { value: "technical", label: "Technical Question" },
 { value: "coa", label: "Documentation (COA/SDS)" },
 { value: "partnership", label: "Partnership Inquiry" }];
@@ -308,14 +308,14 @@ export default function Contact() {
                         </Select>
                       </div>
 
-                      {(formData.inquiryType === "quote" || formData.inquiryType === "sample") &&
+                      {formData.inquiryType === "quote" &&
                       <div className="space-y-2 md:col-span-2">
                           <Label htmlFor="quantity" className="text-sm font-medium">
-                            {formData.inquiryType === "sample" ? "Sample Quantity" : "Estimated Quantity"}
+                            Estimated Quantity
                           </Label>
                           <Input
                           id="quantity"
-                          placeholder={formData.inquiryType === "sample" ? "1 kg" : "e.g., 500 kg per month"}
+                          placeholder="e.g., 500 kg per month"
                           value={formData.quantity}
                           onChange={(e) => handleChange("quantity", e.target.value)}
                           className="h-12 rounded-xl border-border bg-background" />
