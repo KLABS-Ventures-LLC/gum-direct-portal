@@ -58,7 +58,7 @@ export function HeroSection() {
 
           <ScrollReveal delay={0.4}>
             <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-4 pt-8 border-t border-primary/20">
-              {["99%+ Purity", "UK Processed", "Batch Tested"].map((item) =>
+              {["High Purity", "Low Ash", "Controlled Microbiology"].map((item) =>
               <div key={item} className="flex items-center gap-2 text-primary text-lg font-medium">
                   <span className="text-secondary font-bold">✔</span>
                   <span>{item}</span>

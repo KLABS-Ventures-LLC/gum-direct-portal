@@ -68,28 +68,22 @@ export function ProductsSection() {
                   </div>
                 </div>
 
-                {/* Pricing Card */}
+                {/* CTA Card */}
                 <div className="bg-background rounded-2xl p-8 border border-border">
                   <div className="text-center mb-8">
                     <span className="text-sm font-semibold text-foreground uppercase tracking-wider">
                       Technical Evaluation Sample – 1kg
                     </span>
-                    <div className="mt-3 mb-2">
-                      <span className="text-5xl font-display font-bold text-foreground">£34.99</span>
-                    </div>
-                    <p className="text-sm text-muted-foreground italic">
-                      For commercial evaluation purposes only.
-                    </p>
-                    <p className="text-muted-foreground mt-1">
-                      Delivery Included (UK Only)
+                    <p className="text-muted-foreground mt-3">
+                      Available for formulation and technical evaluation. UK delivery included.
                     </p>
                   </div>
 
                   <div className="space-y-3">
                     <Button variant="accent" size="lg" className="w-full" asChild>
-                      <Link to="/contact?type=sample&product=senegal">
+                      <Link to="/order-sample">
                         <Package className="w-5 h-5" />
-                        Request Technical Sample
+                        Order Technical Sample
                       </Link>
                     </Button>
                     <Button variant="outline" size="lg" className="w-full" asChild>

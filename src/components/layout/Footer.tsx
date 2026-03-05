@@ -37,10 +37,10 @@ export function Footer() {
                 <ArrowUpRight className="w-4 h-4" />
               </Link>
               <Link
-                to="/contact?type=sample"
+                to="/order-sample"
                 className="inline-flex items-center gap-2 px-6 py-3 border-2 border-primary-foreground/30 text-primary-foreground font-medium rounded-full hover:bg-primary-foreground/10 transition-all"
               >
-                Request Technical Sample
+                Order Technical Sample
               </Link>
             </div>
           </div>

@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ApplicationDetail from "./pages/ApplicationDetail";
+import OrderSample from "./pages/OrderSample";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Cookies from "./pages/Cookies";
@@ -34,6 +35,7 @@ const App = () => (
             <Route path="/products/acacia-senegal" element={<ProductSenegal />} />
             <Route path="/applications" element={<Applications />} />
             <Route path="/applications/:id" element={<ApplicationDetail />} />
+            <Route path="/order-sample" element={<OrderSample />} />
             <Route path="/quality" element={<Quality />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

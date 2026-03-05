@@ -80,27 +80,12 @@ export default function ProductSenegal() {
                   </p>
                 </ScrollReveal>
 
-                <ScrollReveal delay={0.2}>
-                  <div className="bg-secondary/30 rounded-2xl p-6 mb-8 border border-border inline-block">
-                    <p className="text-sm font-semibold text-foreground uppercase tracking-wider mb-2">
-                      Technical Evaluation Sample – 1kg
-                    </p>
-                    <div className="flex items-baseline gap-3 mb-1">
-                      <span className="text-4xl font-display font-bold text-primary">£34.99</span>
-                    </div>
-                    <p className="text-accent font-medium">UK Delivery Included</p>
-                    <p className="text-sm text-muted-foreground italic mt-2">
-                      For commercial evaluation purposes only.
-                    </p>
-                  </div>
-                </ScrollReveal>
-
                 <ScrollReveal delay={0.3}>
                   <div className="flex flex-wrap gap-4">
                     <Button variant="hero" size="xl" asChild>
-                      <Link to="/contact?type=sample&product=senegal">
+                      <Link to="/order-sample">
                         <Package className="w-5 h-5" />
-                        Request Technical Sample
+                        Order Technical Sample
                       </Link>
                     </Button>
                     <Button variant="hero-outline" size="xl" asChild>
