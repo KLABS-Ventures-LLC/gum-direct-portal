@@ -148,7 +148,7 @@ export function Footer() {
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
               <div className="text-background/40 text-center md:text-left">
                 <p>© {new Date().getFullYear()} GumDirect Ltd. All rights reserved.</p>
-                <p className="mt-1 text-xs text-background/30">
+                <p className="mt-1 text-sm font-medium text-background/60">
                   Company No: 16390184 · Registered in England & Wales
                 </p>
               </div>
