@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { CheckCircle, Lock, Package, ArrowRight } from "lucide-react";
+import { Lock, Package, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const whatYouReceive = [
@@ -41,7 +41,7 @@ export default function OrderSample() {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
