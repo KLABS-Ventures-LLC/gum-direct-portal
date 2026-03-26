@@ -82,7 +82,7 @@ export function Footer() {
                 </a>
                 <div className="flex items-start gap-3 text-background/60 text-sm">
                   <MapPin className="w-4 h-4 mt-0.5" />
-                  <span>London, United Kingdom</span>
+                  <span>Registered office: 58 Alderton Hill, Loughton, Essex IG10 3JB, United Kingdom</span>
                 </div>
               </div>
             </div>
