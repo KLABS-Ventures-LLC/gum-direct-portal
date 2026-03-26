@@ -27,7 +27,6 @@ const dispatchInfo = [
 export default function OrderSample() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const [formData, setFormData] = useState({
     companyName: "",
@@ -46,55 +45,16 @@ export default function OrderSample() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    try {
-      // Placeholder — will be linked to Stripe
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setIsSubmitted(true);
-      toast({
-        title: "Order Received",
-        description: "You will be redirected to secure payment shortly.",
-      });
-    } catch {
-      toast({
-        title: "Error",
-        description: "Something went wrong. Please try again.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+    toast({
+      title: "Redirecting to payment...",
+      description: "You will be taken to our secure checkout.",
+    });
 
-  if (isSubmitted) {
-    return (
-      <>
-        <Helmet>
-          <title>Order Confirmed | GumDirect</title>
-        </Helmet>
-        <Layout>
-          <section className="min-h-screen flex items-center justify-center pt-20">
-            <div className="container-wide text-center py-32">
-              <ScrollReveal>
-                <div className="w-24 h-24 mx-auto rounded-full gradient-primary flex items-center justify-center mb-8 shadow-elevated">
-                  <CheckCircle className="w-12 h-12 text-primary-foreground" />
-                </div>
-                <h1 className="text-display-md font-display font-bold mb-4">
-                  Thank You!
-                </h1>
-                <p className="text-xl text-muted-foreground mb-10 max-w-md mx-auto">
-                  Your order details have been received. Stripe payment integration coming soon.
-                </p>
-                <Button variant="default" size="lg" onClick={() => setIsSubmitted(false)}>
-                  Place Another Order
-                  <ArrowRight className="w-5 h-5" />
-                </Button>
-              </ScrollReveal>
-            </div>
-          </section>
-        </Layout>
-      </>
-    );
-  }
+    // Brief delay so the user sees feedback before redirect
+    setTimeout(() => {
+      window.location.href = "https://pay.gumdirect.co.uk/b/cNi7sK0FZaOX3PFfDPabK01";
+    }, 500);
+  };
 
   return (
     <>
