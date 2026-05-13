@@ -149,7 +149,7 @@ export function Footer() {
               <div className="text-background/40 text-center md:text-left">
                 <p>© {new Date().getFullYear()} GumDirect Ltd. All rights reserved.</p>
                 <p className="mt-1 text-sm font-medium text-background/60">
-                  Company No: 16390184 · Registered in England & Wales
+                  Company No: 16390184 · VAT No: 514479580 · Registered in England & Wales
                 </p>
               </div>
               <div className="flex items-center gap-6">
