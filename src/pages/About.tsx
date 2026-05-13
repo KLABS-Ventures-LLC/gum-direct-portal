@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
@@ -57,13 +57,11 @@ const supplyChainPoints = [
 export default function About() {
   return (
     <>
-      <Helmet>
-        <title>About GumDirect | Premium Gum Arabic Supplier UK</title>
-        <meta
-          name="description"
-          content="GumDirect is a UK-based supplier of premium spray-dried acacia gum. Direct from Sudan, processed to global food standards."
-        />
-      </Helmet>
+      <SEO
+        title="About GumDirect | Premium Gum Arabic Supplier UK"
+        description="GumDirect is a UK-based supplier of premium spray-dried acacia gum. Direct from Sudan, processed to global food standards."
+        path="/about"
+      />
 
       <Layout>
         {/* Hero */}

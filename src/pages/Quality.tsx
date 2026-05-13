@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
@@ -96,13 +96,11 @@ const qualityPoints = [
 export default function Quality() {
   return (
     <>
-      <Helmet>
-        <title>Quality & Certifications | HACCP, ISO, Halal, Kosher | GumDirect</title>
-        <meta
-          name="description"
-          content="GumDirect quality standards and certifications. HACCP certified, ISO 22000, Halal, Kosher, Non-GMO verified. Full traceability and COA available."
-        />
-      </Helmet>
+      <SEO
+        title="Quality & Certifications | HACCP, ISO, Halal, Kosher | GumDirect"
+        description="GumDirect quality standards and certifications. HACCP certified, ISO 22000, Halal, Kosher, Non-GMO verified. Full traceability and COA available."
+        path="/quality"
+      />
 
       <Layout>
         {/* Hero */}
