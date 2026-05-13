@@ -141,6 +141,32 @@ export default function About() {
           </div>
         </section>
 
+        {/* Our Approach */}
+        <section className="py-16 md:py-20 lg:py-24 bg-white">
+          <div className="container-wide">
+            <div className="max-w-3xl mx-auto">
+              <ScrollReveal>
+                <span className="text-accent font-semibold text-sm uppercase tracking-widest mb-4 block">
+                  Our Approach
+                </span>
+              </ScrollReveal>
+              <ScrollReveal delay={0.1}>
+                <h2 className="text-display-md font-display font-bold text-foreground mb-8">
+                  Our Approach
+                </h2>
+              </ScrollReveal>
+              <ScrollReveal delay={0.2}>
+                <div className="space-y-5 text-lg text-foreground/80 leading-relaxed">
+                  <p>GumDirect operates at the intersection of sourcing and market supply, with a focus on delivering consistent, high-quality spray-dried gum arabic.</p>
+                  <p>Our sourcing is closely connected to production regions in Sudan through our broader group operations, giving us direct exposure to raw material dynamics and supply conditions.</p>
+                  <p>We combine this sourcing access with a structured, market-oriented approach to serve manufacturers across food, beverage, and related industries.</p>
+                  <p>Our focus is on building a reliable, scalable supply model that supports long-term partnerships with our customers.</p>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
         {/* Operational Principles */}
         <section className="py-16 md:py-20 lg:py-24 bg-foreground">
           <div className="container-wide">
