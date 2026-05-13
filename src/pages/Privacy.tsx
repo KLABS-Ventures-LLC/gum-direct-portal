@@ -1,13 +1,14 @@
 import { Layout } from "@/components/layout/Layout";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 
 export default function Privacy() {
   return (
     <Layout>
-      <Helmet>
-        <title>Privacy Policy | GumDirect</title>
-        <meta name="description" content="GumDirect Ltd Privacy Policy — how we collect, use, and protect your personal information." />
-      </Helmet>
+      <SEO
+        title="Privacy Policy | GumDirect"
+        description="GumDirect Ltd Privacy Policy — how we collect, use, and protect your personal information."
+        path="/privacy"
+      />
 
       <div className="bg-muted/30 border-b border-border">
         <div className="container-wide py-16 md:py-20">

@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
@@ -51,13 +51,12 @@ const applicationBlocks = [
 export default function ProductSenegal() {
   return (
     <>
-      <Helmet>
-        <title>Acacia Senegal Spray-Dried Powder (E414) – 1 kg Sample | GumDirect</title>
-        <meta
-          name="description"
-          content="Food-grade spray-dried Acacia Senegal (E414) processed in the UK. 1 kg technical evaluation sample for £34.99 with UK delivery included."
-        />
-      </Helmet>
+      <SEO
+        title="Acacia Senegal Spray-Dried Powder (E414) – 1 kg Sample | GumDirect"
+        description="Food-grade spray-dried Acacia Senegal (E414) processed in the UK. 1 kg technical evaluation sample for £34.99 with UK delivery included."
+        path="/products/acacia-senegal"
+        type="product"
+      />
 
       <Layout>
         {/* Hero */}
