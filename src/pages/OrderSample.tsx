@@ -1,4 +1,5 @@
 import { SEO } from "@/components/SEO";
+import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
@@ -63,6 +64,24 @@ export default function OrderSample() {
         description="Order a 1kg technical evaluation sample of spray-dried Acacia Senegal (E414) for £34.99 with UK delivery included."
         path="/order-sample"
       />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: "Spray-Dried Acacia Senegal (E414) — 1 kg Technical Sample",
+          description: "1 kg technical evaluation sample of food-grade spray-dried Acacia Senegal (E414) with UK delivery included.",
+          brand: { "@type": "Brand", name: "GumDirect" },
+          url: "https://gumdirect.co.uk/order-sample",
+          offers: {
+            "@type": "Offer",
+            price: "34.99",
+            priceCurrency: "GBP",
+            availability: "https://schema.org/InStock",
+            url: "https://gumdirect.co.uk/order-sample",
+            seller: { "@type": "Organization", name: "GumDirect" }
+          }
+        })}</script>
+      </Helmet>
 
       <Layout>
         {/* Header */}

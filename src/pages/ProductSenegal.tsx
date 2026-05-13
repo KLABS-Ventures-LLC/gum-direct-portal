@@ -1,4 +1,5 @@
 import { SEO } from "@/components/SEO";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
@@ -57,6 +58,22 @@ export default function ProductSenegal() {
         path="/products/acacia-senegal"
         type="product"
       />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: "Spray-Dried Acacia Senegal (E414)",
+          description: "Food-grade spray-dried Acacia Senegal gum arabic (E414) for beverage, confectionery, supplement, pharmaceutical, bakery, and industrial applications. Processed in the UK with full traceability.",
+          brand: { "@type": "Brand", name: "GumDirect" },
+          category: "Food Ingredient / Hydrocolloid",
+          additionalProperty: [
+            { "@type": "PropertyValue", name: "E Number", value: "E414" },
+            { "@type": "PropertyValue", name: "Form", value: "Spray-dried powder" },
+            { "@type": "PropertyValue", name: "Origin", value: "Sudan" }
+          ],
+          url: "https://gumdirect.co.uk/products/acacia-senegal"
+        })}</script>
+      </Helmet>
 
       <Layout>
         {/* Hero */}
