@@ -185,6 +185,32 @@ export default function Quality() {
           </div>
         </section>
 
+        {/* Sourcing Approach */}
+        <section className="py-16 md:py-20 lg:py-24 bg-white">
+          <div className="container-wide">
+            <div className="max-w-3xl mx-auto">
+              <ScrollReveal>
+                <span className="text-accent font-semibold text-sm uppercase tracking-widest mb-4 block">
+                  Sourcing
+                </span>
+              </ScrollReveal>
+              <ScrollReveal delay={0.1}>
+                <h2 className="text-display-md font-display font-bold text-foreground mb-8">
+                  Sourcing Approach
+                </h2>
+              </ScrollReveal>
+              <ScrollReveal delay={0.2}>
+                <div className="space-y-5 text-lg text-foreground/80 leading-relaxed">
+                  <p>We work closely with sourcing networks connected to gum arabic production regions in Sudan.</p>
+                  <p>Our approach is focused on building long-term, transparent relationships across the supply chain, with an emphasis on consistency, traceability, and supply reliability.</p>
+                  <p>Sourcing is supported by established regional connections, allowing us to maintain continuity and access to high-quality raw material, even in complex operating environments.</p>
+                  <p>As we scale, we aim to further develop structured sourcing initiatives that strengthen traceability and create more direct value across the supply chain.</p>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
         {/* Quality Assurance */}
         <section className="py-16 md:py-20 lg:py-24 bg-foreground">
           <div className="container-wide">
