@@ -1,3 +1,4 @@
+import { SEO } from "@/components/SEO";
 import { Helmet } from "react-helmet-async";
 import { useSearchParams } from "react-router-dom";
 import { useState } from "react";
@@ -156,12 +157,11 @@ export default function Contact() {
 
   return (
     <>
-      <Helmet>
-        <title>Contact Us | Get a Quote | GumDirect</title>
-        <meta
-          name="description"
-          content="Contact GumDirect for samples, quotes, or inquiries about our premium acacia gum products." />
-      </Helmet>
+      <SEO
+        title="Contact Us | Get a Quote | GumDirect"
+        description="Contact GumDirect for samples, quotes, or inquiries about our premium acacia gum products."
+        path="/contact"
+      />
 
       <Layout>
         {/* Hero */}

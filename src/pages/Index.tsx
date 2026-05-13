@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Layout } from "@/components/layout/Layout";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { VideoSection } from "@/components/sections/VideoSection";
@@ -11,13 +11,11 @@ import { WhyGumDirectSection } from "@/components/sections/WhyGumDirectSection";
 const Index = () => {
   return (
     <>
-      <Helmet>
-        <title>GumDirect | Premium Spray-Dried Acacia Gum (Gum Arabic) UK Supplier</title>
-        <meta
-          name="description"
-          content="Premium spray-dried acacia gum direct from Sudan. UK-based supplier of food-grade gum arabic with HACCP certification, full traceability, and batch testing."
-        />
-      </Helmet>
+      <SEO
+        title="GumDirect | Premium Spray-Dried Acacia Gum (Gum Arabic) UK Supplier"
+        description="Premium spray-dried acacia gum direct from Sudan. UK-based supplier of food-grade gum arabic with HACCP certification, full traceability, and batch testing."
+        path="/"
+      />
 
       <Layout>
         <HeroSection />

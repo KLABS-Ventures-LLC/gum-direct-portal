@@ -1,5 +1,5 @@
 import { useParams, Navigate, Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { Button } from "@/components/ui/button";
@@ -24,10 +24,11 @@ export default function ApplicationDetail() {
 
   return (
     <>
-      <Helmet>
-        <title>{data.hero.title} | GumDirect</title>
-        <meta name="description" content={data.hero.subtitle} />
-      </Helmet>
+      <SEO
+        title={`${data.hero.title} | GumDirect`}
+        description={data.hero.subtitle}
+        path={`/applications/${id}`}
+      />
 
       <Layout>
         {/* 1 — Hero */}

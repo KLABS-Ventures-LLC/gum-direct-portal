@@ -1,13 +1,14 @@
 import { Layout } from "@/components/layout/Layout";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 
 export default function Cookies() {
   return (
     <Layout>
-      <Helmet>
-        <title>Cookie Policy | GumDirect</title>
-        <meta name="description" content="GumDirect Ltd Cookie Policy — how we use cookies and similar technologies on our website." />
-      </Helmet>
+      <SEO
+        title="Cookie Policy | GumDirect"
+        description="GumDirect Ltd Cookie Policy — how we use cookies and similar technologies on our website."
+        path="/cookies"
+      />
 
       <div className="bg-muted/30 border-b border-border">
         <div className="container-wide py-16 md:py-20">

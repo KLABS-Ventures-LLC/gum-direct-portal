@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
@@ -58,13 +58,11 @@ export default function OrderSample() {
 
   return (
     <>
-      <Helmet>
-        <title>Order Technical Evaluation Sample | GumDirect</title>
-        <meta
-          name="description"
-          content="Order a 1kg technical evaluation sample of spray-dried Acacia Senegal (E414) for £34.99 with UK delivery included."
-        />
-      </Helmet>
+      <SEO
+        title="Order Technical Evaluation Sample | GumDirect"
+        description="Order a 1kg technical evaluation sample of spray-dried Acacia Senegal (E414) for £34.99 with UK delivery included."
+        path="/order-sample"
+      />
 
       <Layout>
         {/* Header */}

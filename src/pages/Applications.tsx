@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
@@ -81,13 +81,11 @@ const applications = [
 export default function Applications() {
   return (
     <>
-      <Helmet>
-        <title>Acacia Gum Applications | Beverages, Confectionery, Pharma | GumDirect</title>
-        <meta
-          name="description"
-          content="Discover acacia gum applications across beverages, emulsions, confectionery, supplements, pharmaceuticals, bakery, and industrial sectors."
-        />
-      </Helmet>
+      <SEO
+        title="Acacia Gum Applications | Beverages, Confectionery, Pharma | GumDirect"
+        description="Discover acacia gum applications across beverages, emulsions, confectionery, supplements, pharmaceuticals, bakery, and industrial sectors."
+        path="/applications"
+      />
 
       <Layout>
         {/* Hero */}

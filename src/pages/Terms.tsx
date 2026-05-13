@@ -1,13 +1,14 @@
 import { Layout } from "@/components/layout/Layout";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 
 export default function Terms() {
   return (
     <Layout>
-      <Helmet>
-        <title>Terms of Service | GumDirect</title>
-        <meta name="description" content="GumDirect Ltd Terms of Service — terms governing your use of our website." />
-      </Helmet>
+      <SEO
+        title="Terms of Service | GumDirect"
+        description="GumDirect Ltd Terms of Service — terms governing your use of our website."
+        path="/terms"
+      />
 
       <div className="bg-muted/30 border-b border-border">
         <div className="container-wide py-16 md:py-20">
