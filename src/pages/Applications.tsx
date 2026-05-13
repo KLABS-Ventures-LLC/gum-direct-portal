@@ -82,7 +82,7 @@ export default function Applications() {
   return (
     <>
       <SEO
-        title="Acacia Gum Applications | Beverages, Confectionery, Pharma | GumDirect"
+        title="Acacia Gum Applications | Beverages & Pharma | GumDirect"
         description="Discover acacia gum applications across beverages, emulsions, confectionery, supplements, pharmaceuticals, bakery, and industrial sectors."
         path="/applications"
       />

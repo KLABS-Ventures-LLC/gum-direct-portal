@@ -12,7 +12,7 @@ const Index = () => {
   return (
     <>
       <SEO
-        title="GumDirect | Premium Spray-Dried Acacia Gum (Gum Arabic) UK Supplier"
+        title="GumDirect | Premium Acacia Gum UK Supplier"
         description="Premium spray-dried acacia gum direct from Sudan. UK-based supplier of food-grade gum arabic with HACCP certification, full traceability, and batch testing."
         path="/"
       />

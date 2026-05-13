@@ -53,7 +53,7 @@ export default function ProductSenegal() {
   return (
     <>
       <SEO
-        title="Acacia Senegal Spray-Dried Powder (E414) – 1 kg Sample | GumDirect"
+        title="Acacia Senegal Spray-Dried (E414) Sample | GumDirect"
         description="Food-grade spray-dried Acacia Senegal (E414) processed in the UK. 1 kg technical evaluation sample for £34.99 with UK delivery included."
         path="/products/acacia-senegal"
         type="product"
