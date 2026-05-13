@@ -1,0 +1,28 @@
+# GumDirect
+
+> UK supplier of Spray-Dried Acacia Senegal (E414) gum arabic for food, beverage, and industrial manufacturers. Sourced through established networks connected to production regions in Sudan.
+
+GumDirect supplies a single, focused product — Spray-Dried Acacia Senegal (E414) — to manufacturers who need consistent quality, traceability, and reliable supply. We offer technical samples, technical data sheets (TDS), and provide COA and SDS documentation upon request.
+
+## Pages
+
+- [Home](/): Overview of GumDirect and our Spray-Dried Acacia Senegal (E414) product.
+- [Product: Acacia Senegal (E414)](/products/acacia-senegal): Specifications, functionality, and packaging for our spray-dried gum arabic.
+- [Applications](/applications): Industries and use cases where Acacia Senegal is applied.
+- [Beverages](/applications/beverages): Stabilisation, clouding, and emulsification in beverage formulation.
+- [Emulsions](/applications/emulsions): Flavour and oil emulsion stabilisation.
+- [Confectionery](/applications/confectionery): Texture, gloss, and binding in confectionery products.
+- [Supplements](/applications/supplements): Encapsulation and carrier applications in nutritional supplements.
+- [Pharmaceuticals](/applications/pharmaceuticals): Excipient and stabiliser uses in pharmaceutical formulations.
+- [Bakery](/applications/bakery): Functional applications in bakery products.
+- [Industrial](/applications/industrial): Non-food industrial applications of Acacia Senegal.
+- [Order a Sample](/order-sample): Request a 1kg technical sample for evaluation.
+- [Quality](/quality): Quality assurance, sourcing approach, and compliance information.
+- [About](/about): Company background, approach, and supply model.
+- [Contact](/contact): Get in touch for quotes, technical questions, or documentation.
+
+## Optional
+
+- [Privacy Policy](/privacy): UK GDPR privacy policy.
+- [Terms](/terms): Terms and conditions of use.
+- [Cookies](/cookies): Cookie policy.
